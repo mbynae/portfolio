@@ -8,7 +8,7 @@
     opacity: 0;
 }
 #header nav {
-    padding: 50px 105px;
+    padding: 50px 115px;
 }
 #header nav ul {
     display: flex;
@@ -19,5 +19,5 @@
     font-weight: 300;
     text-decoration: underline;
     text-underline-position: under;
-
+    cursor: pointer;
 }
