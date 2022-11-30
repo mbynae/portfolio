@@ -99,6 +99,5 @@
     font-family: 'Leather Boots Regular';
     font-style: normal;
     font-weight: normal;
-    src: local('Leather Boots Regular'), url('LeatherBoots-gxn2E.woff') format('woff'),
-        url('LeatherBoots-gxn2E.ttf') format("truetype")
-}
+    src: local('Leather Boots Regular'), url('LeatherBoots-gxn2E.woff') format('woff');
+    }

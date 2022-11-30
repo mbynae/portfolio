@@ -79,7 +79,7 @@
     position: fixed;
     left: 0;
     top: 100vh;
-    width: 1920px;
+    width: 100%;
     height: 100vh;
     background-color: #14CF93;
 }
@@ -87,7 +87,7 @@
     position: fixed;
     left: 0;
     top: 100vh;
-    width: 1920px;
+    width: 100%;
     height: 100vh;
     background-color: #FCFAF8;
 }

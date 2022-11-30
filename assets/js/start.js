@@ -38,12 +38,12 @@ tl.to(".start_main", {
     duration: 0.4,
 })
 .to(".earlybox", {
-    y: -970,
+    y: '-100vh',
     duration: 1.1,
     ease: Power3.easeOut,
 })
 .to(".bgbox", {
-    y: -970,
+    y: '-100vh',
     duration: 1.2,
     delay: -0.9,
     ease: Power3.easeOut,
@@ -51,17 +51,17 @@ tl.to(".start_main", {
 .to("#header", {
     delay: -0.7,
     opacity: 1,
-    onComplete: titleOn()
+    // onComplete: titleOn()
 })
     
 
 
-function titleOn(){
-    const header = getElementById("header");
+// function titleOn(){
+//     const header = getElementById("header");
     
-    if(header.style.opacity == 1){
-        document.getElementById("start").style.display = "none";
-        document.querySelector(".earlybox").style.display = "none";
-        document.querySelector(".bgbox").style.display = "none";
-    }
-}
+//     if(header.style.opacity == 1){
+//         document.getElementById("start").style.display = "none";
+//         document.querySelector(".earlybox").style.display = "none";
+//         document.querySelector(".bgbox").style.display = "none";
+//     }
+// }
