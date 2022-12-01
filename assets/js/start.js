@@ -83,7 +83,7 @@ function init(){
         delay: -0.8
     })
 }
-init();
+// init();
 
 function sample(){
     gsap.set("#start", {
@@ -105,5 +105,5 @@ function sample(){
         scaleY: 1
     })
 }
-// sample();
+sample();
 

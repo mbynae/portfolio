@@ -89,6 +89,7 @@
 .project_textBox .textBox {
     word-break: keep-all;
     height: 100%;
+    background-color: #fff;
     position: relative;
 }
 .project_textBox .textBox h3 {
