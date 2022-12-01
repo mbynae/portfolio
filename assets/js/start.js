@@ -1,5 +1,11 @@
 const header = document.getElementById("header");
 
+window.onload = function(){
+    setTimeout(()=>{
+        scrollTo(0,0);
+    }, 100)
+}
+
 function init(){
     gsap.registerPlugin(ScrollTrigger);
     const tl = gsap.timeline();
@@ -64,17 +70,25 @@ function init(){
         delay: -0.9
     })
     .to("#title", {
-        yPercent: -200,
-        ease: "none",
-        scrollTrigger: {
-            trigger: "#about",
-            pin: true,
-            scrub: 1,
-            // snap: 1,
-            end: "+=2000",
-            // markers: true
-        }
+        position: 'static',
+        delay: -0.1
     })
+    .to("body", {
+        overflow: 'overlay',
+        delay: -0.5
+    })
+    
+    // .to("#title", {
+    //     yPercent: -200,
+    //     ease: "none",
+    //     scrollTrigger: {
+    //         scrub: 1,
+    //         end: "+=3000",
+    //     }
+    // })
+    // .to("#title", {
+    //     onComplete: fixedup
+    // })
 }
 init();
 function sample(){
@@ -92,3 +106,22 @@ function sample(){
     })
 }
 // sample();
+
+function fixedup(){
+    document.querySelector("body").addEventListener("wheel", (e)=>{
+        console.log(e.deltaY );
+        
+        if(e.deltaY > 0){
+            gsap.to("#title", {
+                y: -e.deltaY * 10,
+                duration: 3
+            })
+        } else if(e.deltaY < 0){
+            gsap.to("#title", {
+                y: e.deltaY * 10,
+                duration: 3
+            })
+        }
+    });
+}
+

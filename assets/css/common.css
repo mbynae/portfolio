@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    overflow: overlay;
+    overflow: hidden;
     /* box-sizing: border-box; */
 }
 body::-webkit-scrollbar {
