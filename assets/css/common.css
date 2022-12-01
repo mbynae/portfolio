@@ -20,6 +20,12 @@ body::-webkit-scrollbar-track {
     background-color: #fff;
 }
 
+/* font */
+.ppEiko {
+    font-family: 'PP Eiko';
+    font-weight: 500;
+}
+
 .container {
     
 }
