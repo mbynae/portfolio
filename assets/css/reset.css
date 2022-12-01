@@ -31,6 +31,10 @@ figcaption {
     -webkit-text-size-adjust: 100%;
 }
 
+button {
+    background-color: inherit;
+}
+
 /* 시멘틱 태그 초기화 */
 article,
 aside,
