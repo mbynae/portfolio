@@ -25,6 +25,9 @@ body::-webkit-scrollbar-track {
     font-family: 'PP Eiko';
     font-weight: 500;
 }
+.nanum {
+    font-family: 'NanumSquareNeo';
+}
 
 .container {
     

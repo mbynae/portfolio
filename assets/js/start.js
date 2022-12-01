@@ -1,12 +1,12 @@
 const header = document.getElementById("header");
 
-window.onload = function(){
-    setTimeout(()=>{
-        scrollTo(0,0);
-    }, 100)
-}
-
 function init(){
+    window.onload = function(){
+        setTimeout(()=>{
+            scrollTo(0,0);
+        }, 100)
+    }
+
     gsap.registerPlugin(ScrollTrigger);
     const tl = gsap.timeline();
     tl.to(".start_main", {
@@ -63,11 +63,11 @@ function init(){
     })
     .to("#start",{
         display: 'none',
-        delay: -1
+        delay: -0.6
     })
     .to(".earlybox", {
         display: 'none',
-        delay: -0.9
+        delay: -0.6
     })
     .to("#title", {
         position: 'static',
@@ -77,20 +77,14 @@ function init(){
         overflow: 'overlay',
         delay: -0.5
     })
-    
-    // .to("#title", {
-    //     yPercent: -200,
-    //     ease: "none",
-    //     scrollTrigger: {
-    //         scrub: 1,
-    //         end: "+=3000",
-    //     }
-    // })
-    // .to("#title", {
-    //     onComplete: fixedup
-    // })
+    .to(".profile_picture", {
+        scaleY: 1,
+        duration: 0.6,
+        delay: -0.8
+    })
 }
 init();
+
 function sample(){
     gsap.set("#start", {
         display: 'none'
@@ -104,24 +98,12 @@ function sample(){
     gsap.set("#title", {
         position: 'static',
     })
+    gsap.set("body", {
+        overflow: 'overlay',
+    })
+    gsap.set(".profile_picture", {
+        scaleY: 1
+    })
 }
 // sample();
-
-function fixedup(){
-    document.querySelector("body").addEventListener("wheel", (e)=>{
-        console.log(e.deltaY );
-        
-        if(e.deltaY > 0){
-            gsap.to("#title", {
-                y: -e.deltaY * 10,
-                duration: 3
-            })
-        } else if(e.deltaY < 0){
-            gsap.to("#title", {
-                y: e.deltaY * 10,
-                duration: 3
-            })
-        }
-    });
-}
 

@@ -1,16 +1,88 @@
 #about {
     width: 100%;
-    /* height: 121.6vh; */
-    /* background: url("../img/about_Bg.png") no-repeat center / cover; */
-    height: 100vh;
-}
-/* .about_inner {
-    width: 100%;
     height: 121.6vh;
     background: url("../img/about_Bg.png") no-repeat center / cover;
-} */
+    background-size: 0.9;
+    display: flex;
+    justify-content: space-between;
+}
+.about_textBox {
+    width: 24.5%;
+    height: 100%;
+    margin: 50px 0 0 104px;
+    color: #383838;
+    z-index: 1;
+}
+.about_textBox h3 {
+    font-size: 40px;
+    text-decoration: underline;
+    text-underline-position: under;
+    margin-bottom: 20px;
+}
+.about_textBox p {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 46px;
+}
+.about_textBox p em {
+    display: block;
+    font-family: 'GmarketSans';
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 6px;
+    word-break: keep-all;
+}
+.about_textBox figure {}
+.about_textBox figure img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
 
-#sample1 {
+.profile_picture {
+    width: 56%;
+    position: relative;
+    display: flex;
+    transform: translateY(-70px) scaleY(0.5)
+    
+}
+.profile_picture figure {
+}
+.profile_picture figure img {
+    /* display: inline-block; */
+    width: 28.65vw;/*550px*/
+    height: 43.23vw;/*830px*/
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter : grayscale(0.8);
+    transition: filter 0.6s;
+    z-index: 10000;
+}
+.profile_picture figure img:nth-child(1){
+    transform: rotate(-8deg);
+}
+.profile_picture figure img:nth-child(2){
+    left: 8.96vw;/*14?16?*/
+    top: 6.84vw;/*10*/
+    transform: rotate(6deg);
+}
+.profile_picture figure img:nth-child(3){
+    left: 16.8vw;/*30%*/
+    top: 17.1vw;/*25*/
+    transform: rotate(25deg);
+}
+.profile_picture figure img:hover {
+    filter : grayscale(0)
+}
+
+
+
+
+
+
+/* #sample1 {
     width: 100%;
     height: 100vh;
 }
@@ -25,5 +97,5 @@
 #sample4 {
     width: 100%;
     height: 100vh;
-}
+} */
 
