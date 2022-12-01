@@ -1,6 +1,12 @@
 const header = document.getElementById("header");
 
 function init(){
+    let scrollY = window.scrollY;
+    
+    window.onload = function(){
+        scrollY.innerText = 0;
+    }
+
     const tl = gsap.timeline();
     tl.to(".start_main", {
         x: -80,
@@ -69,8 +75,17 @@ function init(){
 }
 init();
 function sample(){
+    gsap.set("#start", {
+        display: 'none'
+    })
+    gsap.set(".earlybox", {
+        display: 'none'
+    })
     gsap.set("#header", {
         opacity: 1
+    })
+    gsap.set("#title", {
+        position: 'static',
     })
 }
 // sample();
