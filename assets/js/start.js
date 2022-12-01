@@ -1,12 +1,7 @@
 const header = document.getElementById("header");
 
 function init(){
-    let scrollY = window.scrollY;
-    
-    window.onload = function(){
-        scrollY.innerText = 0;
-    }
-
+    gsap.registerPlugin(ScrollTrigger);
     const tl = gsap.timeline();
     tl.to(".start_main", {
         x: -80,
@@ -69,9 +64,17 @@ function init(){
         delay: -0.9
     })
     .to("#title", {
-        position: 'static',
-        delay: -0.1
-    })  
+        yPercent: -200,
+        ease: "none",
+        scrollTrigger: {
+            trigger: "#about",
+            pin: true,
+            scrub: 1,
+            // snap: 1,
+            end: "+=2000",
+            // markers: true
+        }
+    })
 }
 init();
 function sample(){

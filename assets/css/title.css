@@ -128,8 +128,6 @@
     display: flex;
     justify-content: space-between;
 }
-#title .textBox .subText .portpolioText {}
-#title .textBox .subText .dateText {}
 
 .about_circle {
     width: 27.7vw;/*532*/
