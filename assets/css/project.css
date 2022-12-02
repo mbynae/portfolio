@@ -2,7 +2,6 @@
 #project {
     width: 100%;
     margin-top: 130px;
-
 }
 .project_inner {
     padding: 0 50px;
@@ -45,14 +44,12 @@
 /* contents */
 .project_table {
     width: 100%;
-    height: 1000vh;
-
     display: flex;
     border-top: 1px solid rgba(21, 21, 21, 0.35);
 }
 .project_sideMenu {
     width: 26%;
-    border-right: 1px solid rgba(21, 21, 21, 0.35);
+    /* border-right: 1px solid rgba(21, 21, 21, 0.35); */
 }
 .project_sideMenu button {
     width: 365px;
@@ -82,11 +79,12 @@
 .project_contentsInner {
     width: 100%;
     height: 800px;
-    border-bottom: 1px solid rgba(21, 21, 21, 0.35);
+    /* border: 1px solid rgba(21, 21, 21, 0.35); */
     display: flex;
 }
 .project_textBox {
     width: 50%;
+    border: 1px solid rgba(21, 21, 21, 0.35);
 }
 .project_textBox .projectText {
     word-break: keep-all;
@@ -115,6 +113,7 @@
 }
 .project_imgBox {
     width: 50%;
+    border: 1px solid rgba(21, 21, 21, 0.35);
 }
 .project_imgBox img {
     width: 100%;
@@ -122,8 +121,13 @@
 }
 .leftpd {
     padding: 50px;
-    border-right: 1px solid rgba(21, 21, 21, 0.35);
+    /* 임시 */
+    border-top: 0;
 }
 .rightpd {
     padding: 50px 0 50px 50px;
+    /* 임시 */
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
 }
