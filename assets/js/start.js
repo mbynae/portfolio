@@ -1,12 +1,16 @@
 const header = document.getElementById("header");
 
+
 function init(){
+
+    //스크롤 초기화
     window.onload = function(){
         setTimeout(()=>{
             scrollTo(0,0);
         }, 100)
     }
 
+    //시작시 GSAP 효과
     gsap.registerPlugin(ScrollTrigger);
     const tl = gsap.timeline();
     tl.to(".start_main", {
@@ -81,10 +85,10 @@ function init(){
         scaleY: 1,
         duration: 0.6,
         delay: -0.8,
-        onComplete: projectAni
+        // onComplete: projectAni
     })
 }
-// init();
+init();
 
 function sample(){
     gsap.set("#start", {
@@ -107,7 +111,7 @@ function sample(){
     })
     // projectAni();
 }
-sample();
+// sample();
 
 
 
