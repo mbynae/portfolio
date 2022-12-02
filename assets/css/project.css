@@ -2,6 +2,7 @@
 #project {
     width: 100%;
     margin-top: 130px;
+    margin-bottom: 150px;
 }
 .project_inner {
     padding: 0 50px;
@@ -131,3 +132,5 @@
     border-left: 0;
     border-right: 0;
 }
+
+

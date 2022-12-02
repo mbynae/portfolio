@@ -1,6 +1,3 @@
-const header = document.getElementById("header");
-
-
 function init(){
 
     //스크롤 초기화
@@ -136,7 +133,7 @@ function projectAni(){
             //     endColor: "purple",
             //     fontSize: "30px"
             // },
-    }
+        }
     })
     p1.set(".button1", {
         y: 100,

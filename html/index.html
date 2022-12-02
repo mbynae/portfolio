@@ -334,7 +334,7 @@
                             <img src="../assets/img/project_img9.png" alt="뷰 웹 사이트 이미지" class="project_img">
                         </div>
                     </div>
-                    <div class="project_contentsInner">
+                    <div class="project_contentsInner prLast">
                         <div class="project_imgBox leftpd">
                             <img src="../assets/img/project_img10.png" alt="VUE 영화 소개 사이트 이미지" class="img2">
                         </div>
@@ -356,8 +356,24 @@
             </div>
         </div>
     </section>
-    <section id="sample3"></section>
-    <section id="sample4"></section>
+
+    <div class="middleBox"></div>
+    <section id="effect">
+        <div class="effect_inner">
+            <div class="effect_title efBox">
+                <div class="paddingBox">
+                    <h2>Creative</h2>
+                    <em class="emphasis ppEiko">Script</em>
+                    <div class="effect_titleLine">20+ project</div>
+                </div>
+            </div>
+            <div class="effect01 efBox"></div>
+        </div>
+    </section>
+
+    <!-- <section id="sample4"></section> -->
+
+    <div class="scrollNum">0</div>
     
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
@@ -365,32 +381,44 @@
 
 
     <script>
-        // lenis 효과
-        const lenis = new Lenis({
-            duration: 1.2,
-            // easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
-            // direction: 'vertical', // vertical, horizontal
-            // gestureDirection: 'vertical', // vertical, horizontal, both
-            // smooth: true,
-            // mouseMultiplier: 1,
-            // smoothTouch: false,
-            // touchMultiplier: 2,
-            // infinite: false,
-        })
-        //get scroll value
-        lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
-            console.log({ scroll, limit, velocity, direction, progress })
-            })
+        const header = document.getElementById("header");
+        const scrollNum = document.querySelector(".scrollNum");
 
-        function raf(time) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
-        }
-        requestAnimationFrame(raf)  
+        // lenis 효과
+            // const lenis = new Lenis({
+            //     duration: 1.2,
+            //     // easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+            //     // direction: 'vertical', // vertical, horizontal
+            //     // gestureDirection: 'vertical', // vertical, horizontal, both
+            //     // smooth: true,
+            //     // mouseMultiplier: 2,
+            //     // smoothTouch: false,
+            //     // touchMultiplier: 2,
+            //     // infinite: true,
+            // })
+            // //get scroll value
+            // lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
+            //     // console.log({ scroll, limit, velocity, direction, progress })
+            //     })
+
+            // function raf(time) {
+            //     lenis.raf(time)
+            //     requestAnimationFrame(raf)
+            // }
+            // requestAnimationFrame(raf)  
+
+
+        // 헤더 색깔
+        window.addEventListener("scroll", ()=>{
+            // console.log(window.scrollY);
+            scrollNum.innerText = window.scrollY;
+        });
+
     </script>
 
     <script src="../assets/js/start.js"></script>
     <script src="../assets/js/project.js"></script>
+    <script src="../assets/js/effect.js"></script>
 
 
 </body>

@@ -1,0 +1,72 @@
+
+.middleBox {
+    width: 100%;
+    height: 100vh;
+    background-color: #14CF93;
+    position: fixed;
+    top: 100vh;
+}
+
+#effect {
+    position: fixed;
+    left: 0;
+    top: 0;
+    top: 100vh;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    overflow:hidden
+}
+.effect_inner {
+    width: 500vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    overscroll-behavior: none;
+}
+.effect_title {
+    width: 100vw;
+    height: 100vh;
+}
+.paddingBox {
+    padding: 0 50px;
+}
+.effect_title h2 {
+    padding-top: 200px;
+    font-size: 200px;
+    color: #fff;
+}
+.effect_title .emphasis {
+    display: inline-block;
+    font-size: 260px;
+    font-weight: 100;
+    color: #14CF93;
+    margin: -80px 0 20px 580px;
+}
+.effect_titleLine {
+    font-family: 'PP Eiko';
+    font-weight: 300;
+    font-size: 40px;
+    color: #fff;
+    float:right;
+    padding-left: 30%;
+    position: relative;
+}
+.effect_titleLine::before {
+    content: '';
+    width: 100%;
+    border: 1px solid #fff;
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    transform-origin: right;
+    transform: var(--border-right-transform);
+    transition: all 1.2s;
+}
+
+.effect01 {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+}
+
