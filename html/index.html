@@ -334,7 +334,7 @@
                             <img src="../assets/img/project_img9.png" alt="뷰 웹 사이트 이미지" class="project_img">
                         </div>
                     </div>
-                    <div class="project_contentsInner prLast">
+                    <div class="project_contentsInner ">
                         <div class="project_imgBox leftpd">
                             <img src="../assets/img/project_img10.png" alt="VUE 영화 소개 사이트 이미지" class="img2">
                         </div>
@@ -348,7 +348,7 @@
                                     것과 다르게 적용을 해야했기 떄문에 숙달하기 위한 연습의
                                     좋은 기회가 되었고 VUE.js 라는 프레임워크를 다루는데 있어 기초를 알 수 있게 되었습니다.                            
                                 </p>
-                                <a href="#" target="_blank" class="link nanum">VUE 영화 소개 사이트 소스보기</a>
+                                <a href="#" target="_blank" class="link nanum prLast">VUE 영화 소개 사이트 소스보기</a>
                             </div>
                         </div>
                     </div>
@@ -357,7 +357,9 @@
         </div>
     </section>
 
+    <div class="prevEffect">NEXT</div>
     <div class="middleBox"></div>
+    <div class="middleBox2"></div>
     <section id="effect">
         <div class="effect_inner">
             <div class="effect_title efBox">
@@ -367,7 +369,13 @@
                     <div class="effect_titleLine">20+ project</div>
                 </div>
             </div>
-            <div class="effect01 efBox"></div>
+            <div class="effectContBox">
+                <div class="effectCont">
+                    <div class="effect01 efBox">
+                        <div>QUIZ</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -378,11 +386,13 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
 
 
     <script>
         const header = document.getElementById("header");
         const scrollNum = document.querySelector(".scrollNum");
+
 
         // lenis 효과
             // const lenis = new Lenis({
@@ -408,10 +418,10 @@
             // requestAnimationFrame(raf)  
 
 
-        // 헤더 색깔
+        // 스크롤 좌표값
         window.addEventListener("scroll", ()=>{
-            // console.log(window.scrollY);
-            scrollNum.innerText = window.scrollY;
+            let scrollTop = Math.floor(window.scrollY);
+            scrollNum.innerText = scrollTop;
         });
 
     </script>

@@ -6,6 +6,7 @@
     height: 100px;
     z-index: 10000;
     opacity: 0;
+    transition: color 0.1s;
 }
 #header nav {
     padding: 50px 115px;
