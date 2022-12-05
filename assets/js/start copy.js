@@ -10,16 +10,6 @@ function init(){
     //시작시 GSAP 효과
     gsap.registerPlugin(ScrollTrigger);
     const tl = gsap.timeline();
-    gsap.set(".tText01", {
-        y: 80,
-        scaleY: 0,
-    })
-    gsap.set(".tText03", {
-        y: 80,
-        scaleY: 0,
-    })
-
-
     tl.to(".start_main", {
         x: -80,
         delay: 0.6,
@@ -88,22 +78,6 @@ function init(){
         overflow: 'overlay',
         delay: -0.5
     })
-    .to(".tText01", {
-        y: 0,
-        scaleY: 1,
-        duration: 1,
-        delay: -1.4,
-        ease: "power2.out",
-        onUpdate: titleUp
-    })
-    .to(".tText03", {
-        y: 0,
-        scaleY: 1,
-        duration: 1,
-        delay: -1.1,
-        ease: "power2.out",
-        onUpdate: titledown
-    })
     .to(".profile_picture", {
         scaleY: 1,
         duration: 0.6,
@@ -112,13 +86,6 @@ function init(){
     })
 }
 init();
-
-function titleUp(){
-    document.documentElement.style.setProperty('--title-top', '0');
-}
-function titledown(){
-    document.documentElement.style.setProperty('--title-down', '0');
-}
 
 function sample(){
     gsap.set("#start", {

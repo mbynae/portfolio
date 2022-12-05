@@ -39,12 +39,22 @@
     <section id="title">
         <div class="title_inner">
             <div class="textBox">
-                <div>Creative</div>
-                <div class="ppEiko">frontend</div>
-                <div>Developer</div>
+                <div class="tText01">Creative</div>
+                <div class="tText02 ppEiko">
+                    <svg version="1.1">
+                        <symbol id="fade-text">
+                          <text x="50%" y="70%" text-anchor="middle">frontend</text>
+                        </symbol>
+                        <g>
+                          <use class="stroke" xlink:href="#fade-text"/>
+                          <use class="fill" xlink:href="#fade-text"/>
+                        </g>
+                      </svg>		
+                </div>
+                <div class="tText03">Developer</div>
                 <div class="subText">
                     <span class="portpolioText">Make 2022<br>PORTPOLIO</span>
-                    <span class="dateText">Today's For 2022. 11. 14<br>Monday</span>
+                    <span class="dateText">Today's For <em class="year">2022</em>. <em class="month">11</em>. <em class="date">14</em><br><em class="week">Monday</em></span>
                 </div>
             </div>
         </div>
@@ -362,7 +372,7 @@
     <div class="middleBox2"></div>
     <section id="effect">
         <div class="effect_inner">
-            <div class="effect_title efBox">
+            <div class="effect_title">
                 <div class="paddingBox">
                     <h2>Creative</h2>
                     <em class="emphasis ppEiko">Script</em>
@@ -370,12 +380,631 @@
                 </div>
             </div>
             <div class="effectContBox">
-                <div class="effectCont">
-                    <div class="effect01 efBox">
-                        <div>QUIZ</div>
+                <div class="effectCont quiz">
+                    <div class="effectCont_inner">
+                        <div class="effectName_box">
+                            <div class="effectName">
+                                <span>QUIZ</span>
+                                <img src="../assets/img/effect_arrow.svg" alt="화살표">
+                            </div>
+                        </div>
+                        <div class="effectMain_box">
+                            <div class="effectMain efc01">
+                                <div class="effectMain_inner">
+                                    <img src="../assets/img/quiz01.png" alt="퀴즈이펙트01">
+                                    <div class="effectText_box">
+                                        <h3>QUIZ EFFECT</h3>
+                                        <span>multiple choice</span>
+                                        <p class="nanum">
+                                            처음으로 배운 스크립트 이펙트 효과로 객체에 데이터를 저장하고 
+                                            키와 값을 스크립트를 통해 HTML에 출력하여 하나의 프레임에 각각의 다른
+                                            텍스트가 출력되는 형태로 객관식 형태의 웹디자인기능사 기출 문제를 제작했습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effectSource efc02">
+                                <div class="effectSource_inner">
+                                    <h4>소스보기</h4>
+                                    <div class="source nanum">
+                                        <li><a href="#">Quiz Effect 02</a></li>
+                                        <li><a href="#">Quiz Effect 03</a></li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effectSource efc03">
+                                <div class="effectSource_inner">
+                                    <h4>소스보기</h4>
+                                    <div class="source nanum">
+                                        <li><a href="#">Quiz Effect 01</a></li>
+                                        <li><a href="#">Quiz Effect 04</a></li>
+                                        <li><a href="#">Quiz Effect 05</a></li>
+                                        <li><a href="#">Quiz Effect 06</a></li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effectMain efc04">
+                                <div class="effectMain_inner">
+                                    <img src="../assets/img/quiz02.png" alt="퀴즈이펙트02">
+                                    <div class="effectText_box">
+                                        <h3>QUIZ EFFECT</h3>
+                                        <span>short-answer question</span>
+                                        <p class="nanum">
+                                            이번엔 주관식 단답형 퀴즈 효과로 입력한 문자열과 데이터에 저장된 문자열이 
+                                            일치하는지 확인하고 일치 시 정답, 다를 시 오답과 해답이 출력되는 형태입니다.<br>
+                                            오류를 방지하기 위해 toLowerCase와 trim으로 대소문자 및 공백 구분없이 
+                                            정답을 체크하도록 하는게 핵심인 스크립트 효과였습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="effectCont search">
+                    <div class="effectCont_inner">
+                        <div class="effectName_box">
+                            <div class="effectName">
+                                <span>SEARCH</span>
+                                <img src="../assets/img/effect_arrow.svg" alt="화살표">
+                            </div>
+                        </div>
+                        <div class="effectMain_box">
+                            <div class="effectMain efc01">
+                                <div class="effectMain_inner">
+                                    <img src="../assets/img/search01.png" alt="서치이펙트01">
+                                    <div class="effectText_box">
+                                        <h3>SEARCH EFFECT</h3>
+                                        <span>KEYWORD SEARCH</span>
+                                        <p class="nanum">
+                                            indexOf, includes, find 메서드 등을 이용해 사용자가 입력한 키워드와
+                                            문자열이 일치시 해당 속성만 출력해 주는 CSS 속성 검색 효과입니다.<br>
+                                            좀 더 응용하여 data-set의 value값을 호출해 카테고리 별로 검색하는 
+                                            기능까지 추가해 종류별로도 볼 수 있도록 하였습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effectSource efc02">
+                                <div class="effectSource_inner">
+                                    <h4>소스보기</h4>
+                                    <div class="source nanum">
+                                        <li><a href="#">SEARCH Effect 05</a></li>
+                                        <li><a href="#">SEARCH Effect 06</a></li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effectSource efc03">
+                                <div class="effectSource_inner">
+                                    <h4>소스보기</h4>
+                                    <div class="source nanum">
+                                        <li><a href="#">SEARCH Effect 01</a></li>
+                                        <li><a href="#">SEARCH Effect 02</a></li>
+                                        <li><a href="#">SEARCH Effect 03</a></li>
+                                        <li><a href="#">SEARCH Effect 04</a></li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effectMain efc04">
+                                <div class="effectMain_inner">
+                                    <img src="../assets/img/search02.png" alt="퀴즈이펙트02">
+                                    <div class="effectText_box">
+                                        <h3>SEARCH EFFECT</h3>
+                                        <span>SORT SEQUENCE</span>
+                                        <p class="nanum">
+                                            sort, reverse 메서드를 활용해 앞의 CSS 속성을 알파벳 순, 역순, 랜덤 순서로
+                                            정렬하는 방식입니다.<br>
+                                            또한 역시 data-set을 활용해 중요도에 따라 출력해주는 
+                                            기능이 포함되어 있습니다. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="effectCont slider">
+                    <div class="effectCont_inner">
+                        <div class="effectName_box">
+                            <div class="effectName">
+                                <span>SLIDER</span>
+                                <img src="../assets/img/effect_arrow.svg" alt="화살표">
+                            </div>
+                        </div>
+                        <div class="effectMain_box">
+                            <div class="effectMain efc01">
+                                <div class="effectMain_inner">
+                                    <img src="../assets/img/slider01.png" alt="슬라이드이펙트01">
+                                    <div class="effectText_box">
+                                        <h3>SLIDER EFFECT</h3>
+                                        <span>REPEAT SLIDE</span>
+                                        <p class="nanum">
+                                            상하 혹은 좌우로 자동으로 움직이고 오토플레이를 켜고 끌 수 있으며, 
+                                            버튼을 클릭 시 이동하도록 하는 가장 많이 쓰이는 타입의 슬라이드 효과입니다.<br>
+                                            슬라이드 효과를 만드는 방법은 여러가지가 있지만 저는 cloneNode와 
+                                            appendChild를 활용해 복사한 이미지를 붙여넣는 방식을 사용했습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effectSource efc02">
+                                <div class="effectSource_inner">
+                                    <h4>소스보기</h4>
+                                    <div class="source nanum">
+                                        <li><a href="#">react API</a></li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effectSource efc03">
+                                <div class="effectSource_inner">
+                                    <h4>소스보기</h4>
+                                    <div class="source nanum">
+                                        <li><a href="#">SLIDER Effect 01</a></li>
+                                        <li><a href="#">SLIDER Effect 02</a></li>
+                                        <li><a href="#">SLIDER Effect 03</a></li>
+                                        <li><a href="#">SLIDER Effect 04</a></li>
+                                        <li><a href="#">SLIDER Effect 05</a></li>
+                                        <li><a href="#">SLIDER Effect 06</a></li>
+                                        <li><a href="#">SLIDER Effect 07</a></li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effectMain efc04">
+                                <div class="effectMain_inner">
+                                    <img src="../assets/img/slider02.png" alt="슬라이드이펙트02">
+                                    <div class="effectText_box">
+                                        <h3>SWIPER</h3>
+                                        <span>SLIDER LIBRARY</span>
+                                        <p class="nanum">
+                                            슬라이드 효과를 쉽게 만들 수 있도록 제공해주는 자바스크립트
+                                            라이브러리인 스와이퍼를 사용해 리엑트 영화 api 사이트를 제작한
+                                            모습입니다. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="effectCont parallax">
+                    <div class="effectCont_inner">
+                        <div class="effectName_box">
+                            <div class="effectName">
+                                <span>PARALLAX</span>
+                                <img src="../assets/img/effect_arrow.svg" alt="화살표">
+                            </div>
+                        </div>
+                        <div class="effectMain_box">
+                            <div class="effectMain efc01">
+                                <div class="effectMain_inner">
+                                    <img src="../assets/img/parallax01.png" alt="슬라이드이펙트01">
+                                    <div class="effectText_box">
+                                        <h3>PARALLAX EFFECT</h3>
+                                        <span>SMOOTH SCROLLING MENU</span>
+                                        <p class="nanum">
+                                            메뉴의 버튼을 클릭 시 해당 화면으로 부드럽게 이동하게 하는
+                                            효과입니다.<br>
+                                            요소의 브라우저 위치 좌표값을 구하고 버튼을 클릭 시
+                                            스크롤 값을 요소 좌표 값에 대입해 부드럽게 이동하도록 했으며,
+                                            GSAP를 사용해 더욱 생동감 넘치는 애니메이션을 구현했습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effectSource efc02">
+                                <div class="effectSource_inner">
+                                    <h4>소스보기</h4>
+                                    <div class="source nanum">
+                                        <li><a href="#">PARALLAX Effect 04</a></li>
+                                        <li><a href="#">PARALLAX Effect 05</a></li>
+                                        <li><a href="#">PARALLAX Effect 06</a></li>
+                                        <li><a href="#">PARALLAX Effect 07</a></li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effectSource efc03">
+                                <div class="effectSource_inner">
+                                    <h4>소스보기</h4>
+                                    <div class="source nanum">
+                                        <li><a href="#">PARALLAX Effect 01</a></li>
+                                        <li><a href="#">PARALLAX Effect 02</a></li>
+                                        <li><a href="#">PARALLAX Effect 03</a></li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effectMain efc04">
+                                <div class="effectMain_inner">
+                                    <img src="../assets/img/parallax02.png" alt="슬라이드이펙트02">
+                                    <div class="effectText_box">
+                                        <h3>PARALLAX EFFECT</h3>
+                                        <span>VARIABLE PARALLAX ELEMENTS</span>
+                                        <p class="nanum">
+                                            스크롤 위치에 따라 각각의 요소들에 효과를 입혀 개별적으로 생동감 있는
+                                            애니메이션을 구현한 효과입니다.<br>
+                                            스크롤링 메뉴가 좌표값을 대입만 했다면, 이번엔 요소 하나하나에 애니메이션을 넣어 
+                                            스크롤 좌표값이 요소의 좌표값에 도달할 시 발생하도록 만들었습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="effectCont mouse">
+                    <div class="effectCont_inner">
+                        <div class="effectName_box">
+                            <div class="effectName">
+                                <span>MOUSE</span>
+                                <img src="../assets/img/effect_arrow.svg" alt="화살표">
+                            </div>
+                        </div>
+                        <div class="effectMain_box">
+                            <div class="effectMain efc01">
+                                <div class="effectMain_inner">
+                                    <img src="../assets/img/mouse01.png" alt="슬라이드이펙트01">
+                                    <div class="effectText_box">
+                                        <h3>MOUSE EFFECT</h3>
+                                        <span>CURSOR EFFECT</span>
+                                        <p class="nanum">
+                                            커서가 특정 요소 위에 위치할 시 커서에 애니메이션이 발생하는
+                                            효과입니다.<br>
+                                            커서가 커지거나 커서 모양이 변하거나, mix-blend-mode를 통해 뒷 배경과 블랜드 효과를 주는 형태로
+                                            제작된 마우스 효과입니다. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effectSource efc02">
+                                <div class="effectSource_inner">
+                                    <h4>소스보기</h4>
+                                    <div class="source nanum">
+                                        <li><a href="#">MOUSE Effect 04</a></li>
+                                        <li><a href="#">MOUSE Effect 05</a></li>
+                                        <li><a href="#">MOUSE Effect 06</a></li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effectSource efc03">
+                                <div class="effectSource_inner">
+                                    <h4>소스보기</h4>
+                                    <div class="source nanum">
+                                        <li><a href="#">MOUSE Effect 01</a></li>
+                                        <li><a href="#">MOUSE Effect 02</a></li>
+                                        <li><a href="#">MOUSE Effect 03</a></li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effectMain efc04">
+                                <div class="effectMain_inner">
+                                    <img src="../assets/img/mouse02.png" alt="슬라이드이펙트02">
+                                    <div class="effectText_box">
+                                        <h3>MOUSE EFFECT</h3>
+                                        <span>VaRIABLE PARALLAX ELEMENTS</span>
+                                        <p class="nanum">
+                                            마우스의 위치 이동에 따라 요소에 다양한 효과가 적용됩니다.<br>
+                                            이미지가 마우스를 따라 상하좌우로 움직일 수 있고 이미지 안의
+                                            글자가 이동하면서 블랜드 효과를 받는 등 좀 더 응용된 버전의 
+                                            효과를 제작했습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="effectCont game">
+                    <div class="effectCont_inner">
+                        <div class="effectName_box">
+                            <div class="effectName">
+                                <span>GAME</span>
+                                <img src="../assets/img/effect_arrow.svg" alt="화살표">
+                            </div>
+                        </div>
+                        <div class="effectMain_box game_Box">
+                            <div class="effectMain efc01">
+                                <div class="effectMain_inner">
+                                    <img src="../assets/img/game01.png" alt="슬라이드이펙트01">
+                                    <div class="effectText_box">
+                                        <h3>MUSIC PLAYER</h3>
+                                        <span>GAME EFFECT 01</span>
+                                        <p class="nanum">
+                                            여태까지 배운 자바스크립트 효과를 종합하여 응용해 만든
+                                            뮤직플레이어입니다.<br>
+                                            음악을 재생, 정지, 다음곡, 이전곡, 랜덤 듣기, 볼륨 조절,
+                                            리스트 펼치기 등 기본적인 기능을 탑재했습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effectSource efc02">
+                                <div class="effectSource_inner">
+                                    <h4>서치게임 보기</h4>
+                                    <div class="source nanum">
+                                        <li><a href="#" class="gameSource">소스보기</a></li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effectSource efc03">
+                                <div class="effectSource_inner">
+                                    <h4>뮤직플레이어 보기</h4>
+                                    <div class="source nanum">
+                                        <li><a href="#" class="gameSource">소스보기</a></li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effectMain efc04">
+                                <div class="effectMain_inner">
+                                    <img src="../assets/img/game02.png" alt="슬라이드이펙트02">
+                                    <div class="effectText_box">
+                                        <h3>CSS SEARCH GAME</h3>
+                                        <span>GAME EFFECT 02</span>
+                                        <p class="nanum">
+                                            서치 이펙트에서 배웠던 메서드를 활용해 만든 간단한 게임입니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="effectCont game2">
+                    <div class="effectCont_inner">
+                        <div class="effectName_box">
+                            <div class="effectName" style="opacity: 0">
+                                <span>GAME</span>
+                                <img src="../assets/img/effect_arrow.svg" alt="화살표">
+                            </div>
+                        </div>
+                        <div class="effectMain_box game_Box">
+                            <div class="effectMain efc01">
+                                <div class="effectMain_inner">
+                                    <img src="../assets/img/game03.png" alt="솔리테어 게임">
+                                    <div class="effectText_box">
+                                        <h3>SOLITAIRE</h3>
+                                        <span>GAME EFFECT 03</span>
+                                        <p class="nanum">
+                                            자바스크립트로 구현한 같은 그림 찾기 게임입니다.<br>
+                                            카드 요소를 랜덤하게 배치하도록 하며, 클릭 시 뒤집어져
+                                            같은 밸류값을 갖는 요소가 매칭됐을 때 점수가 올라가도록
+                                            설계하였습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effectSource efc02">
+                                <div class="effectSource_inner">
+                                    <h4>테트리스 보기</h4>
+                                    <div class="source nanum">
+                                        <li><a href="#" class="gameSource">소스보기</a></li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effectSource efc03">
+                                <div class="effectSource_inner">
+                                    <h4>솔리테어 보기</h4>
+                                    <div class="source nanum">
+                                        <li><a href="#" class="gameSource">소스보기</a></li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effectMain efc04">
+                                <div class="effectMain_inner">
+                                    <img src="../assets/img/game04.png" alt="테트리스 게임">
+                                    <div class="effectText_box">
+                                        <h3>TETRIS</h3>
+                                        <span>GAME EFFECT 04</span>
+                                        <p class="nanum">
+                                            자바스크립트로 구현한 마지막 게임 이펙트 테트리스 게임입니다.<br>
+                                            스크립트로 만든 각각의 사각형 요소에 클래스를 추가/삭제하여 이미지를 
+                                            실시간으로 출력하며, 키다운 이벤트 메서드로 클래스를 조절해
+                                            구현했습니다. <br>
+                                            다소 복잡했지만 이해력를 높이는데 큰 도움이 되었습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="summary">
+        <div class="summary_inner">
+            <h3>Project summary</h3>
+            <div class="summary_box">
+                <div class="sBox b01">
+                    <div class="sBox_cont">
+                        <div class="name">
+                            <h4>HTML5</h4>
+                        </div>
+                        <div class="contents">
+                            <h5>Basic Mark up</h5>
+                            <ul>
+                                <li>Mark up</li>
+                                <li>HTML attribute</li>
+                                <li>Pug</li>
+                            </ul>
+                        </div>
+                        <div class="num">Three</div>
+                        <div class="click">Click</div>
+                    </div>
+                </div>
+                <div class="sBox b02">
+                    <div class="sBox_cont">
+                        <div class="name">
+                            <h4>CSS3</h4>
+                        </div>
+                        <div class="contents">
+                            <h5>Bootstript & Animation</h5>
+                            <ul>
+                                <li>Bootstrap</li>
+                                <li>CSS Anaimation</li>
+                                <li>SCSS</li>
+                            </ul>
+                        </div>
+                        <div class="num">Three</div>
+                        <div class="click">Click</div>
+                    </div>
+                </div>
+                <div class="sBox b03">
+                    <div class="sBox_cont">
+                        <div class="name">
+                            <h4>JAVASCRIPT</h4>
+                        </div>
+                        <div class="contents">
+                            <h5>Script Effect With GSAP & JQUERY </h5>
+                            <div class="category">
+                                <ul>
+                                    <li>Javascript Attribute</li>
+                                    <li>Script Effect</li>
+                                    <li>GSAP</li>
+                                </ul>
+                                <ul>
+                                    <li>JQUERY</li>
+                                    <li>ALGORITHM</li>
+                                    <li>THREE.JS</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="num">Six</div>
+                        <div class="click">Click</div>
+                    </div>
+                </div>
+                <div class="sBox b04">
+                    <div class="sBox_cont">
+                        <div class="name">
+                            <h4>SITE</h4>
+                        </div>
+                        <div class="contents">
+                            <h5>Web Standards Site</h5>
+                            <ul>
+                                <li>WEB Standard Site1</li>
+                                <li>WEB Standard Site2</li>
+                            </ul>
+                        </div>
+                        <div class="num">Two</div>
+                        <div class="click">Click</div>
+                    </div>
+                </div>
+                <div class="sBox b05">
+                    <div class="sBox_cont">
+                        <div class="name">
+                            <h4>PHP</h4>
+                        </div>
+                        <div class="contents">
+                            <h5 style="line-height: 1.2;">MySql5 - database<br>
+                                Group Project winimal </h5>
+                            <ul>
+                                <li>MySql</li>
+                                <li>PHP Blog</li>
+                                <li>PHP Group Project</li>
+                            </ul>
+                        </div>
+                        <div class="num">Three</div>
+                        <div class="click">Click</div>
+                    </div>
+                </div>
+                <div class="sBox b06">
+                    <div class="sBox_cont">
+                        <div class="name">
+                            <h4>REACT</h4>
+                        </div>
+                        <div class="contents">
+                            <h5>React Hook and API Group project </h5>
+                            <div class="category">
+                                <ul>
+                                    <li>React Web Stand Site</li>
+                                    <li>React API Site</li>
+                                </ul>
+                                <ul>
+                                    <li>React API Blog</li>
+                                    <li>React Group Project</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="num">Four</div>
+                        <div class="click">Click</div>
+                    </div>
+                </div>
+                <div class="sBox b07">
+                    <div class="sBox_cont">
+                        <div class="name">
+                            <h4>VUE</h4>
+                        </div>
+                        <div class="contents">
+                            <h5>React &lt;-&gt; Vue Conversion & API Blog </h5>
+                            <div class="category">
+                                <ul>
+                                    <li>VUE Web Stand Site</li>
+                                    <li>VUE API Site</li>
+                                </ul>
+                                <ul>
+                                    <li>VUE API Blog</li>
+                                    <li>VUE Group Project</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="num">Four</div>
+                        <div class="click">Click</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact_box">
+            <div class="contact_box_inner">
+                <div class="contact_title">
+                    <h3>Contact Me</h3>
+                    <span>Last page</span>
+                </div>
+                <div class="contact_link">
+                    <a href="#" class="ir">티스토리</a>
+                    <a href="#" class="ir">깃허브</a>
+                    <a href="#" class="ir">코드팬</a>
+                </div>
+                <div class="contact_subtext">
+                    <p>
+                        My project summaries are uploaded to T-Story,<br>
+                        and this refers to the sources in the Codepen.
+                    </p>
+                    <p>
+                        All project sources are available on GitHub.
+                    </p>
+                </div>
+                <div class="contact_address">
+                    <span>MY ADDRESS</span>
+                    <address>In Ansan, <em>Kyeonggi</em></address>
+                </div>
+                <div class="contact_email">
+                    <span>E-MAIL</span>
+                    <div><em>piowm123</em>@gmail.com</div>
+                </div>
+                <a href="mailto:piowm123@gmail.com" class="contact_emailBtn">
+                    <button>
+                        <span>Get in touch</span>
+                        <span></span>
+                    </button>
+                </a>
+                <p class="contact_finish">
+                    2022 ─ Moon, Byeong Nae. POTPORIO
+                </p>
+            </div>
+        </div>
+        <div class="contact_img">
+            <button>
+                <div class="inner">
+                    <span class="text">Click the button to go to the top</span>
+                    <span class="arrow"></span>
+                </div>
+            </button>
+        </div>
+        <div class="contact_logo"></div>
+        <div class="logo_text ppEiko">
+            <span>2022<br> <em>FRONTEND<br> PORTPOLIO</em></span>
         </div>
     </section>
 
@@ -395,27 +1024,21 @@
 
 
         // lenis 효과
-            // const lenis = new Lenis({
-            //     duration: 1.2,
-            //     // easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
-            //     // direction: 'vertical', // vertical, horizontal
-            //     // gestureDirection: 'vertical', // vertical, horizontal, both
-            //     // smooth: true,
-            //     // mouseMultiplier: 2,
-            //     // smoothTouch: false,
-            //     // touchMultiplier: 2,
-            //     // infinite: true,
-            // })
-            // //get scroll value
-            // lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
-            //     // console.log({ scroll, limit, velocity, direction, progress })
-            //     })
+            const lenis = new Lenis({
+                duration: 1.2,
+                // easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+                // direction: 'vertical', // vertical, horizontal
+                // gestureDirection: 'vertical', // vertical, horizontal, both
+            })
+            //get scroll value
+            lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
+            })
 
-            // function raf(time) {
-            //     lenis.raf(time)
-            //     requestAnimationFrame(raf)
-            // }
-            // requestAnimationFrame(raf)  
+            function raf(time) {
+                lenis.raf(time)
+                requestAnimationFrame(raf)
+            }
+            requestAnimationFrame(raf)  
 
 
         // 스크롤 좌표값
@@ -427,8 +1050,7 @@
     </script>
 
     <script src="../assets/js/start.js"></script>
-    <script src="../assets/js/project.js"></script>
-    <script src="../assets/js/effect.js"></script>
+    <script src="../assets/js/title.js"></script>
 
 
 </body>
