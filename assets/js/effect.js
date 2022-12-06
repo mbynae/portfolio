@@ -1,3 +1,61 @@
+//이펙트 효과 진입
+function effectStart(){
+    window.addEventListener("scroll", ()=>{
+        if(window.scrollY < document.querySelector(".prevEffect").offsetTop - document.querySelector(".prevEffect").offsetHeight){
+            header.style.color = "#000"; 
+            document.documentElement.style.setProperty("--border-right-transform", "scaleX(0)")
+        }
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(".prevEffect", {
+        // onComplete: middleEffect,
+        // onComplete: horizontal,
+        scrollTrigger: {
+            trigger: ".prevEffect",
+            start: "top 50%",
+            end: "top 50%",
+            pin: true,
+            pinSpacing: true,
+            // end: () => `+=${document.querySelector(".prevEffect").offsetHeight - 500}`,   //요소 높이값만큼 end를 처리함 가로모드 할때 필요
+            // markers: {
+            //     startColor: "blue",
+            //     endColor: "purple",
+            //     fontSize: "30px"
+            // },
+            toggleActions: "restart none restart none"
+        },
+    });
+
+    console.log(document.querySelector(".prevEffect").offsetTop - document.querySelector(".prevEffect").offsetHeight)
+}
+
+
+function middleEffect(){
+    const tl = gsap.timeline()
+    tl.to(".middleBox", {
+        top: 0,
+        duration: 1.2,
+        ease: Power3.easeOut,
+    })
+    .to(".middleBox2", {
+        top: 0,
+        duration: 1.4,
+        delay: -1,
+        ease: Power3.easeOut
+    })
+    .to("#effect", {
+        display: 'block'
+    })
+    .to(".middleBox", {
+        display: 'none'
+    })
+    .to(".middleBox2", {
+        display: 'none'
+    })
+}
+
 //이펙트 효과 타이틀
 function horizontal(){
     if(window.scrollY >= document.querySelector(".prevEffect").offsetTop - document.querySelector(".prevEffect").offsetHeight){

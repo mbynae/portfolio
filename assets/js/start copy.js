@@ -9,20 +9,12 @@ function init(){
         }, 100)
     }
 
-    //타이틀 선택자
-    const titleName1 = document.querySelector(".tText01");
-    const word1 = titleName1.innerText.split("");
-    titleName1.innerHTML = "";
-    word1.forEach((e, i) => {
-        titleName1.innerHTML += `<span class='titleArr1'>${e}</span>`;
-    });
-
     //시작시 GSAP 효과
     const tl = gsap.timeline();
-    // gsap.set(".tText01", {
-    //     y: 80,
-    //     scaleY: 0,
-    // })
+    gsap.set(".tText01", {
+        y: 80,
+        scaleY: 0,
+    })
     gsap.set(".tText03", {
         y: 80,
         scaleY: 0,
@@ -104,12 +96,12 @@ function init(){
         delay: -0.5
     })
     .to(".tText01", {
-        // y: 0,
-        // scaleY: 1,
-        // duration: 1,
+        y: 0,
+        scaleY: 1,
+        duration: 1,
         delay: -1.4,
-        // ease: "power2.out",
-        onUpate: title01
+        ease: "power2.out",
+        onUpdate: titleUp
     })
     .to(".tText03", {
         y: 0,
@@ -143,43 +135,6 @@ function init(){
 }
 init();
 // sample();
-
-
-function title01(){
-
-    const selection1 = gsap.utils.toArray(".titleArr1");
-    
-    // GSAP 효과
-    const tl = gsap.timeline();
-
-    tl.to(selection1, {
-        transformOrigin: "bottom",
-        y: 0,
-        scaleY: 1,
-        duration: 1,
-        ease: "power2.out",
-        stagger: .06,
-    })
-    .to("html", {
-        delay: -3,
-        onUpate: titleTop,
-    })
-
-
-    function titleTop(){
-        for(let i=0; i<=7; i++){
-            document.documentElement.style.setProperty(`--title-top${i}`, '0');
-        }    
-    }
-}
-// title01();
-
-
-
-
-
-
-
 
 
 
@@ -217,13 +172,5 @@ function sample(){
     effectStart();
     slider();
     profilePicture();
-
-        // //타이틀 선택자
-        // const titleName1 = document.querySelector(".tText01");
-        // const word1 = titleName1.innerText.split("");
-        // titleName1.innerHTML = "";
-        // word1.forEach((e) => {
-        //     titleName1.innerHTML += `<span class='titleArr1'>${e}</span>`;
-        // });
 }
 

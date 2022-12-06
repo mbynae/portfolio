@@ -1,6 +1,5 @@
 html {
     --border-right-transform: scaleX(0);
-    --title-top : 1;
     --title-down : 1;
     --about-border: 0;
 }
