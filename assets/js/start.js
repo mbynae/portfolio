@@ -18,6 +18,14 @@ function init(){
         y: 80,
         scaleY: 0,
     })
+    gsap.set(".portpolioText", {
+        y: 20,
+        opacity: 0,
+    })
+    gsap.set(".dateText", {
+        y: 20,
+        opacity: 0,
+    })
 
 
     tl.to(".start_main", {
@@ -49,7 +57,7 @@ function init(){
     })
     .to(".start_main_2", {
         y: -120,
-        delay: -0.25,
+        delay: -0.26,
         duration: 0.3,
     })
     .to(".start_info", {
@@ -104,10 +112,25 @@ function init(){
         ease: "power2.out",
         onUpdate: titledown
     })
+    .to(".portpolioText", {
+        y: 0,
+        opacity: 1,
+        durantion: 3,
+        delay: -0.7,
+        ease: "power2.out"
+    })
+    .to(".dateText", {
+        y: 0,
+        opacity: 1,
+        durantion: 3,
+        delay: -0.5,
+        ease: "power2.out"
+    })
     .to(".profile_picture", {
         scaleY: 1,
         duration: 0.6,
-        delay: -0.8,
+        delay: -0.6,
+        ease: "power2.out",
         onComplete: effectStart, slider
     })
 }

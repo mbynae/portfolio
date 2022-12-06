@@ -1,7 +1,7 @@
 :root {
     --border-right-transform: scaleX(0);
-    --title-top : 0;
-    --title-down : 0;
+    --title-top : 1;
+    --title-down : 1;
 }
 
 
