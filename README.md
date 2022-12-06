@@ -1,2 +1,2 @@
 ﻿# portpolio-markup
-https://mbynae.github.io/portpolio-markup/html/index.html
+https://mbynae.github.io/portpolio/html/index.html
