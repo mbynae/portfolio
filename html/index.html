@@ -13,7 +13,7 @@
         <div class="start_inner">
             <div class="start_info_block"></div>
             <div class="start_info">
-                MAKE PORTPORIO<br>2022
+                MAKE PORTFORIO<br>2022
             </div>
             <div class="start_main">
               <span class="start_main_0">My <em>Dream</em></span> 
@@ -53,7 +53,7 @@
                 </div>
                 <div class="tText03">Developer</div>
                 <div class="subText">
-                    <span class="portpolioText">Make 2022<br>PORTPOLIO</span>
+                    <span class="portfolioText">Make 2022<br>PORTFOLIO</span>
                     <span class="dateText">Today's For <em class="year">2022</em>. <em class="month">11</em>. <em class="date">14</em><br><em class="week">Monday</em></span>
                 </div>
             </div>
@@ -65,8 +65,8 @@
         <div class="about_textBox">
             <h3>About Me</h3>
             <p class="nanum">
-                <em>창의적인 프론트엔드 개발자를</em>
-                꿈꾸는 문병내입니다. <br>모든 일에는 끊임없이 도전하는<br> 도전자 정신이 중요하다고 생각합니다.<br> 실력을 꾸준히 갈고 닦으며 언젠가<br> 꿈을 크게 펼치고 싶습니다.
+                <em class="bold">창의적인 프론트엔드 개발자를</em>
+                <em class="normal">꿈꾸는 문병내입니다. <br>모든 일에는 끊임없이 도전하는<br> 도전자 정신이 중요하다고 생각합니다.<br> 실력을 꾸준히 갈고 닦으며 언젠가<br> 꿈을 크게 펼치고 싶습니다.</em>
             </p>
             <figure>
                 <img src="../assets/img/sample_profile.png" alt="프로필 사진">
@@ -74,9 +74,9 @@
         </div>
         <div class="profile_picture">
             <figure>
-                <img src="../assets/img/about_sampleP01.png" alt="사진1">
-                <img src="../assets/img/about_sampleP02.png" alt="사진2">
-                <img src="../assets/img/about_sampleP03.png" alt="사진3">
+                <img src="../assets/img/about_sampleP03.png" alt="사진1" class="pofile1">
+                <img src="../assets/img/about_sampleP02.png" alt="사진2" class="pofile2">
+                <img src="../assets/img/about_sampleP01.png" alt="사진3" class="pofile3">
             </figure>
         </div>
     </section>
@@ -990,7 +990,7 @@
                     </button>
                 </a>
                 <p class="contact_finish">
-                    2022 ─ Moon, Byeong Nae. POTPORIO
+                    2022 ─ Moon, Byeong Nae. POTFORIO
                 </p>
             </div>
         </div>
@@ -1004,7 +1004,7 @@
         </div>
         <div class="contact_logo"></div>
         <div class="logo_text ppEiko">
-            <span>2022<br> <em>FRONTEND<br> PORTPOLIO</em></span>
+            <span>2022<br> <em>FRONTEND<br> PORTFOLIO</em></span>
         </div>
     </section>
 
@@ -1021,11 +1021,12 @@
     <script>
         const header = document.getElementById("header");
         const scrollNum = document.querySelector(".scrollNum");
+        gsap.registerPlugin(ScrollTrigger);
 
 
         // lenis 효과
             const lenis = new Lenis({
-                duration: 1.2,
+                duration: 2,
                 // easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
                 // direction: 'vertical', // vertical, horizontal
                 // gestureDirection: 'vertical', // vertical, horizontal, both
@@ -1049,8 +1050,11 @@
 
     </script>
 
-    <script src="../assets/js/start.js"></script>
-    <script src="../assets/js/title.js"></script>
+<script src="../assets/js/effect.js"></script>
+<script src="../assets/js/project.js"></script>
+<script src="../assets/js/about.js"></script>
+<script src="../assets/js/title.js"></script>
+<script src="../assets/js/start.js"></script>
 
 
 </body>

@@ -135,6 +135,7 @@
     color: #A2A2A2;
     display: flex;
     justify-content: space-between;
+    line-height: 1.2;
 }
 
 .about_circle {

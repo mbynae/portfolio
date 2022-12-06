@@ -8,7 +8,6 @@ function init(){
     }
 
     //시작시 GSAP 효과
-    gsap.registerPlugin(ScrollTrigger);
     const tl = gsap.timeline();
     gsap.set(".tText01", {
         y: 80,
@@ -18,7 +17,7 @@ function init(){
         y: 80,
         scaleY: 0,
     })
-    gsap.set(".portpolioText", {
+    gsap.set(".portfolioText", {
         y: 20,
         opacity: 0,
     })
@@ -26,8 +25,6 @@ function init(){
         y: 20,
         opacity: 0,
     })
-
-
     tl.to(".start_main", {
         x: -80,
         delay: 0.6,
@@ -68,13 +65,13 @@ function init(){
     .to(".earlybox", {
         y: '-100vh',
         duration: 1.1,
-        ease: Power3.easeOut,
+        ease: "Power3.easeOut",
     })
     .to("#title", {
         top: 0,
         duration: 1.2,
         delay: -0.9,
-        ease: Power3.easeOut,
+        ease: "Power3.easeOut",
     })
     .to("#header", {
         delay: -0.7,
@@ -107,22 +104,20 @@ function init(){
     .to(".tText03", {
         y: 0,
         scaleY: 1,
-        duration: 1,
+        duration: 0.6,
         delay: -1.1,
         ease: "power2.out",
         onUpdate: titledown
     })
-    .to(".portpolioText", {
+    .to(".portfolioText", {
         y: 0,
         opacity: 1,
-        durantion: 3,
         delay: -0.7,
         ease: "power2.out"
     })
     .to(".dateText", {
         y: 0,
         opacity: 1,
-        durantion: 3,
         delay: -0.5,
         ease: "power2.out"
     })
@@ -130,8 +125,10 @@ function init(){
         scaleY: 1,
         duration: 0.6,
         delay: -0.6,
-        ease: "power2.out",
-        onComplete: effectStart, slider
+        ease: "power2.out"
+    })
+    .to("html", {
+        onComplete: effectStart, slider, profilePicture
     })
 }
 init();
@@ -165,12 +162,34 @@ function sample(){
     // projectAni();
     effectStart();
     slider();
+    profilePicture();
 }
 // sample();
 
 
 
 //////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // project
