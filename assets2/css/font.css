@@ -1,0 +1,201 @@
+/* Gmarket */
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
+    font-display: swap;
+} 
+
+/* nanumsquere neo */
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 300;
+    font-style: normal;
+    src: url('../font/NanumSquareNeoTTF-aLt.eot');
+    src: url('../font/NanumSquareNeoTTF-aLt.eot?#iefix') format('embedded-opentype'),
+         url('../font/NanumSquareNeoTTF-aLt.woff') format('woff'),
+         url('../font/NanumSquareNeoTTF-aLt.woff2') format('woff2'),
+         url('../font/NanumSquareNeo-aLt.ttf') format("truetype");
+    font-display: swap;
+} 
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../font/NanumSquareNeoTTF-bRg.eot');
+    src: url('../font/NanumSquareNeoTTF-bRg.eot?#iefix') format('embedded-opentype'),
+         url('../font/NanumSquareNeoTTF-bRg.woff') format('woff'),
+         url('../font/NanumSquareNeoTTF-bRg.woff2') format('woff2'),
+         url('../font/NanumSquareNeo-bRg.ttf') format("truetype");
+    font-display: swap;
+} 
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 600;
+    font-style: normal;
+    src: url('../font/NanumSquareNeoTTF-cBd.eot');
+    src: url('../font/NanumSquareNeoTTF-cBd.eot?#iefix') format('embedded-opentype'),
+         url('../font/NanumSquareNeoTTF-cBd.woff') format('woff'),
+         url('../font/NanumSquareNeoTTF-cBd.woff2') format('woff2'),
+         url('../font/NanumSquareNeo-cBd.ttf') format("truetype");
+    font-display: swap;
+} 
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../font/NanumSquareNeoTTF-dEb.eot');
+    src: url('../font/NanumSquareNeoTTF-dEb.eot?#iefix') format('embedded-opentype'),
+         url('../font/NanumSquareNeoTTF-dEb.woff') format('woff'),
+         url('../font/NanumSquareNeoTTF-dEb.woff2') format('woff2'),
+         url('../font/NanumSquareNeo-dEb.ttf') format("truetype");
+    font-display: swap;
+} 
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 800;
+    font-style: normal;
+    src: url('../font/NanumSquareNeoTTF-eHv.eot');
+    src: url('../font/NanumSquareNeoTTF-eHv.eot?#iefix') format('embedded-opentype'),
+         url('../font/NanumSquareNeoTTF-eHv.woff') format('woff'),
+         url('../font/NanumSquareNeoTTF-eHv.woff2') format('woff2'),
+         url('../font/NanumSquareNeo-eHv.ttf') format("truetype");
+    font-display: swap;
+} 
+
+/* LeatherBoots */
+@font-face {
+    font-family: 'Leather Boots Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Leather Boots Regular'), url('LeatherBoots-gxn2E.woff') format('woff');
+    }
+
+/* PP Eiko */
+@font-face {
+    font-family: 'PP Eiko';
+    src: url('PPEiko-LightItalic.eot');
+    src: url('PPEiko-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('PPEiko-LightItalic.woff2') format('woff2'),
+        url('PPEiko-LightItalic.woff') format('woff'),
+        url('PPEiko-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Eiko';
+    src: url('PPEiko-BlackItalic.eot');
+    src: url('PPEiko-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('PPEiko-BlackItalic.woff2') format('woff2'),
+        url('PPEiko-BlackItalic.woff') format('woff'),
+        url('PPEiko-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Eiko';
+    src: url('PPEiko-Medium.eot');
+    src: url('PPEiko-Medium.eot?#iefix') format('embedded-opentype'),
+        url('PPEiko-Medium.woff2') format('woff2'),
+        url('PPEiko-Medium.woff') format('woff'),
+        url('PPEiko-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Eiko';
+    src: url('PPEiko-Heavy.eot');
+    src: url('PPEiko-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('PPEiko-Heavy.woff2') format('woff2'),
+        url('PPEiko-Heavy.woff') format('woff'),
+        url('PPEiko-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Eiko';
+    src: url('PPEiko-Thin.eot');
+    src: url('PPEiko-Thin.eot?#iefix') format('embedded-opentype'),
+        url('PPEiko-Thin.woff2') format('woff2'),
+        url('PPEiko-Thin.woff') format('woff'),
+        url('PPEiko-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* hana */
+@font-face {
+    font-family: 'Hana';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/hana/HanaLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/hana/HanaLight.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/hana/HanaLight.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/hana/HanaLight.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/hana/HanaLight.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Hana';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/hana/HanaMedium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/hana/HanaMedium.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/hana/HanaMedium.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/hana/HanaMedium.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/hana/HanaMedium.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Hana';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/hana/HanaBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/hana/HanaBold.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/hana/HanaBold.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/hana/HanaBold.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/hana/HanaBold.ttf') format("truetype");
+    font-display: swap;
+}
+    

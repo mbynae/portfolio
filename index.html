@@ -6,9 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>포트폴리오</title>
 
+    <!-- SEO -->
+    <meta name="author" content="piowm123" />
+    <meta name="description" content="포트폴리오입니다." />
+    <meta name="keyword" content="포트폴리오, portfolio, frontend, piowm123" />
+    <meta name="robots" content="all" />
+
+
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <!-- start -->
     <section id="start">
         <div class="start_inner">
             <div class="start_info_block"></div>
@@ -25,6 +33,7 @@
     </section>
     <div class="earlybox"></div>
 
+    <!-- header -->
     <header id="header">
         <nav>
             <ul>
@@ -36,6 +45,7 @@
         </nav>
     </header>
 
+    <!-- title -->
     <section id="title">
         <div class="title_inner">
             <div class="textBox">
@@ -61,6 +71,7 @@
         <div class="about_circle"></div>
     </section>
 
+    <!-- about -->
     <section id="about">
         <div class="about_textBox">
             <h3>About Me</h3>
@@ -81,6 +92,7 @@
         </div>
     </section>
 
+    <!-- myskill -->
     <section id="myskill">
         <div class="skill_textBox">
             <h3>ALL MY SKILL</h3>
@@ -148,6 +160,7 @@
         </div>
     </section>
 
+    <!-- project -->
     <section id="project">
         <div class="project_inner">
             <div class="project_title">
@@ -367,6 +380,7 @@
         </div>
     </section>
 
+    <!-- effect -->
     <div class="prevEffect">NEXT</div>
     <div class="middleBox"></div>
     <div class="middleBox2"></div>
@@ -810,6 +824,7 @@
         </div>
     </section>
 
+    <!-- summary -->
     <section id="summary">
         <div class="summary_inner">
             <h3>Project summary</h3>
@@ -954,6 +969,7 @@
         </div>
     </section>
 
+    <!-- contact -->
     <section id="contact">
         <div class="contact_box">
             <div class="contact_box_inner">
@@ -1008,8 +1024,6 @@
         </div>
     </section>
 
-    <!-- <section id="sample4"></section> -->
-
     <div class="scrollNum">0</div>
     
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
@@ -1022,8 +1036,7 @@
         const header = document.getElementById("header");
         const scrollNum = document.querySelector(".scrollNum");
         gsap.registerPlugin(ScrollTrigger);
-
-
+        
         // lenis 효과
             const lenis = new Lenis({
                 duration: 2,
