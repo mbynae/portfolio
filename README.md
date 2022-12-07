@@ -1,2 +1,2 @@
-﻿# portpolio
-https://mbynae.github.io/portpolio/html/index.html
+﻿# portfolio
+https://mbynae.github.io/portfolio/html/index.html
