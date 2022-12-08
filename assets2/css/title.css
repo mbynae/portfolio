@@ -24,16 +24,20 @@
     text-align: center;
 }
 .tText01 {
+    transform: translateX(0%) translateY(35%);
 }
 .tText02 {
-    font-size: 12.5000vw;
     position: relative;
-    color: #14CF93;
     font-weight: 300;
     font-style: italic;
     margin-top: -1.0417vw;
     z-index: 10;
     letter-spacing: -0.5208vw;
+    color: #00D293;
+    font-size: 12vw;
+}
+.tText03 {
+    transform: translateX(0) translateY(-35%);
 }
 .tText span {
     display: inline-block;
@@ -41,14 +45,13 @@
     transform: translateY(100px);
 }
 .split1 {
-    transform: translateX(0%) translateY(35%);
+
 }
 .split2 {
-    transform: translate(0) scale(1.4) rotate(10deg);
-    color: #383838;
+    transform: translate(0, 0) scale(1.6) rotate(20deg);
 }
 .split3 {
-    transform: translateX(0) translateY(-35%);
+
 }
 
 #sample {
