@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+</head>
+<body>
+
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">work</a></li>
+                <li><a href="#">site</a></li>
+                <li><a href="#">script</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="section1">
+            <div class="text__inner">
+                <div class="txt1 split">Creative</div>
+                <div class="txt2 split">frontend</div>
+                <div class="txt3 split">Developer</div>
+            </div>
+            <canvas id="canvas"></canvas>
+        </section>
+        <!-- //section1 -->
+
+        <section id="section2"></section><!-- //section1 -->
+        <section id="section3"></section><!-- //section1 -->
+        <section id="section4"></section><!-- //section1 -->
+        <section id="section5"></section><!-- //section1 -->
+        <section id="section6"></section><!-- //section1 -->
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script>
+        document.querySelectorAll(".split").forEach(desc => {
+            let splitText = desc.innerText;
+            let splitWrap = splitText.split('').join("</span><span aria-hidden='true'>");
+                splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
+                desc.innerHTML = splitWrap;
+                desc.setAttribute("aria-label", splitText);
+        })
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+
+        // setTimeout(() => {
+            let mainTl = gsap.timeline();
+            
+            mainTl.to("#canvas", {duration: 0.6, opacity: 0.5})
+            mainTl.to(".txt1 span", {duration: 0.6, stagger: 0.02, y: 0, opacity: 1, ease: Circ.easeOut, delay: 3}, "y")
+            mainTl.to(".txt3 span", {duration: 0.6, stagger: 0.02, y: 0, opacity: 1, ease: Circ.easeOut, delay: 3}, "y")
+            mainTl.to(".txt1", {duration: 0.6, y: 0, opacity: 1, ease: Circ.easeOut}, "y2")
+            mainTl.to(".txt3", {duration: 0.6, y: 0, opacity: 1, ease: Circ.easeOut}, "y2")
+            mainTl.to(".txt1", {duration: 0.6, x: "-20%", opacity: 1, ease: Circ.easeOut}, "y3")
+            mainTl.to(".txt3", {duration: 0.6, x: "13%", opacity: 1, ease: Circ.easeOut}, "y3")
+            mainTl.to(".txt2 span", {duration: 0.9, x: 0, y: 0, rotation: 0, scale: 1, stagger: 0.02, opacity: 1, ease: Circ.easeOut})
+            mainTl.to("#header", {duration: 0.6, top: 0})
+        // }, 2000);
+
+        gsap.to(".txt1 ", {
+            xPercent: -30,
+            ease: "none",
+            scrollTrigger: {
+                scrub: 1,
+            }
+        })
+        gsap.to(".txt3 ", {
+            xPercent: 30,
+            ease: "none",
+            scrollTrigger: {
+                scrub: 1,
+            }
+        })
+
+    </script>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        var cw = canvas.width = window.innerWidth,
+            cx = cw / 2;
+        var ch = canvas.height = window.innerHeight,
+            cy = ch / 2;
+
+        ctx.fillStyle = "#000";
+        var circlesRy = [];
+        var circlesNum = 15;
+        var requestId = null;
+
+        function Circle() {
+            this.r = randomIntFromInterval(25, 170);
+            this.x = randomIntFromInterval(this.r, cw - this.r);
+            this.y = randomIntFromInterval(this.r, ch - this.r);
+
+            this.vx = randomIntFromInterval(25, 100) / 100;
+            this.vy = randomIntFromInterval(25, 100) / 100;
+
+            this.update = function () {
+                this.edges();
+                this.x += this.vx;
+                this.y += this.vy;
+            }
+
+            this.edges = function () {
+                if (this.x < this.r || this.x > cw - this.r) {
+                    this.vx *= -1;
+                }
+                if (this.y < this.r || this.y > ch - this.r) {
+                    this.vy *= -1;
+                }
+            }
+
+            this.draw = function () {
+                ctx.strokeStyle = "#ccc";
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
+                ctx.stroke();
+            }
+        }
+
+        for (var i = 0; i < circlesNum; i++) {
+            var circle = new Circle();
+            circlesRy.push(circle);
+        }
+
+        function Draw() {
+            requestId = window.requestAnimationFrame(Draw);
+            ctx.clearRect(0, 0, cw, ch);
+            for (var i = 0; i < circlesRy.length; i++) {
+                var c = circlesRy[i];
+                c.update();
+                c.draw();
+            }
+            for (var i = 0; i < circlesRy.length; i++) {
+                var c = circlesRy[i];
+                for (var j = i + 1; j < circlesRy.length; j++) {
+                    var c1 = circlesRy[j];
+                    var d = dist(c, c1);
+                    if ((d < c.r + c1.r) && (d > Math.abs(c.r - c1.r))) {
+                        getIntersection(c, c1, d);
+                    }
+                }
+            }
+        }
+
+        function Init() {
+            circlesRy.length = 0;
+            for (var i = 0; i < circlesNum; i++) {
+                var circle = new Circle();
+                circlesRy.push(circle);
+            }
+
+            if (requestId) {
+                window.cancelAnimationFrame(requestId);
+                requestId = null;
+            }
+
+            cw = canvas.width = window.innerWidth,
+                cx = cw / 2;
+            ch = canvas.height = window.innerHeight,
+                cy = ch / 2;
+
+            Draw();
+        };
+
+        setTimeout(function () {
+            Init();
+
+            addEventListener('resize', Init, false);
+        }, 15);
+
+        function getIntersection(p1, p2, d) {
+
+            var p3 = {}; // middle point
+            var p4 = {}; // intersection 1
+            var p5 = {}; // intersection 2
+
+            var a = (Math.pow(p1.r, 2) - Math.pow(p2.r, 2) + Math.pow(d, 2)) / (2 * d)
+            var h = Math.sqrt(Math.pow(p1.r, 2) - Math.pow(a, 2));
+
+            p3.x = p1.x + a * (p2.x - p1.x) / d;
+            p3.y = p1.y + a * (p2.y - p1.y) / d;
+
+            p4.x = p3.x + h * (p2.y - p1.y) / d;
+            p4.y = p3.y - h * (p2.x - p1.x) / d;
+
+            p5.x = p3.x - h * (p2.y - p1.y) / d;
+            p5.y = p3.y + h * (p2.x - p1.x) / d;
+
+            markPoint(p4);
+            markPoint(p5);
+
+        }
+
+        function dist(p1, p2) {
+            var dx = p2.x - p1.x;
+            var dy = p2.y - p1.y;
+            return Math.sqrt(dx * dx + dy * dy);
+        }
+
+        function randomIntFromInterval(mn, mx) {
+            return ~~(Math.random() * (mx - mn + 1) + mn)
+        }
+
+        function markPoint(p) {
+            ctx.fillStyle = "#02ff43";
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, 2, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+    </script>
+</body>
+</html>

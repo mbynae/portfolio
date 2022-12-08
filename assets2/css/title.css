@@ -1,11 +1,12 @@
+#canvas {
+    position: absolute;
+    opacity: 0;
+}
 
 #title {
     width: 100%;
     height: 100vh;
-    /* position: fixed;
-    left: 0;
-    top: 0; */
-    background-color: #fff;
+    background: #FCFAF8;
 }
 .title_inner {
     height: 100%;
@@ -14,9 +15,12 @@
     align-items: center;
 }
 .title_inner .textBox {
-    color: #383838;
+    font-size: 11vw;
     line-height: 0.8;
-    font-size: 9.3750vw;
+    letter-spacing: -0.51vw;
+    color: #383838;
+    text-align: center;
+    padding: 0 5vw;
     text-align: center;
 }
 .tText01 {
@@ -33,19 +37,18 @@
 }
 .tText span {
     display: inline-block;
+    opacity: 0;
+    transform: translateY(100px);
 }
 .split1 {
-    transform: translateY(4.1667vw);
-    opacity: 0;
+    transform: translateX(0%) translateY(35%);
 }
 .split2 {
     transform: translate(0) scale(1.4) rotate(10deg);
-    opacity: 0;
     color: #383838;
 }
 .split3 {
-    transform: translateY(4.1667vw);
-    opacity: 0;
+    transform: translateX(0) translateY(-35%);
 }
 
 #sample {
