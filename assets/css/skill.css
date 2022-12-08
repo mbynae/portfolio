@@ -8,21 +8,20 @@
     margin: 0 auto;
 }
 .skill_textBox {
-    margin-bottom: 70px;
+    margin-bottom: 3.6458vw;
 }
 .skill_textBox h3 {
-    font-size: 2.0833vw;
+    font-size: 40px;
     font-weight: 700;
     color: #383838;
     margin-bottom: 10px;
 }
 .skill_textBox p {
     width: 100%;
-    max-width: 35.4167vw;
-    font-size: 0.9375vw;
-    line-height: 1.3021vw;
+    max-width: 680px;
+    font-size: 18px;
+    line-height: 25px;
 }
-
 
 /* 아이콘 박스 */
 .skill_iconBox {
@@ -33,53 +32,58 @@
 .skill_iconBox .icon {
     width: 13.3333%;
     margin-right: 4%;
-    margin-bottom: 100px;
+    margin-bottom: 5.2083vw;
+    position: relative;
 }
 .skill_iconBox .icon:nth-child(6){
     margin-right: 0;
 }
 .skill_iconBox .icon figure {
-    width: 200px;
-    height: 200px;
+    margin: 0 auto;
+    width: 10.4167vw;
+    height: 10.4167vw;
     border-radius: 50%;
     background-color: rgba(255, 248, 228, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 1.3021vw;
     transform-style: preserve-3d;
-    perspective: 500px;
-    transition: all 0.3s;
+    perspective: 26.0417vw;
     position: relative;
-    transform: rotateY(180deg);
+    transform: translateY(2.0833vw);
+    opacity: 0;
+    transition: all 0.3s;
 }
 
 .skill_iconBox .icon:nth-child(n+7) figure {
     background-color: rgba(245, 244, 244, 0.6);
 }
 .skill_iconBox .icon figure img {
-    width: 80px;
-    height: 80px;
+    width: 4.1667vw;
+    height: 4.1667vw;
     backface-visibility: hidden;
 }
-.skill_iconBox .icon figure.front {
-    transform: rotateY(0deg);
-}
-
 .skill_iconBox .icon:nth-child(4) figure img {
-    width: 110px;
-    height: 110px;
+    width: 5.7292vw;
+    height: 5.7292vw;
 }
 .skill_iconBox .icon:nth-child(7) figure img {
-    width: 120px;
-    height: 120px;
+    width: 6.2500vw;
+    height: 6.2500vw;
 }
 .skill_iconBox .icon span {
+    display: inline-block;
     font-family: 'Hana';
     font-weight: 300;
-    font-size: 25px;
-    display: block;
+    font-size: 1.3021vw;
     text-align: center;
+    position: absolute;
+    left: 0%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    width: 100%;
 }
 
 
@@ -100,25 +104,21 @@
 
 
 /* 아이콘 애니메이션 */
-.skill_iconBox .icon figure:hover {
-    transform: rotateY(180deg);
-}
-
 .skill_iconBox .icon figure::before {
     content: '';
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) rotateY(180deg);
-    width: 200px;
-    height: 200px;
+    width: 10.4167vw;
+    height: 10.4167vw;
     border-radius: 50%;
     backface-visibility: hidden;
-    font-size: 30px;
+    font-size: 1.5625vw;
     font-family: 'pp Eiko';
     font-weight: 1000;
     text-align: center;
-    line-height: 200px;
+    line-height: 10.4167vw;
 }
 .skill_iconBox .icon:nth-child(1) figure::before {content: 'Mark Up';}
 .skill_iconBox .icon:nth-child(2) figure::before {content: 'Style';}
@@ -129,3 +129,181 @@
 .skill_iconBox .icon:nth-child(7) figure::before {content: 'DataBase';}
 .skill_iconBox .icon:nth-child(8) figure::before {content: 'Library';}
 .skill_iconBox .icon:nth-child(9) figure::before {content: '3D Library';}
+
+@media (max-width: 1024px){
+    .skill_textBox h3 {
+        font-size: 3.5156vw;
+    }
+    .skill_textBox p {
+        width: 100%;    
+        font-size: 1.5625vw;
+        line-height: 1.9531vw;
+    }
+
+    .skill_iconBox .icon {
+        width: 16%;
+        margin-right: 4%;
+        margin-bottom: 5.2083vw;
+    }
+    .skill_iconBox .icon:nth-child(6){
+        margin-right: 4%;
+    }
+    .skill_iconBox .icon:nth-child(5){
+        margin-right: 0;
+    }
+    .skill_iconBox .icon figure {
+        width: 15.6250vw;
+        height: 15.6250vw;
+        margin-bottom: 1.8021vw;
+    }
+    .skill_iconBox .icon:nth-child(n+6) figure {
+        background-color: rgba(245, 244, 244, 0.6);
+    }
+    .skill_iconBox .icon figure img {
+        width: 5.8594vw;
+        height: 5.8594vw;
+    }
+    .skill_iconBox .icon:nth-child(4) figure img {
+        width: 8.7891vw;
+        height: 8.7891vw;
+    }
+    .skill_iconBox .icon:nth-child(7) figure img {
+        width: 9.7656vw;
+        height: 9.7656vw;
+    }
+    .skill_iconBox .icon span {
+        font-size: 1.9531vw;
+    }
+    
+    /* 아이콘 애니메이션 */
+    .skill_iconBox .icon figure::before {
+        width: 15.6250vw;
+        height: 15.6250vw;
+        font-size: 2.3438vw;
+        line-height: 15.6250vw;
+    }
+}
+
+@media (max-width: 768px){
+    .skill_textBox {
+        margin-bottom: 6.5104vw;
+    }
+    .skill_textBox h3 {
+        font-size: 4.4271vw;
+    }
+    .skill_textBox p {
+        width: 80%;    
+        font-size: 2.0833vw;
+        line-height: 2.6042vw;
+    }
+
+    .skill_iconBox .icon {
+        width: 26.6666%;
+        margin-right: 10%;
+        margin-bottom: 5.2083vw;
+    }
+    .skill_iconBox .icon:nth-child(3){
+        margin-right: 0;
+    }
+    .skill_iconBox .icon:nth-child(5){
+        margin-right: 10%;
+    }
+    .skill_iconBox .icon:nth-child(6){
+        margin-right: 0;
+    }
+    .skill_iconBox .icon:nth-child(9){
+        margin-right: 0;
+    }
+    .skill_iconBox .icon figure {
+        width: 24.7396vw;
+        height: 24.7396vw;
+        margin-bottom: 3.2552vw;
+    }
+    .skill_iconBox .icon:nth-child(n+4) figure {
+        background-color: rgba(232, 248, 231, 0.6);
+    }
+    .skill_iconBox .icon:nth-child(n+7) figure {
+        background-color: rgba(245, 244, 244, 0.6);
+    }
+    .skill_iconBox .icon figure img {
+        width: 9.1146vw;
+        height: 9.1146vw;
+    }
+    .skill_iconBox .icon:nth-child(4) figure img {
+        width: 13.0208vw;
+        height: 13.0208vw;
+    }
+    .skill_iconBox .icon:nth-child(7) figure img {
+        width: 14.3229vw;
+        height: 14.3229vw;
+    }
+    .skill_iconBox .icon span {
+        font-size: 2.6042vw;
+    }
+    
+    /* 아이콘 애니메이션 */
+    .skill_iconBox .icon figure::before {
+        width: 23.4375vw;
+        height: 23.4375vw;
+        font-size: 3.9063vw;
+        line-height: 23.4375vw;
+    }
+}
+
+@media (max-width: 480px){
+    .skill_textBox {
+        margin-bottom: 6.2500vw;
+    }
+    .skill_textBox h3 {
+        font-size: 6.2500vw;
+    }
+    .skill_textBox p {
+        width: 100%;    
+        font-size: 2.9167vw;
+        line-height: 4.1667vw;
+    }
+
+    .skill_iconBox .icon {
+        width: 26.6666%;
+        margin-right: 10%;
+        margin-bottom: 5.2083vw;
+    }
+    .skill_iconBox .icon:nth-child(3){
+        margin-right: 0;
+    }
+    .skill_iconBox .icon:nth-child(5){
+        margin-right: 10%;
+    }
+    .skill_iconBox .icon:nth-child(6){
+        margin-right: 0;
+    }
+    .skill_iconBox .icon:nth-child(9){
+        margin-right: 0;
+    }
+    .skill_iconBox .icon figure {
+        width: 22.9167vw;
+        height: 22.9167vw;
+        margin-bottom: 4.1667vw;
+    }
+    .skill_iconBox .icon:nth-child(n+4) figure {
+        background-color: rgba(232, 248, 231, 0.6);
+    }
+    .skill_iconBox .icon:nth-child(n+7) figure {
+        background-color: rgba(245, 244, 244, 0.6);
+    }
+    .skill_iconBox .icon figure img {
+        width: 9.3750vw;
+        height: 9.3750vw;
+    }
+    .skill_iconBox .icon:nth-child(4) figure img {
+        width: 14.5833vw;
+        height: 14.5833vw;
+    }
+    .skill_iconBox .icon:nth-child(7) figure img {
+        width: 16.6667vw;
+        height: 16.6667vw;
+    }
+    .skill_iconBox .icon span {
+        font-size: 4.1667vw;
+    }
+}
