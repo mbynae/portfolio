@@ -84,7 +84,7 @@ function aboutFadeIn(){
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: ".profile_picture",
-            markers: true,
+            // markers: true,
             start: "top 60%",
             end: "top 60%",
         }

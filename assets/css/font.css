@@ -99,17 +99,18 @@
     font-family: 'Leather Boots Regular';
     font-style: normal;
     font-weight: normal;
-    src: local('Leather Boots Regular'), url('LeatherBoots-gxn2E.woff') format('woff');
+    src: local('Leather Boots Regular'), url('../font/LeatherBoots-gxn2E.woff') format('woff'),
+    url('../font/LeatherBoots-gxn2E.ttf') format('truetype');
     }
 
 /* PP Eiko */
 @font-face {
     font-family: 'PP Eiko';
-    src: url('PPEiko-LightItalic.eot');
-    src: url('PPEiko-LightItalic.eot?#iefix') format('embedded-opentype'),
-        url('PPEiko-LightItalic.woff2') format('woff2'),
-        url('PPEiko-LightItalic.woff') format('woff'),
-        url('PPEiko-LightItalic.ttf') format('truetype');
+    src: url('../font/PPEiko-LightItalic.eot');
+    src: url('../font/PPEiko-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../font/PPEiko-LightItalic.woff2') format('woff2'),
+        url('../font/PPEiko-LightItalic.woff') format('woff'),
+        url('../font/PPEiko-LightItalic.ttf') format('truetype');
     font-weight: 300;
     font-style: italic;
     font-display: swap;
@@ -117,11 +118,11 @@
 
 @font-face {
     font-family: 'PP Eiko';
-    src: url('PPEiko-BlackItalic.eot');
-    src: url('PPEiko-BlackItalic.eot?#iefix') format('embedded-opentype'),
-        url('PPEiko-BlackItalic.woff2') format('woff2'),
-        url('PPEiko-BlackItalic.woff') format('woff'),
-        url('PPEiko-BlackItalic.ttf') format('truetype');
+    src: url('../font/PPEiko-BlackItalic.eot');
+    src: url('../font/PPEiko-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('../font/PPEiko-BlackItalic.woff2') format('woff2'),
+        url('../font/PPEiko-BlackItalic.woff') format('woff'),
+        url('../font/PPEiko-BlackItalic.ttf') format('truetype');
     font-weight: 900;
     font-style: italic;
     font-display: swap;
@@ -129,11 +130,11 @@
 
 @font-face {
     font-family: 'PP Eiko';
-    src: url('PPEiko-Medium.eot');
-    src: url('PPEiko-Medium.eot?#iefix') format('embedded-opentype'),
-        url('PPEiko-Medium.woff2') format('woff2'),
-        url('PPEiko-Medium.woff') format('woff'),
-        url('PPEiko-Medium.ttf') format('truetype');
+    src: url('../font/PPEiko-Medium.eot');
+    src: url('../font/PPEiko-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../font/PPEiko-Medium.woff2') format('woff2'),
+        url('../font/PPEiko-Medium.woff') format('woff'),
+        url('../font/PPEiko-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -141,11 +142,11 @@
 
 @font-face {
     font-family: 'PP Eiko';
-    src: url('PPEiko-Heavy.eot');
-    src: url('PPEiko-Heavy.eot?#iefix') format('embedded-opentype'),
-        url('PPEiko-Heavy.woff2') format('woff2'),
-        url('PPEiko-Heavy.woff') format('woff'),
-        url('PPEiko-Heavy.ttf') format('truetype');
+    src: url('../font/PPEiko-Heavy.eot');
+    src: url('../font/PPEiko-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('../font/PPEiko-Heavy.woff2') format('woff2'),
+        url('../font/PPEiko-Heavy.woff') format('woff'),
+        url('../font/PPEiko-Heavy.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -153,11 +154,11 @@
 
 @font-face {
     font-family: 'PP Eiko';
-    src: url('PPEiko-Thin.eot');
-    src: url('PPEiko-Thin.eot?#iefix') format('embedded-opentype'),
-        url('PPEiko-Thin.woff2') format('woff2'),
-        url('PPEiko-Thin.woff') format('woff'),
-        url('PPEiko-Thin.ttf') format('truetype');
+    src: url('../font/PPEiko-Thin.eot');
+    src: url('../font/PPEiko-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../font/PPEiko-Thin.woff2') format('woff2'),
+        url('../font/PPEiko-Thin.woff') format('woff'),
+        url('../font/PPEiko-Thin.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
     font-display: swap;

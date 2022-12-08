@@ -138,11 +138,11 @@ function init(){
         ease: "power2.out"
     })
     .to("html", {
-        onComplete: effectStart, slider, profilePicture
+        onComplete: effectStart, slider, profilePicture, mySkillEffect
     })
 }
-init();
-// sample();
+// init();
+sample();
 
 
 function title01(){
@@ -217,6 +217,7 @@ function sample(){
     effectStart();
     slider();
     profilePicture();
+    mySkillEffect();
 
         // //타이틀 선택자
         // const titleName1 = document.querySelector(".tText01");

@@ -105,11 +105,11 @@
 /* PP Eiko */
 @font-face {
     font-family: 'PP Eiko';
-    src: url('PPEiko-LightItalic.eot');
-    src: url('PPEiko-LightItalic.eot?#iefix') format('embedded-opentype'),
-        url('PPEiko-LightItalic.woff2') format('woff2'),
-        url('PPEiko-LightItalic.woff') format('woff'),
-        url('PPEiko-LightItalic.ttf') format('truetype');
+    src: url('../../assets/font/PPEiko-LightItalic.eot');
+    src: url('../../assets/font/PPEiko-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/font/PPEiko-LightItalic.woff2') format('woff2'),
+        url('../../assets/font/PPEiko-LightItalic.woff') format('woff'),
+        url('../../assets/font/PPEiko-LightItalic.ttf') format('truetype');
     font-weight: 300;
     font-style: italic;
     font-display: swap;

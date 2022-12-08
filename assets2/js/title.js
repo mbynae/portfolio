@@ -5,9 +5,6 @@ function titleText(){
     tText.forEach((e, i) => {
         tText[i].innerHTML = `<span class='split${i+1}'>${document.querySelector(`.tText0${i+1}`).innerText.split("").join(`</span><span class=split${i+1}>`)}</span>`;
     })
-
-    const reverseSplit3 = [...document.querySelectorAll(".split3")].reverse();
-    console.log(reverseSplit3.innerText);
     
     const titleTl = gsap.timeline();
     gsap.set(".tText01", {y: "30%"})
