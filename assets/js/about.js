@@ -49,16 +49,6 @@ function profilePicture(){
 // 소개 텍스트 페이드인 효과 
 function aboutFadeIn(){
 
-    //타이틀 선택자
-    const aboutName = document.querySelector(".about_textBox h3");
-    const word = aboutName.innerText.split("");
-    aboutName.innerHTML = "";
-    word.forEach((e) => {
-        aboutName.innerHTML += `<span class='aboutArr'>${e}</span>`;
-    });
-    const selection = gsap.utils.toArray(".aboutArr");
-    
-
     //내용 선택자
     const aboutDescBold = document.querySelector(".about_textBox p .bold");
     const aboutDescNormal = document.querySelector(".about_textBox p .normal");
@@ -84,35 +74,27 @@ function aboutFadeIn(){
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: ".profile_picture",
-            // markers: true,
+            // markers: true,  
             start: "top 60%",
             end: "top 60%",
         }
     })
 
-    gsap.set(selection, {
+    gsap.set(selection2, {
         y: 20
     })
-    tl.to(selection, {
-        duration: .5,
+    tl.to(selection2, {
+        duration: 0.4,
         y: 0,
         opacity: 1,
-        stagger: .06,
-    })
-    .to("html", {
-        "--about-border": 1,
-        delay: -0.4,
-    })
-    .to(selection2, {
-        duration: .5,
-        opacity: 1,
-        stagger: .03,
+        stagger: 0.04,
     })
     .to(selection3, {
-        duration: .5,
+        duration: 0.5,
+        y: 0,
         opacity: 1,
         delay: -0.2,
-        stagger: .01,
+        stagger: .006,
     })
 }
 

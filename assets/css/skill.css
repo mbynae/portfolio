@@ -120,15 +120,15 @@
     text-align: center;
     line-height: 10.4167vw;
 }
-.skill_iconBox .icon:nth-child(1) figure::before {content: 'Mark Up';}
-.skill_iconBox .icon:nth-child(2) figure::before {content: 'Style';}
-.skill_iconBox .icon:nth-child(3) figure::before {content: 'Script';}
-.skill_iconBox .icon:nth-child(4) figure::before {content: 'Server side';}
-.skill_iconBox .icon:nth-child(5) figure::before {content: 'SPA';}
-.skill_iconBox .icon:nth-child(6) figure::before {content: 'Framework';}
-.skill_iconBox .icon:nth-child(7) figure::before {content: 'DataBase';}
-.skill_iconBox .icon:nth-child(8) figure::before {content: 'Library';}
-.skill_iconBox .icon:nth-child(9) figure::before {content: '3D Library';}
+.skill_iconBox .icon:nth-child(1) figure::before {content: '95%';}
+.skill_iconBox .icon:nth-child(2) figure::before {content: '90%';}
+.skill_iconBox .icon:nth-child(3) figure::before {content: '85%';}
+.skill_iconBox .icon:nth-child(4) figure::before {content: '60%';}
+.skill_iconBox .icon:nth-child(5) figure::before {content: '75%';}
+.skill_iconBox .icon:nth-child(6) figure::before {content: '60%';}
+.skill_iconBox .icon:nth-child(7) figure::before {content: '50%';}
+.skill_iconBox .icon:nth-child(8) figure::before {content: '30%';}
+.skill_iconBox .icon:nth-child(9) figure::before {content: '15%';}
 
 @media (max-width: 1024px){
     .skill_textBox h3 {

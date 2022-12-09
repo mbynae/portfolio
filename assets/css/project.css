@@ -12,24 +12,28 @@
     margin-bottom: 190px;
 }
 .project_title h2 {
-    font-size: 150px;
+    font-size: 160px;
     color: #151515;
     line-height: 1.1;
     margin-bottom: 20px;
+    text-align: center;
+    transform: translateX(-10%);
 }
-.project_title h2 .emphasis {
-    font-size: 200px;
+.project_title .emphasis {
+    display: block;
+    font-size: 220px;
+    font-weight: 100;
     color: #14CF93;
-    margin-left: 580px;
+    margin-top: -80px;
+    text-align: center;
+    transform: translateX(10%);
 }
 .project_titleLine {
     font-family: 'PP Eiko';
     font-weight: 300;
     font-size: 40px;
     float:right;
-    /* padding-bottom: 10px; */
     padding-left: 30%;
-    /* border-bottom: 2px solid #151515; */
     position: relative;
 }
 .project_titleLine::before {
@@ -38,15 +42,40 @@
     border: 1px solid #151515;
     position: absolute;
     right: 0;
+    transform-origin: right;
+    transform: scaleX(var(--pr-border));
     bottom: -10px;
 }
+.prSplit1 {
+    display: inline-block;
+    min-width: 1vw;
+}
+.prSplit2 {
+    display: inline-block;
+    min-width: 1vw;
+}
+
+
+
 
 
 /* contents */
 .project_table {
     width: 100%;
     display: flex;
+    /* border-top: 1px solid rgba(21, 21, 21, 0.35); */
+    position: relative;
+}
+.table_border {
+    content: '';
+    width: 100%;
+    height: 1px;
     border-top: 1px solid rgba(21, 21, 21, 0.35);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: scaleX(var(--pr-border2));
+    z-index: 10;
 }
 .project_sideMenu {
     width: 26%;
@@ -61,6 +90,8 @@
     background-color: #000;
     margin-bottom: 10px;
     cursor: pointer;
+    transform: translateY(200%);
+    opacity: 0;
 }
 .project_sideMenu .button1 {
     margin-top: 50px;
@@ -80,12 +111,14 @@
 .project_contentsInner {
     width: 100%;
     height: 800px;
-    /* border: 1px solid rgba(21, 21, 21, 0.35); */
     display: flex;
 }
 .project_textBox {
     width: 50%;
     border: 1px solid rgba(21, 21, 21, 0.35);
+    background-color: #fff;
+    transform: translateY(25%);
+    opacity: 0;
 }
 .project_textBox .projectText {
     word-break: keep-all;
@@ -115,22 +148,26 @@
 .project_imgBox {
     width: 50%;
     border: 1px solid rgba(21, 21, 21, 0.35);
+    background-color: #fff;
+    transform: translateY(25%);
+    opacity: 0;
 }
 .project_imgBox img {
     width: 100%;
     max-height: 700px;
 }
+
+.project_textBox:nth-child(n),
+.project_imgBox:nth-child(n) {
+    border-top: var(--pr-border3);
+}
+
 .leftpd {
     padding: 50px;
-    /* 임시 */
-    border-top: 0;
 }
 .rightpd {
     padding: 50px 0 50px 50px;
-    /* 임시 */
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
+    margin-left: -1px;
 }
 
 

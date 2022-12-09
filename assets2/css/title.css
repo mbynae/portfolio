@@ -42,16 +42,16 @@
 .tText span {
     display: inline-block;
     opacity: 0;
-    transform: translateY(100px);
+
 }
 .split1 {
-
+    transform: translateY(100px);
 }
 .split2 {
     transform: translate(0, 0) scale(1.6) rotate(20deg);
 }
 .split3 {
-
+    transform: translateY(100px);
 }
 
 #sample {

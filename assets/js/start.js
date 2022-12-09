@@ -141,8 +141,8 @@ function init(){
         onComplete: effectStart, slider, profilePicture, mySkillEffect
     })
 }
-init();
-// sample();
+// init();
+sample();
 
 
 function title01(){

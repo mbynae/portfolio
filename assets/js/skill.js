@@ -5,6 +5,7 @@ function mySkillEffect(){
         skillText[i].innerHTML = `<span class='skSplit${i+1}'>${document.querySelector(`.skText0${i+1}`).innerText.split("").join(`</span><span class=skSplit${i+1}>`)}</span>`;
     })
     document.querySelectorAll(".skSplit2")[38].insertAdjacentElement("afterend", document.createElement("br"));
+    const skillBox = gsap.utils.toArray(".skill_iconBox .icon");
     const skillIcon = gsap.utils.toArray(".skill_iconBox .icon .view");
     const skillName = gsap.utils.toArray(".skill_iconBox .icon span");
 
@@ -13,7 +14,7 @@ function mySkillEffect(){
             trigger: "#myskill",
             start: "top, 70%",
             end: "top, 70%",
-            markers: true
+            // markers: true
         }
     })
     
@@ -25,12 +26,12 @@ function mySkillEffect(){
     
 
     function addFront(){
-        skillIcon.forEach((e)=>{
+        skillBox.forEach((e,i)=>{
             e.addEventListener("mouseenter",()=>{
-                e.style.transform = "rotateY(180deg)";
+                skillIcon[i].style.transform = "rotateY(180deg)";
             });
             e.addEventListener("mouseleave",()=>{
-                e.style.transform = "rotateY(0deg)";
+                skillIcon[i].style.transform = "rotateY(0deg)";
             })
         })
     }

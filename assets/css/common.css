@@ -2,6 +2,8 @@ html {
     --border-right-transform: scaleX(0);
     --title-down : 1;
     --about-border: 0;
+    --pr-border: 0;
+    --pr-border2: 0;
 }
 
 
