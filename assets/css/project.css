@@ -159,7 +159,7 @@
 
 .project_textBox:nth-child(n),
 .project_imgBox:nth-child(n) {
-    border-top: var(--pr-border3);
+    border-top: 0;
 }
 
 .leftpd {
