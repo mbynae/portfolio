@@ -1,0 +1,125 @@
+/* 프로필 배경 */
+#about {
+    height: 200vh;
+    background: url("../img/about_Bg.png") no-repeat center / cover;
+    padding-top: 100px;
+}
+
+/* 프로필 텍스트 */
+.about_textBox {
+    width: 50%;
+    height: 50vh;
+    color: #383838;
+    z-index: 1;
+    margin: 0 auto 200px auto;
+    position: relative;
+}
+.about_textBox p {
+    margin-bottom: 46px;
+    font-size: 28px;
+    line-height: 36px;
+}
+.about_textBox p .bold {
+    display: block;
+    font-family: 'GmarketSans';
+    font-weight: 700;
+    font-size: 70px;
+    margin-bottom: 14px;
+    word-break: keep-all;
+    mix-blend-mode: color-burn;
+    position: absolute;
+    left: 0;
+}
+.about_textBox p .bold-1 {
+    top: 10%;
+}
+.about_textBox p .bold-2 {
+    top: 25%;
+}
+.about_textBox p .bold span {
+    display: inline-block;
+    min-width: 1vw;
+    transform: translateY(20px);
+    opacity: 0;
+}
+.about_textBox p .normal {
+    position: absolute;
+    left: 0;
+    top: 35%;
+    mix-blend-mode: color-burn;
+}
+.about_textBox p .normal span {
+    display: inline-block;
+    min-width: 0.2vw;
+    opacity: 0;
+}
+.about_textBox p .aText03 {
+    transform: translateY(35px);
+}
+.about_textBox p .aText04 {
+    transform: translateY(75px);
+}
+.about_textBox p .aText05 {
+    transform: translateY(115px);
+}
+.about_textBox p .aText06 {
+    transform: translateY(155px);
+}
+.about_textBox p .aText07 {
+    transform: translateY(195px);
+}
+
+
+/* 프로필 사진 */
+.about_textBox figure {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+}
+.about_textBox figure img {
+    display: inline-block;
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+}
+
+.profile_picture {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.profile_picture .cards {
+    width: 300px;
+    height: 453px;
+    filter : grayscale(1);
+}
+.profile_picture .card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 453px;
+    border-radius: 25px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: transparent;
+}
+.profile_picture .card-1 {
+    background: url(../img/about_sampleP01.png);
+}
+.profile_picture .card-2 {
+    background: url(../img/about_sampleP02.png);
+}
+.profile_picture .card-3 {
+    background: url(../img/about_sampleP03.png);
+}
+
+
+
+ 
+

@@ -42,7 +42,9 @@ body::-webkit-scrollbar-track {
     top: 100px;
 }
 
-#sample4 {
-    width: 100%;
-    height: 500vh;
+@media (max-width: 1300px){
+    body {
+        width: 96%;
+        padding: 0 2%;
+    }
 }

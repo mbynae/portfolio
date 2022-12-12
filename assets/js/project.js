@@ -38,13 +38,13 @@ function projectCont(){
         scrollTrigger: {
             trigger: ".project_table",
             start: "top, 12%",
-            end: () => `+=${document.querySelector(".project_contentsInner").offsetHeight * 2}`,
+            end: () => `+=${document.querySelector(".project_contentsInner").offsetHeight * 1.5}`,
             // markers: true,
             pin: true,
             scrub: 1
         }
     })
-    prSticky1.to(".sticky1", {yPercent: -100, duration: 0.2, stagger: 0.15})
+    prSticky1.to(".sticky1", {yPercent: -100, duration: 0.2})
 
     const prSticky2 = gsap.timeline({
         scrollTrigger: {
@@ -53,23 +53,66 @@ function projectCont(){
             end: () => `+=${document.querySelector(".project_contentsInner").offsetHeight * 1.5}`,
             // markers: true,
             pin: true,
-            scrub: 1
+            scrub: 1,
+            onLeave: ()=>{
+                document.querySelectorAll(".sticky2").forEach((e) => {
+                    e.classList.add("borderTop");
+                })
+            },
+            onEnterBack: ()=>{
+                document.querySelectorAll(".sticky2").forEach((e) => {
+                    e.classList.remove("borderTop");
+                })
+            }
         }
     })
-    prSticky2.to(".sticky2", {yPercent: -100, duration: 0.2, stagger: 0.15})
+    prSticky2.to(".sticky2", {yPercent: -100, duration: 0.2})
 
     const prSticky3 = gsap.timeline({
         scrollTrigger: {
             trigger: ".project_table",
             start: `${document.querySelector(".project_contentsInner").offsetHeight * 3}, 12%`,
-            end: () => `+=${document.querySelector(".project_contentsInner").offsetHeight * 4}`,
-            // markers: true,
+            end: () => `+=${document.querySelector(".project_contentsInner").offsetHeight * 3}`,
+            markers: true,
             pin: true,
-            scrub: 1
+            scrub: 1,
+            onLeave: ()=>{
+                document.querySelectorAll(".sticky3").forEach((e) => {
+                    e.classList.add("borderTop");
+                })
+            },
+            onEnterBack: ()=>{
+                document.querySelectorAll(".sticky3").forEach((e) => {
+                    e.classList.remove("borderTop");
+                })
+            }
         }
     })
-    prSticky3.to(".sticky3_1", {yPercent: -100, duration: 0.2, stagger: 0.15}, "sticky3")
-    prSticky3.to(".sticky3_2", {yPercent: -200, duration: 0.4, delay: 0.2, stagger: 0.15}, "sticky3")
+    prSticky3.to(".sticky3_1", {yPercent: -100, duration: 0.2}, "sticky3")
+    prSticky3.to(".sticky3_2", {yPercent: -200, duration: 0.4, delay: 0.1}, "sticky3")
+
+    const prSticky4 = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".project_table",
+            start: `${document.querySelector(".project_contentsInner").offsetHeight * 4}, 12%`,
+            end: () => `+=${document.querySelector(".project_contentsInner").offsetHeight * 1.5}`,
+            markers: true,
+            pin: true,
+            scrub: 1,
+            onLeave: ()=>{
+                document.querySelectorAll(".sticky4").forEach((e) => {
+                    e.classList.add("borderTop");
+                });
+                gsap.to(".prCB5", {scaleX: 1, duration: 0.3})
+            },
+            onEnterBack: ()=>{
+                document.querySelectorAll(".sticky4").forEach((e) => {
+                    e.classList.remove("borderTop");
+                })
+            }
+        }
+    })
+    prSticky4.to(".sticky4", {yPercent: -100, duration: 0.2})
 
 
 
@@ -85,7 +128,7 @@ function projectCont(){
     })
     .to(".button1", {y: 0, opacity: 1, duration: 0.8, ease: "power2.out"}, "table1")
     .to(".leftpd1", {y: 0, opacity: 1, delay: 0.2, duration: 0.8, ease: "power2.out"}, "table1")
-    .to(".rightpd1", {y: 0, opacity: 1, delay: 0.4, duration: 0.8, ease: "power2.out"}, "table1");
+    .to(".rightpd1", {y: 0, opacity: 1, delay: 0.4, duration: 0.8, ease: "power2.out"}, "table1")   
 
     gsap.timeline({
         scrollTrigger: {
@@ -98,7 +141,9 @@ function projectCont(){
     .to(".prCB1", {scaleX: 1, duration: 0.3}, "table2")
     .to(".button2", {y: `${document.querySelector(".project_textBox").offsetHeight * 0.9}px`, opacity: 1, duration: 1, ease: "power2.out"}, "table2")
     .to(".leftpd2", {y: `-${document.querySelector(".project_textBox").offsetHeight}`, opacity: 1, delay: 0.2, duration: 1, ease: "power2.out"}, "table2")
-    .to(".rightpd2", {y: `-${document.querySelector(".project_textBox").offsetHeight}`, opacity: 1, delay: 0.4, duration: 1, ease: "power2.out"}, "table2");
+    .to(".rightpd2", {y: `-${document.querySelector(".project_textBox").offsetHeight}`, opacity: 1, delay: 0.4, duration: 1, ease: "power2.out"}, "table2")
+    .to(".leftpd2", {borderTop: 0 , delay: 0.5,ease: "none"}, "table2")
+    .to(".rightpd2", {borderTop: 0, delay: 0.5, ease: "none"}, "table2");
 
     gsap.timeline({
         scrollTrigger: {
@@ -111,7 +156,9 @@ function projectCont(){
     .to(".prCB2", {scaleX: 1, duration: 0.3}, "table3")
     .to(".button3", {y: `${document.querySelector(".project_textBox").offsetHeight * 1.8}px`, opacity: 1, duration: 1, ease: "power2.out"}, "table3")
     .to(".leftpd3", {y: `-${document.querySelector(".project_textBox").offsetHeight}`, opacity: 1, delay: 0.2, duration: 1, ease: "power2.out"}, "table3")
-    .to(".rightpd3", {y: `-${document.querySelector(".project_textBox").offsetHeight}`, opacity: 1, delay: 0.4, duration: 1, ease: "power2.out"}, "table3");
+    .to(".rightpd3", {y: `-${document.querySelector(".project_textBox").offsetHeight}`, opacity: 1, delay: 0.4, duration: 1, ease: "power2.out"}, "table3")
+    .to(".ltb3", {borderTop: 0 , delay: 0.5,ease: "none"}, "table3")
+    .to(".rtb3", {borderTop: 0, delay: 0.7, ease: "none"}, "table3");
 
     gsap.timeline({
         scrollTrigger: {
@@ -124,12 +171,14 @@ function projectCont(){
     .to(".prCB3", {scaleX: 1, duration: 0.3}, "table4")
     .to(".button4", {y: `${document.querySelector(".project_textBox").offsetHeight * 2.7}px`, opacity: 1, duration: 1, ease: "power2.out"}, "table4")
     .to(".leftpd4", {y: `-${document.querySelector(".project_textBox").offsetHeight * 2}`, opacity: 1, delay: -0.2, duration: 1.5, ease: "power2.out"}, "table4")
-    .to(".rightpd4", {y: `-${document.querySelector(".project_textBox").offsetHeight * 2}`, opacity: 1, delay: 0.2, duration: 1.5, ease: "power2.out"}, "table4");
+    .to(".rightpd4", {y: `-${document.querySelector(".project_textBox").offsetHeight * 2}`, opacity: 1, delay: 0.2, duration: 1.5, ease: "power2.out"}, "table4")
+    .to(".ltb4", {borderTop: 0 , delay: 0.8,ease: "none"}, "table4")
+    .to(".rtb4", {borderTop: 0, delay: 1, ease: "none"}, "table4");
 
     gsap.timeline({
         scrollTrigger: {
             trigger: ".project_table",
-            markers: true,
+            // markers: true,
             start: `${document.querySelector(".project_textBox").offsetHeight*4}, 80%`,
             end: "top, 80%"
         }
@@ -137,7 +186,9 @@ function projectCont(){
     .to(".prCB4", {scaleX: 1, duration: 0.3}, "table5")
     .to(".button5", {y: `${document.querySelector(".project_textBox").offsetHeight * 3.6}px`, opacity: 1, duration: 1, ease: "power2.out"}, "table5")
     .to(".leftpd5", {y: `-${document.querySelector(".project_textBox").offsetHeight * 4}`, opacity: 1, delay: -0.3, duration: 1.5, ease: "power2.out"}, "table5")
-    .to(".rightpd5", {y: `-${document.querySelector(".project_textBox").offsetHeight * 4}`, opacity: 1, delay: 0.2, duration: 1.5, ease: "power2.out"}, "table5");
+    .to(".rightpd5", {y: `-${document.querySelector(".project_textBox").offsetHeight * 4}`, opacity: 1, delay: 0.2, duration: 1.5, ease: "power2.out"}, "table5")
+    .to(".ltb5", {borderTop: 0 , delay: 0.8,ease: "none"}, "table5")
+    .to(".rtb5", {borderTop: 0, delay: 1, ease: "none"}, "table5");
 }
 projectCont();
 
