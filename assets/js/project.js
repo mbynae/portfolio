@@ -34,7 +34,7 @@ function projectCont(){
         scrollTrigger: {
             trigger: ".project_table",
             start: "top, 12%",
-            end: () => `+=${document.querySelector(".project_contentsInner").offsetHeight * 1.5}`,
+            end: () => `+=${document.querySelector(".project_contentsInner").offsetHeight * 2}`,
             // markers: true,
             pin: true,
             scrub: 1
@@ -46,13 +46,26 @@ function projectCont(){
         scrollTrigger: {
             trigger: ".project_table",
             start: `${document.querySelector(".project_contentsInner").offsetHeight * 2}, 12%`,
-            end: () => `+=${document.querySelector(".project_contentsInner").offsetHeight * 1.5}`,
-            markers: true,
+            end: () => `+=${document.querySelector(".project_contentsInner").offsetHeight * 2}`,
+            // markers: true,
             pin: true,
             scrub: 1
         }
     })
     prSticky2.to(".sticky2", {yPercent: -100, duration: 0.2, stagger: 0.15})
+
+    const prSticky3 = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".project_table",
+            start: `${document.querySelector(".project_contentsInner").offsetHeight * 3}, 12%`,
+            end: () => `+=${document.querySelector(".project_contentsInner").offsetHeight * 4}`,
+            markers: true,
+            pin: true,
+            scrub: 1
+        }
+    })
+    prSticky3.to(".sticky3_1", {yPercent: -100, duration: 0.2, stagger: 0.15})
+    prSticky3.to(".sticky3_2", {yPercent: -200, duration: 0.2, stagger: 0.15})
 
 
 
@@ -75,7 +88,7 @@ function projectCont(){
             trigger: ".project_table",
             // markers: true,
             start: `${document.querySelector(".project_textBox").offsetHeight}, 80%`,
-            end: "top, 60%"
+            end: "top, 80%"
         }
     })
     .to(".prCB1", {scaleX: 1, duration: 0.3}, "table2")
@@ -88,13 +101,26 @@ function projectCont(){
             trigger: ".project_table",
             // markers: true,
             start: `${document.querySelector(".project_textBox").offsetHeight*2}, 80%`,
-            end: "top, 60%"
+            end: "top, 80%"
         }
     })
     .to(".prCB2", {scaleX: 1, duration: 0.3}, "table3")
     .to(".button3", {y: `${document.querySelector(".project_textBox").offsetHeight * 1.8}px`, opacity: 1, duration: 1, ease: "power2.out"}, "table3")
     .to(".leftpd3", {y: `-${document.querySelector(".project_textBox").offsetHeight}`, opacity: 1, delay: 0.2, duration: 1, ease: "power2.out"}, "table3")
     .to(".rightpd3", {y: `-${document.querySelector(".project_textBox").offsetHeight}`, opacity: 1, delay: 0.4, duration: 1, ease: "power2.out"}, "table3");
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: ".project_table",
+            // markers: true,
+            start: `${document.querySelector(".project_textBox").offsetHeight*3}, 80%`,
+            end: "top, 80%"
+        }
+    })
+    .to(".prCB3", {scaleX: 1, duration: 0.3}, "table4")
+    .to(".button4", {y: `${document.querySelector(".project_textBox").offsetHeight * 2.7}px`, opacity: 1, duration: 1, ease: "power2.out"}, "table4")
+    .to(".leftpd4", {y: `-${document.querySelector(".project_textBox").offsetHeight * 2}`, opacity: 1, delay: 0.2, duration: 1, ease: "power2.out"}, "table4")
+    .to(".rightpd4", {y: `-${document.querySelector(".project_textBox").offsetHeight * 2}`, opacity: 1, delay: 0.4, duration: 1, ease: "power2.out"}, "table4");
 }
 projectCont();
 
