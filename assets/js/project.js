@@ -1,7 +1,5 @@
 function projectTitle(){
-
     const projectName = document.querySelectorAll(".prName");
-    console.log(projectName);
     
 
     projectName.forEach((e, i) => {
@@ -31,23 +29,39 @@ projectTitle();
 
 function projectCont(){
 
-    const prSticky = gsap.timeline({
+    // 스티키 효과
+    const prSticky1 = gsap.timeline({
         scrollTrigger: {
             trigger: ".project_table",
             start: "top, 12%",
-            end: () => `+=${document.querySelector(".project_contentsInner").offsetHeight*10}`,
+            end: () => `+=${document.querySelector(".project_contentsInner").offsetHeight * 1.5}`,
+            // markers: true,
+            pin: true,
+            scrub: 1
+        }
+    })
+    prSticky1.to(".sticky1", {yPercent: -100, duration: 0.2, stagger: 0.15})
+
+    const prSticky2 = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".project_table",
+            start: `${document.querySelector(".project_contentsInner").offsetHeight * 2}, 12%`,
+            end: () => `+=${document.querySelector(".project_contentsInner").offsetHeight * 1.5}`,
             markers: true,
             pin: true,
             scrub: 1
         }
     })
-    prSticky.to(".sticky1", {yPercent: -100, duration: 0.2, stagger: 0.15, toComplete: asd})
+    prSticky2.to(".sticky2", {yPercent: -100, duration: 0.2, stagger: 0.15})
 
 
+
+
+    // 등장 효과
     gsap.timeline({
         scrollTrigger: {
             trigger: ".project_table",
-            markers: true,
+            // markers: true,
             start: "top, 60%",
             end: "top, 60%"
         }
@@ -55,18 +69,43 @@ function projectCont(){
     .to(".button1", {y: 0, opacity: 1, duration: 0.8, ease: "power2.out"}, "table1")
     .to(".leftpd1", {y: 0, opacity: 1, delay: 0.2, duration: 0.8, ease: "power2.out"}, "table1")
     .to(".rightpd1", {y: 0, opacity: 1, delay: 0.4, duration: 0.8, ease: "power2.out"}, "table1");
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: ".project_table",
+            // markers: true,
+            start: `${document.querySelector(".project_textBox").offsetHeight}, 80%`,
+            end: "top, 60%"
+        }
+    })
+    .to(".prCB1", {scaleX: 1, duration: 0.3}, "table2")
+    .to(".button2", {y: `${document.querySelector(".project_textBox").offsetHeight * 0.9}px`, opacity: 1, duration: 1, ease: "power2.out"}, "table2")
+    .to(".leftpd2", {y: `-${document.querySelector(".project_textBox").offsetHeight}`, opacity: 1, delay: 0.2, duration: 1, ease: "power2.out"}, "table2")
+    .to(".rightpd2", {y: `-${document.querySelector(".project_textBox").offsetHeight}`, opacity: 1, delay: 0.4, duration: 1, ease: "power2.out"}, "table2");
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: ".project_table",
+            // markers: true,
+            start: `${document.querySelector(".project_textBox").offsetHeight*2}, 80%`,
+            end: "top, 60%"
+        }
+    })
+    .to(".prCB2", {scaleX: 1, duration: 0.3}, "table3")
+    .to(".button3", {y: `${document.querySelector(".project_textBox").offsetHeight * 1.8}px`, opacity: 1, duration: 1, ease: "power2.out"}, "table3")
+    .to(".leftpd3", {y: `-${document.querySelector(".project_textBox").offsetHeight}`, opacity: 1, delay: 0.2, duration: 1, ease: "power2.out"}, "table3")
+    .to(".rightpd3", {y: `-${document.querySelector(".project_textBox").offsetHeight}`, opacity: 1, delay: 0.4, duration: 1, ease: "power2.out"}, "table3");
 }
 projectCont();
 
 
 document.querySelectorAll(".button").forEach((e, i)=>{
-    document.querySelector(`.button${i+1}`).style.transform = `translateY(calc(200% + ${document.querySelector(".project_textBox").offsetHeight * i}px))`;
-    
-    document.querySelectorAll(".prContBorder")[i].style.transform = `translateY(${document.querySelector(".project_textBox").offsetHeight * i}px)`;
+    if(i == 0){
+        document.querySelector(`.button${i+1}`).style.transform = `translateY(200%)`;
+    } else {
+        document.querySelector(`.button${i+1}`).style.transform = `translateY(${document.querySelector(".project_textBox").offsetHeight * i + 500}px)`;
+    }
+    document.querySelectorAll(".prContBorder")[i].style.transform = `translateY(${document.querySelector(".project_textBox").offsetHeight * (i+1)}px) scaleX(0)`;
 })
 // document.querySelector(`.prContBorder`).style.transform = `translateY(${document.querySelector(".project_textBox").offsetHeight}px)`;
 
-
-function asd(){
-
-}
