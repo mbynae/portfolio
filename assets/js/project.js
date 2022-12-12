@@ -1,11 +1,14 @@
+// 프로젝트 타이틀 효과
 function projectTitle(){
+
+    //문자열 나누기
     const projectName = document.querySelectorAll(".prName");
     
-
     projectName.forEach((e, i) => {
         projectName[i].innerHTML = `<span class='prSplit${i+1}'>${document.querySelector(`.prText0${i+1}`).innerText.split("").join(`</span><span class=prSplit${i+1}>`)}</span>`;
     })
 
+    // 문자열 효과
     gsap.set(".prSplit1", {x: 100, color: "#fff"})
     gsap.set(".prSplit2", {x: -100, color: "#fff"})
     gsap.set(".project_titleLine", {y: 80, opacity: 0})
@@ -27,6 +30,7 @@ function projectTitle(){
 }
 projectTitle();
 
+// 프로젝트 컨텐츠 효과
 function projectCont(){
 
     // 스티키 효과
@@ -46,7 +50,7 @@ function projectCont(){
         scrollTrigger: {
             trigger: ".project_table",
             start: `${document.querySelector(".project_contentsInner").offsetHeight * 2}, 12%`,
-            end: () => `+=${document.querySelector(".project_contentsInner").offsetHeight * 2}`,
+            end: () => `+=${document.querySelector(".project_contentsInner").offsetHeight * 1.5}`,
             // markers: true,
             pin: true,
             scrub: 1
@@ -59,13 +63,13 @@ function projectCont(){
             trigger: ".project_table",
             start: `${document.querySelector(".project_contentsInner").offsetHeight * 3}, 12%`,
             end: () => `+=${document.querySelector(".project_contentsInner").offsetHeight * 4}`,
-            markers: true,
+            // markers: true,
             pin: true,
             scrub: 1
         }
     })
-    prSticky3.to(".sticky3_1", {yPercent: -100, duration: 0.2, stagger: 0.15})
-    prSticky3.to(".sticky3_2", {yPercent: -200, duration: 0.2, stagger: 0.15})
+    prSticky3.to(".sticky3_1", {yPercent: -100, duration: 0.2, stagger: 0.15}, "sticky3")
+    prSticky3.to(".sticky3_2", {yPercent: -200, duration: 0.4, delay: 0.2, stagger: 0.15}, "sticky3")
 
 
 
@@ -119,12 +123,26 @@ function projectCont(){
     })
     .to(".prCB3", {scaleX: 1, duration: 0.3}, "table4")
     .to(".button4", {y: `${document.querySelector(".project_textBox").offsetHeight * 2.7}px`, opacity: 1, duration: 1, ease: "power2.out"}, "table4")
-    .to(".leftpd4", {y: `-${document.querySelector(".project_textBox").offsetHeight * 2}`, opacity: 1, delay: 0.2, duration: 1, ease: "power2.out"}, "table4")
-    .to(".rightpd4", {y: `-${document.querySelector(".project_textBox").offsetHeight * 2}`, opacity: 1, delay: 0.4, duration: 1, ease: "power2.out"}, "table4");
+    .to(".leftpd4", {y: `-${document.querySelector(".project_textBox").offsetHeight * 2}`, opacity: 1, delay: -0.2, duration: 1.5, ease: "power2.out"}, "table4")
+    .to(".rightpd4", {y: `-${document.querySelector(".project_textBox").offsetHeight * 2}`, opacity: 1, delay: 0.2, duration: 1.5, ease: "power2.out"}, "table4");
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: ".project_table",
+            markers: true,
+            start: `${document.querySelector(".project_textBox").offsetHeight*4}, 80%`,
+            end: "top, 80%"
+        }
+    })
+    .to(".prCB4", {scaleX: 1, duration: 0.3}, "table5")
+    .to(".button5", {y: `${document.querySelector(".project_textBox").offsetHeight * 3.6}px`, opacity: 1, duration: 1, ease: "power2.out"}, "table5")
+    .to(".leftpd5", {y: `-${document.querySelector(".project_textBox").offsetHeight * 4}`, opacity: 1, delay: -0.3, duration: 1.5, ease: "power2.out"}, "table5")
+    .to(".rightpd5", {y: `-${document.querySelector(".project_textBox").offsetHeight * 4}`, opacity: 1, delay: 0.2, duration: 1.5, ease: "power2.out"}, "table5");
 }
 projectCont();
 
 
+// 버튼 및 사이드 테두리 위치 조정
 document.querySelectorAll(".button").forEach((e, i)=>{
     if(i == 0){
         document.querySelector(`.button${i+1}`).style.transform = `translateY(200%)`;
