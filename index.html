@@ -388,8 +388,8 @@
 
     <!-- effect -->
     <div class="prevEffect">NEXT</div>
-    <div class="middleBox"></div>
-    <div class="middleBox2"></div>
+    <!-- <div class="middleBox"></div>
+    <div class="middleBox2"></div> -->
     <section id="effect">
         <div class="effect_inner">
             <div class="effect_title">
@@ -1014,14 +1014,17 @@
                 <p class="contact_finish">
                     2022 ─ Moon, Byeong Nae. POTFORIO
                 </p>
+                <div class="miniBtn"><a href="#title" onclick="lenis.scrollTo('#title', {offset:0, duration:5})"></a></div>
             </div>
         </div>
         <div class="contact_img">
-            <button>
-                <div class="inner">
-                    <span class="text">Click the button to go to the top</span>
-                    <span class="arrow"></span>
-                </div>
+            <button class="contact_btn">
+                <a href="#title" onclick="lenis.scrollTo('#title', {offset:0, duration:5})">
+                    <div class="inner">
+                        <span class="text">Click the button to go to the top</span>
+                        <span class="arrow"></span>
+                    </div>
+                </a>
             </button>
         </div>
         <div class="contact_logo"></div>
@@ -1069,6 +1072,8 @@
 
     </script>
 
+<script src="assets/js/contact.js"></script>
+<script src="assets/js/summary.js"></script>
 <script src="assets/js/effect.js"></script>
 <script src="assets/js/project.js"></script>
 <script src="assets/js/skill.js"></script>

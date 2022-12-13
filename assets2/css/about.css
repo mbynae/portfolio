@@ -1,56 +1,185 @@
 /* 프로필 배경 */
 #about {
-    height: 200vh;
+    height: 100vw;
     background: url("../img/about_Bg.png") no-repeat center / cover;
-    padding-top: 100px;
+    padding-top: 5.2083vw;
 }
 
 /* 프로필 텍스트 */
 .about_textBox {
     width: 50%;
-    height: 50vh;
+    height: 25vw;
     color: #383838;
     z-index: 1;
-    margin: 0 auto 200px auto;
+    margin: 0 auto 10.4167vw auto;
     position: relative;
 }
 .about_textBox p {
-    margin-bottom: 46px;
-    font-size: 28px;
-    line-height: 36px;
+    margin-bottom: 2.3958vw;
+    font-size: 1.4583vw;
+    line-height: 1.8750vw;
 }
 .about_textBox p .bold {
     display: block;
     font-family: 'GmarketSans';
     font-weight: 700;
-    font-size: 70px;
-    margin-bottom: 14px;
+    font-size: 3.6458vw;
+    margin-bottom: 0.7292vw;
     word-break: keep-all;
     mix-blend-mode: color-burn;
     position: absolute;
     left: 0;
 }
 .about_textBox p .bold-1 {
-    top: 10%;
+    top: 2.4vw;
+    /* top: 10%; */
 }
 .about_textBox p .bold-2 {
-    top: 25%;
+    top: 6.2vw;
+    /* top: 25%; */
 }
 .about_textBox p .bold span {
     display: inline-block;
     min-width: 1vw;
-    transform: translateY(20px);
+    transform: translateY(1.0417vw);
     opacity: 0;
 }
 .about_textBox p .normal {
     position: absolute;
     left: 0;
-    top: 35%;
+    top: 9vw;
+    /* top: 35%; */
     mix-blend-mode: color-burn;
 }
 .about_textBox p .normal span {
     display: inline-block;
     min-width: 0.2vw;
+    opacity: 0;
+}
+.about_textBox p .aText03 {
+    transform: translateY(1.8229vw);
+}
+.about_textBox p .aText04 {
+    transform: translateY(3.9063vw);
+}
+.about_textBox p .aText05 {
+    transform: translateY(5.9896vw);
+}
+.about_textBox p .aText06 {
+    transform: translateY(8.0729vw);
+}
+.about_textBox p .aText07 {
+    transform: translateY(10.1563vw);
+}
+
+
+/* 프로필 사진 */
+.about_textBox figure {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+}
+.about_textBox figure img {
+    display: inline-block;
+    width: 17.1875vw;
+    height: 17.1875vw;
+    border-radius: 50%;
+}
+
+.profile_picture {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.profile_picture .cards {
+    width: 15.6250vw;
+    height: 23.5938vw;
+    filter : grayscale(1);
+}
+.profile_picture .card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15.6250vw;
+    height: 23.5938vw;
+    border-radius: 25px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: transparent;
+}
+.profile_picture .card-1 {
+    background: url(../img/about_sampleP01.png);
+}
+.profile_picture .card-2 {
+    background: url(../img/about_sampleP02.png);
+}
+.profile_picture .card-3 {
+    background: url(../img/about_sampleP03.png);
+}
+
+@media (max-width: 1700px){
+    #about {
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 1200px){
+    #about {
+        margin-bottom: 200px;
+    }
+}
+
+@media (max-width: 1024px){
+    /* 프로필 배경 */
+#about {
+    height: 1720px;
+    padding-top: 100px;
+    /* margin-bottom: 100px; */
+}
+
+/* 프로필 텍스트 */
+.about_textBox {
+    width: 90%;
+    height: 480px;
+    margin: 0 auto 200px auto;
+    position: relative;
+}
+.about_textBox p {
+    margin-bottom: 46px;
+    font-size: 28px;
+}
+.about_textBox p .bold {
+    font-size: 60px;
+    margin-bottom: 10px;
+    position: absolute;
+    left: 0;
+}
+.about_textBox p .bold-1 {
+    top: 28px;
+    /* top: 10%; */
+}
+.about_textBox p .bold-2 {
+    top: 119px;
+    /* top: 25%; */
+}
+.about_textBox p .bold span {
+    min-width: 19px;
+    transform: translateY(20px);
+}
+.about_textBox p .normal {
+    position: absolute;
+    left: 0;
+    top: 173px;
+    /* top: 35%; */
+}
+.about_textBox p .normal span {
+    display: inline-block;
+    min-width: 4px;
     opacity: 0;
 }
 .about_textBox p .aText03 {
@@ -76,50 +205,122 @@
     right: 0;
     bottom: 0;
     opacity: 0;
-    z-index: -1;
 }
 .about_textBox figure img {
-    display: inline-block;
-    width: 330px;
-    height: 330px;
-    border-radius: 50%;
+    width: 310px;
+    height: 310px;
 }
 
 .profile_picture {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 }
 .profile_picture .cards {
-    width: 300px;
-    height: 453px;
-    filter : grayscale(1);
+    width: 260px;
+    height: 413px;
 }
 .profile_picture .card {
     position: absolute;
     top: 0;
     left: 0;
-    width: 300px;
-    height: 453px;
+    width: 260px;
+    height: 413px;
     border-radius: 25px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-color: transparent;
 }
-.profile_picture .card-1 {
-    background: url(../img/about_sampleP01.png);
 }
-.profile_picture .card-2 {
-    background: url(../img/about_sampleP02.png);
+
+@media (max-width: 768px){
+    /* 프로필 배경 */
+#about {
+    height: 1700px; 
+    padding-top: 100px;
 }
-.profile_picture .card-3 {
-    background: url(../img/about_sampleP03.png);
+
+/* 프로필 텍스트 */
+.about_textBox {
+    width: 100%;
+    height: 420px;
+    margin: 0 auto 200px auto;
+    position: relative;
+}
+.about_textBox p {
+    margin-bottom: 46px;
+    font-size: 24px;
+}
+.about_textBox p .bold {
+    font-size: 50px;
+    margin-bottom: 10px;
+    position: absolute;
+    left: 0;
+}
+.about_textBox p .bold-1 {
+    top: 28px;
+    /* top: 10%; */
+}
+.about_textBox p .bold-2 {
+    top: 119px;
+    /* top: 25%; */
+}
+.about_textBox p .bold span {
+    min-width: 19px;
+    transform: translateY(20px);
+}
+.about_textBox p .normal {
+    position: absolute;
+    left: 0;
+    top: 173px;
+    /* top: 35%; */
+}
+.about_textBox p .normal span {
+    display: inline-block;
+    min-width: 4px;
+    opacity: 0;
+}
+.about_textBox p .aText03 {
+    transform: translateY(35px);
+}
+.about_textBox p .aText04 {
+    transform: translateY(75px);
+}
+.about_textBox p .aText05 {
+    transform: translateY(115px);
+}
+.about_textBox p .aText06 {
+    transform: translateY(155px);
+}
+.about_textBox p .aText07 {
+    transform: translateY(195px);
 }
 
 
+/* 프로필 사진 */
+.about_textBox figure {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+}
+.about_textBox figure img {
+    width: 280px;
+    height: 280px;
+}
 
+.profile_picture {
+    width: 100%;
+    height: 100%;
+}
+.profile_picture .cards {
+    width: 260px;
+    height: 413px;
+}
+.profile_picture .card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 413px;
+    border-radius: 25px;
+}
+}
  
 

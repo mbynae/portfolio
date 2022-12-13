@@ -73,7 +73,7 @@ function projectCont(){
             trigger: ".project_table",
             start: `${document.querySelector(".project_contentsInner").offsetHeight * 3}, 12%`,
             end: () => `+=${document.querySelector(".project_contentsInner").offsetHeight * 3}`,
-            markers: true,
+            // markers: true,
             pin: true,
             scrub: 1,
             onLeave: ()=>{
@@ -96,7 +96,7 @@ function projectCont(){
             trigger: ".project_table",
             start: `${document.querySelector(".project_contentsInner").offsetHeight * 4}, 12%`,
             end: () => `+=${document.querySelector(".project_contentsInner").offsetHeight * 1.5}`,
-            markers: true,
+            // markers: true,
             pin: true,
             scrub: 1,
             onLeave: ()=>{

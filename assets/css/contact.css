@@ -42,11 +42,10 @@
 }
 .contact_title span {
     font-size: 10px;
-    font-weight: 10;
+    font-weight: 100;
     margin-top: 20px;
 }
 .contact_link {
-    width: 100%;
     height: 40px;
     margin-bottom: 20px;
 }
@@ -153,6 +152,7 @@
     right: 30px;
     bottom: 30px;
     cursor: pointer;
+    transform: translateY(100px);
 }
 .contact_img button .inner {
     padding: 7px;
@@ -207,4 +207,364 @@
 }
 @keyframes rotate {
     100% {transform: rotate(360deg);}
+}
+
+.miniBtn {
+    width: 50px;
+    height: 50px;
+    background-color: #151515;
+    border-radius: 50%;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='40' viewBox='0 0 16 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.70711 0.292892C8.31658 -0.0976315 7.68342 -0.0976314 7.29289 0.292892L0.928932 6.65685C0.538407 7.04738 0.538407 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292892ZM9 21L9 1L7 1L7 21L9 21Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    cursor: pointer;
+    display: none;
+}
+.miniBtn a {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: block;
+}
+
+
+@media (max-width: 1024px){
+    .contact_box_inner {
+        width: 100%;
+        margin: 100px 10px 30px 0; 
+    }
+
+    .contact_title {
+        margin-bottom: 40px;
+    }
+    .contact_title::before {
+        bottom: -10px;
+    }
+    .contact_title::after {
+        bottom: -15px;
+    }
+    .contact_title h3 {
+        font-size: 30px;
+    }
+    .contact_title span {
+        font-size: 10px;
+        font-weight: 100;
+        margin-top: 20px;
+    }
+    .contact_link {
+        height: 40px;
+        margin-bottom: 20px;
+    }
+    .contact_link a {
+        width: 40px;
+        height: 40px;
+    }
+    .contact_link a:nth-child(2){
+        background-position: -50px 0;
+    }
+    .contact_link a:nth-child(3){
+        background-position: -100px 0;
+    }
+    .contact_subtext {
+        font-size: 10px;
+        line-height: 15px;
+        margin-bottom: 150px;
+    }
+    .contact_subtext p:first-child {
+        margin-bottom: 5px;
+    }
+    .contact_address {
+        margin-bottom: 80px;
+    }
+    .contact_address span {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .contact_address address {
+        font-size: 32px;
+    }
+    
+    .contact_email {
+        margin-bottom: 80px;
+    }
+    .contact_email span {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .contact_email div {
+        font-size: 32px;
+    }
+
+    .contact_emailBtn {
+        width: 320px;
+        height: 80px;
+    }
+    .contact_emailBtn button span:first-child {
+        font-size: 28px;
+        /* margin-right: 10px; */
+    }
+    .contact_emailBtn button span:last-child {
+        width: 20px;
+        height: 20px;
+    }
+    .contact_finish {
+        font-size: 10px;
+        left: 0;
+        bottom: 30px;
+    }
+
+    .contact_img button {
+        width: 180px;
+        height: 60px;
+        right: 30px;
+        bottom: 30px;
+    }
+    .contact_img button .inner {
+        padding: 7px;
+    }
+    .contact_img button .inner .text {
+        width: 70%;
+        font-size: 12px;
+        line-height: 1.5;
+        margin-left: 14px;
+    }
+    .contact_img button .inner .arrow {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .contact_logo {
+        margin-left: -80px;
+        margin-top: -80px;
+        width: 140px;
+        height: 140px;
+        background-image: url("data:image/svg+xml,%0A%3Csvg width='140' height='140' viewBox='0 0 160 160' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ccircle cx='80' cy='80' r='80' fill='white'/%3E%3Cpath d='M149 79.5364C149 117.382 118.114 148.073 80 148.073C41.8861 148.073 11 117.382 11 79.5364C11 41.6911 41.8861 11 80 11C118.114 11 149 41.6911 149 79.5364Z' fill='white' stroke='%23151515' stroke-width='2'/%3E%3Ccircle cx='80' cy='80' r='63.5' stroke='url(%23pattern0)'/%3E%3Cpath d='M62.5067 15.5957L64.2389 18.5318L67.7531 18.5069L64.7343 20.2623L64.8418 23.7533L63.0038 20.7576L59.5954 20.8421L62.5084 19.0271L62.5067 15.5957Z' fill='%23151515'/%3E%3Cpath d='M127.007 33.0078L125.273 35.9429L126.993 39.0078L123.997 37.2125L120.993 38.9931L122.728 35.9366L121.007 32.9931L124.004 34.6669L127.007 33.0078Z' fill='%23151515'/%3E%3Cpath d='M144.087 98.1738L140.679 98.0917L138.842 101.088L138.948 97.5971L135.928 95.8425L139.442 95.8664L141.173 92.9288L141.173 96.361L144.087 98.1738Z' fill='%23151515'/%3E%3Cpath d='M92.0206 141.338L94.9121 139.532L94.7987 136.02L96.6296 138.993L100.117 138.798L97.1684 140.711L97.3387 144.116L95.4509 141.25L92.0206 141.338Z' fill='%23151515'/%3E%3Cpath d='M33 121L35.9393 122.727L39 121L37.2121 124L39 127L35.9393 125.272L33 127L34.6665 124L33 121Z' fill='%23151515'/%3E%3Cpath d='M16 61.9902L19.4088 62.0223L21.2017 58.9999L21.1466 62.4914L24.1921 64.2016L20.6775 64.2292L18.9904 67.1919L18.9397 63.7601L16 61.9902Z' fill='%23151515'/%3E%3Cdefs%3E%3Cpattern id='pattern0' patternContentUnits='objectBoundingBox' width='1' height='1'%3E%3Cuse xlink:href='%23image0_566_117' transform='scale(0.015625)'/%3E%3C/pattern%3E%3Cimage id='image0_566_117' width='64' height='64' xlink:href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAONJREFUeF7t20EOhEAIRFG4/6F7DvEnYeFzryQIv6pBd2behOu9dPvsbog+k+NLgArQAqmJcw9iAAhSgZKB3IJkkAySQTJ4CiE+gA8oBeg0mH3Ai084P89HhqwEqIA209ICsQdjAeaZIgaAYKxBDMCAYy8fXwAIgiAIcoJpJEYGI4VjB3YrbC9gL2AvkCB43cM5PgZgAAZgQFnNZAhdGykQBEEQBEEQDBmgAm2glM/z+QUYisYUGoldO7kY32IEAzCg6RgIRgjFAsw+AgRBMNYgBmCAT2TCYfoPPz/HCqQCX1eBHzHnv7C7WhBSAAAAAElFTkSuQmCC'/%3E%3C/defs%3E%3C/svg%3E");
+    }
+    .logo_text span {
+        margin-left: -10px;
+        margin-top: -12px;
+        font-size: 6px;
+    }
+    .logo_text span em {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px){
+    .contact_box {
+        width: 100%;
+    }
+    .contact_box_inner {
+        width: 100%;
+        margin: 100px 0px 30px 0; 
+    }
+    .contact_title {
+        margin-bottom: 40px;
+    }
+    .contact_title::before {
+        bottom: -10px;
+    }
+    .contact_title::after {
+        bottom: -15px;
+    }
+    .contact_title h3 {
+        font-size: 30px;
+    }
+    .contact_title span {
+        font-size: 10px;
+        font-weight: 100;
+        margin-top: 20px;
+    }
+    .contact_link {
+        display: inline-block;
+        height: 40px;
+        margin-bottom: 150px;
+    }
+    .contact_link a {
+        width: 40px;
+        height: 40px;
+    }
+    .contact_link a:nth-child(2){
+        background-position: -50px 0;
+    }
+    .contact_link a:nth-child(3){
+        background-position: -100px 0;
+    }
+    .contact_subtext {
+        display: inline-block;
+        font-size: 10px;
+        line-height: 15px;
+        margin-bottom: 0px;
+        float: right;
+    }
+    .contact_subtext p:first-child {
+        margin-bottom: 5px;
+    }
+    .contact_address {
+        margin-bottom: 80px;
+    }
+    .contact_address span {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .contact_address address {
+        font-size: 40px;
+    }
+    
+    .contact_email {
+        margin-bottom: 80px;
+    }
+    .contact_email span {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .contact_email div {
+        font-size: 40px;
+    }
+
+    .contact_emailBtn {
+        width: 400px;
+        height: 84px;
+    }
+    .contact_emailBtn button span:first-child {
+        font-size: 36px;
+    }
+    .contact_emailBtn button span:last-child {
+        width: 20px;
+        height: 20px;
+    }
+    .contact_finish {
+        font-size: 10px;
+        left: 0;
+        bottom: 30px;
+    }
+
+    .contact_img {
+        display: none;
+    }
+    
+    .contact_logo {
+        display: none;
+    }
+    .logo_text {
+        display: none;
+    }
+    .miniBtn {
+        display: block;
+    }
+}
+
+@media (max-width: 480px){
+    .contact_box {
+        width: 100%;
+    }
+    .contact_box_inner {
+        width: 100%;
+        margin: 100px 0px 30px 0; 
+    }
+    .contact_title {
+        margin-bottom: 40px;
+    }
+    .contact_title::before {
+        bottom: -10px;
+    }
+    .contact_title::after {
+        bottom: -15px;
+    }
+    .contact_title h3 {
+        font-size: 30px;
+    }
+    .contact_title span {
+        font-size: 10px;
+        font-weight: 100;
+        margin-top: 20px;
+    }
+    .contact_link {
+        display: inline-block;
+        height: 40px;
+        margin-bottom: 150px;
+    }
+    .contact_link a {
+        width: 40px;
+        height: 40px;
+    }
+    .contact_link a:nth-child(2){
+        background-position: -50px 0;
+    }
+    .contact_link a:nth-child(3){
+        background-position: -100px 0;
+    }
+    .contact_subtext {
+        display: inline-block;
+        font-size: 8px;
+        line-height: 15px;
+        margin-bottom: 0px;
+        float: right;
+    }
+    .contact_subtext p:first-child {
+        margin-bottom: 5px;
+    }
+    .contact_address {
+        margin-bottom: 80px;
+    }
+    .contact_address span {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .contact_address address {
+        font-size: 30px;
+    }
+    
+    .contact_email {
+        margin-bottom: 120px;
+    }
+    .contact_email span {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .contact_email div {
+        font-size: 30px;
+    }
+
+    .contact_emailBtn {
+        display: block;
+        margin: 0 auto;
+        width: 300px;
+        height: 80px;
+    }
+    .contact_emailBtn button span:first-child {
+        font-size: 30px;
+    }
+    .contact_emailBtn button span:last-child {
+        width: 20px;
+        height: 20px;
+    }
+    .contact_finish {
+        font-size: 10px;
+        left: 0;
+        bottom: 30px;
+    }
+
+    .contact_img {
+        display: none;
+    }
+    
+    .contact_logo {
+        display: none;
+    }
+    .logo_text {
+        display: none;
+    }
+    .miniBtn {
+        display: block;
+    }
+
+    .miniBtn {
+        width: 40px;
+        height: 40px;
+        background-image: url("data:image/svg+xml,%3Csvg width='15' height='30' viewBox='0 0 16 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.70711 0.292892C8.31658 -0.0976315 7.68342 -0.0976314 7.29289 0.292892L0.928932 6.65685C0.538407 7.04738 0.538407 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292892ZM9 21L9 1L7 1L7 21L9 21Z' fill='white'/%3E%3C/svg%3E%0A");
+    }
 }
