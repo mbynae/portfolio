@@ -1,0 +1,199 @@
+.prevEffect {
+    width: 100%;
+    height: 50vh;
+    font-size: 100px;
+    text-align: center;
+    line-height: 50vh;
+}
+
+#effect {
+    /* position: fixed;
+    left: 0;
+    top: 100vh; */
+    /* display: none; */
+    width: 100%;
+    height: 100vh;
+
+
+}
+.effect_inner {
+    width: 800%;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #000;
+    overscroll-behavior: none;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+.effect_title {
+    width: 100%;
+    height: 100vh;
+    /* margin-right: 210px; */
+}
+.paddingBox {
+    padding: 0 50px;
+}
+.effect_title h2 {
+    padding-top: 200px;
+    font-size: 200px;
+    color: #fff;
+}
+.effect_title .emphasis {
+    display: inline-block;
+    font-size: 260px;
+    font-weight: 100;
+    color: #14CF93;
+    margin: -80px 0 20px 580px;
+}
+.effect_titleLine {
+    font-family: 'PP Eiko';
+    font-weight: 300;
+    font-size: 40px;
+    color: #fff;
+    float:right;
+    padding-left: 30%;
+    position: relative;
+}
+.effect_titleLine::before {
+    content: '';
+    width: 100%;
+    border: 1px solid #fff;
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    transform-origin: right;
+    transform: var(--border-right-transform);
+    transition: all 1.2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.effectContBox {
+    width: 700%;
+    height: 100%;
+    border-left: 1px solid #454545;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.effectCont {
+    width: 100vw;
+    height: 100%;
+    margin-top: 85px;
+}
+
+.effectCont_inner {
+    width: 100vw;
+    height: 100%;
+    color: #fff;
+}
+.effectName_box {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #454545
+}
+.effectName {
+    margin-left: 30px;
+    text-align: center;
+    line-height: 80px;
+    width: 360px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 60px;
+    font-size: 30px;
+    color: #000;
+}
+.effectName img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+}
+
+.effectMain_box {
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    flex-wrap: wrap;
+    border-left: 1px solid #454545;
+}
+.effectMain_box:first-child {
+    border-left: 0;
+}
+
+.effectMain {
+    width:79.9%;
+    height: 385px;
+}
+.effectMain_inner {
+    display: flex;
+    padding: 30px;
+}
+.effectMain_inner img {
+    width: 640px;
+    height: 325px;
+    margin-right: 20px;
+}
+.effectMain_inner .effectText_box {
+    width: 50%;
+}
+.effectMain_inner .effectText_box h3 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+.effectMain_inner .effectText_box span {
+    display: inline-block;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.effectMain_inner .effectText_box p {
+    font-size: 20px;
+    line-height: 1.74;
+    word-break: keep-all;
+}
+
+.effectSource {
+    width: 20%;
+    height: 385px;
+}
+.effectSource_inner {
+    padding: 30px;
+}
+.effectSource_inner h4 {
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: underline;
+    text-underline-position: under;
+    margin-bottom: 14px;
+}
+.effectSource_inner .source {}
+.effectSource_inner .source li {}
+.effectSource_inner .source li a {
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.efc01 {
+    border-right: 1px solid #454545;
+    border-bottom: 1px solid #454545;
+}
+.efc02 {
+    border-bottom: 1px solid #454545;
+}
+.efc03 {
+    border-right: 1px solid #454545;
+}
+
+

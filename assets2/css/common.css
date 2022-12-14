@@ -2,11 +2,13 @@ html {
     --border-right-transform: scaleX(0);
     --title-down : 1;
     --about-border: 0;
+    --pr-border: 0;
+    --pr-border2: 0;
 }
 
 
 body {
-    overflow: hidden;
+    /* overflow: hidden; */
     /* box-sizing: border-box; */
 }
 body::-webkit-scrollbar {
@@ -42,9 +44,7 @@ body::-webkit-scrollbar-track {
     top: 100px;
 }
 
-@media (max-width: 1300px){
+/* @media (max-width: 1300px){
     body {
-        width: 96%;
-        padding: 0 2%;
     }
-}
+} */

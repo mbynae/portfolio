@@ -129,11 +129,11 @@
 
 @font-face {
     font-family: 'PP Eiko';
-    src: url('PPEiko-Medium.eot');
-    src: url('PPEiko-Medium.eot?#iefix') format('embedded-opentype'),
-        url('PPEiko-Medium.woff2') format('woff2'),
-        url('PPEiko-Medium.woff') format('woff'),
-        url('PPEiko-Medium.ttf') format('truetype');
+    src: url('../../assets/font/PPEiko-Medium.eot');
+    src: url('../../assets/font/PPEiko-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/font/PPEiko-Medium.woff2') format('woff2'),
+        url('../../assets/font/PPEiko-Medium.woff') format('woff'),
+        url('../../assets/font/PPEiko-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -153,11 +153,11 @@
 
 @font-face {
     font-family: 'PP Eiko';
-    src: url('PPEiko-Thin.eot');
-    src: url('PPEiko-Thin.eot?#iefix') format('embedded-opentype'),
-        url('PPEiko-Thin.woff2') format('woff2'),
-        url('PPEiko-Thin.woff') format('woff'),
-        url('PPEiko-Thin.ttf') format('truetype');
+    src: url('../../assets/font/PPEiko-Thin.eot');
+    src: url('../../assets/font/PPEiko-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/font/PPEiko-Thin.woff2') format('woff2'),
+        url('../../assets/font/PPEiko-Thin.woff') format('woff'),
+        url('../../assets/font/PPEiko-Thin.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
     font-display: swap;

@@ -1,7 +1,11 @@
+@import "font.css";
 @import "reset.css";
 @import "common.css";
-@import "font.css";
 @import "header.css";
 @import "title.css";
 @import "about.css";
 @import "skill.css";
+@import "project.css";
+@import "effect.css";
+@import "summary.css";
+@import "contact.css";

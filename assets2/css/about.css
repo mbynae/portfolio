@@ -55,21 +55,22 @@
     display: inline-block;
     min-width: 0.2vw;
     opacity: 0;
+    transform: scaleX(0);
 }
 .about_textBox p .aText03 {
-    transform: translateY(1.8229vw);
+    transform: translateY(1.0417vw);
 }
 .about_textBox p .aText04 {
-    transform: translateY(3.9063vw);
+    transform: translateY(3.1250vw);
 }
 .about_textBox p .aText05 {
-    transform: translateY(5.9896vw);
+    transform: translateY(5.2083vw);
 }
 .about_textBox p .aText06 {
-    transform: translateY(8.0729vw);
+    transform: translateY(7.2917vw);
 }
 .about_textBox p .aText07 {
-    transform: translateY(10.1563vw);
+    transform: translateY(9.3750vw);
 }
 
 
@@ -136,173 +137,278 @@
 
 @media (max-width: 1024px){
     /* 프로필 배경 */
-#about {
-    height: 1720px;
-    padding-top: 100px;
-    /* margin-bottom: 100px; */
-}
+    #about {
+        height: 170vw;
+        margin-bottom: 9.7656vw;
+        width: 96%;
+        padding: 9.7656vw 2% 0 2%;
+    }
 
-/* 프로필 텍스트 */
-.about_textBox {
-    width: 90%;
-    height: 480px;
-    margin: 0 auto 200px auto;
-    position: relative;
-}
-.about_textBox p {
-    margin-bottom: 46px;
-    font-size: 28px;
-}
-.about_textBox p .bold {
-    font-size: 60px;
-    margin-bottom: 10px;
-    position: absolute;
-    left: 0;
-}
-.about_textBox p .bold-1 {
-    top: 28px;
-    /* top: 10%; */
-}
-.about_textBox p .bold-2 {
-    top: 119px;
-    /* top: 25%; */
-}
-.about_textBox p .bold span {
-    min-width: 19px;
-    transform: translateY(20px);
-}
-.about_textBox p .normal {
-    position: absolute;
-    left: 0;
-    top: 173px;
-    /* top: 35%; */
-}
-.about_textBox p .normal span {
-    display: inline-block;
-    min-width: 4px;
-    opacity: 0;
-}
-.about_textBox p .aText03 {
-    transform: translateY(35px);
-}
-.about_textBox p .aText04 {
-    transform: translateY(75px);
-}
-.about_textBox p .aText05 {
-    transform: translateY(115px);
-}
-.about_textBox p .aText06 {
-    transform: translateY(155px);
-}
-.about_textBox p .aText07 {
-    transform: translateY(195px);
-}
+    /* 프로필 텍스트 */
+    .about_textBox {
+        width: 90%;
+        height: 42.9688vw;
+        margin: 0 auto 19.5313vw auto;
+        position: relative;
+    }
+    .about_textBox p {
+        margin-bottom: 4.4922vw;
+        font-size: 2.7344vw;
+    }
+    .about_textBox p .bold {
+        font-size: 5.8594vw;
+        margin-bottom: 0.9766vw;
+        position: absolute;
+        left: 0;
+    }
+    .about_textBox p .bold-1 {
+        top: 2.7344vw;
+        /* top: 10%; */
+    }
+    .about_textBox p .bold-2 {
+        top: 9.668vw;
+        /* top: 25%; */
+    }
+    .about_textBox p .bold span {
+        min-width: 1.8555vw;
+        transform: translateY(1.9531vw);
+    }
+    .about_textBox p .normal {
+        position: absolute;
+        left: 0;
+        top: 16.8945vw;
+        /* top: 35%; */
+    }
+    .about_textBox p .normal span {
+        display: inline-block;
+        min-width: 0.3906vw;
+        opacity: 0;
+    }
+    .about_textBox p .aText03 {
+        transform: translateY(0.0000vw);
+    }
+    .about_textBox p .aText04 {
+        transform: translateY(3.9063vw);
+    }
+    .about_textBox p .aText05 {
+        transform: translateY(7.8125vw);
+    }
+    .about_textBox p .aText06 {
+        transform: translateY(11.7188vw);
+    }
+    .about_textBox p .aText07 {
+        transform: translateY(15.6250vw);
+    }
 
 
-/* 프로필 사진 */
-.about_textBox figure {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-}
-.about_textBox figure img {
-    width: 310px;
-    height: 310px;
-}
+    /* 프로필 사진 */
+    .about_textBox figure {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+    }
+    .about_textBox figure img {
+        width: 30.2734vw;
+        height: 30.2734vw;
+    }
 
-.profile_picture {
-    width: 100%;
-    height: 100%;
-}
-.profile_picture .cards {
-    width: 260px;
-    height: 413px;
-}
-.profile_picture .card {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 260px;
-    height: 413px;
-    border-radius: 25px;
-}
+    .profile_picture {
+        width: 100%;
+        height: 100%;
+    }
+    .profile_picture .cards {
+        width: 23.4375vw;
+        height: 38.3789vw;
+    }
+    .profile_picture .card {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 23.4375vw;
+        height: 38.3789vw;
+        border-radius: 25px;
+    }
 }
 
 @media (max-width: 768px){
     /* 프로필 배경 */
-#about {
-    height: 1700px; 
-    padding-top: 100px;
+    #about {
+        height: 182.2917vw; 
+        margin-bottom: 13.0208vw;
+        padding: 13.0208vw 2% 0 2%;
+    }
+
+    /* 프로필 텍스트 */
+    .about_textBox {
+        width: 100%;
+        height: 54.6875vw;
+        margin: 0 auto 26.0417vw auto;
+        position: relative;
+        /* background-color: #666; */
+    }
+    .about_textBox p {
+        margin-bottom: 5.9896vw;
+        font-size: 3.1250vw;
+    }
+    .about_textBox p .bold {
+        font-size: 6.5104vw;
+        margin-bottom: 1.3021vw;
+        position: absolute;
+        left: 0;
+    }
+    .about_textBox p .bold-1 {
+        top: 3.6458vw;
+        /* top: 10%; */
+    }
+    .about_textBox p .bold-2 {
+        top: 11.5885vw;
+        /* top: 25%; */
+    }
+    .about_textBox p .bold span {
+        min-width: 2.4740vw;
+        transform: translateY(2.6042vw);
+    }
+    .about_textBox p .normal {
+        position: absolute;
+        left: 0;
+        top: 22.5260vw;
+        /* top: 35%; */
+    }
+    .about_textBox p .normal span {
+        display: inline-block;
+        min-width: 0.5208vw;
+        opacity: 0;
+    }
+    .about_textBox p .aText03 {
+        transform: translateY(-2.6042vw);
+    }
+    .about_textBox p .aText04 {
+        transform: translateY(1.9531vw);
+    }
+    .about_textBox p .aText05 {
+        transform: translateY(6.5104vw);
+    }
+    .about_textBox p .aText06 {
+        transform: translateY(11.0677vw);
+    }
+    .about_textBox p .aText07 {
+        transform: translateY(15.6250vw);
+    }
+
+
+    /* 프로필 사진 */
+    .about_textBox figure {
+        position: absolute;
+        right: 0;
+        bottom: 5.2083vw;
+        opacity: 0;
+    }
+    .about_textBox figure img {
+        width: 36.4583vw;
+        height: 36.4583vw;
+    }
+
+    .profile_picture {
+        width: 100%;
+        height: 100%;
+    }
+    .profile_picture .cards {
+        width: 24.7396vw;
+        height: 42.0573vw;
+    }
+    .profile_picture .card {
+        position: absolute;
+        top: -18.2292vw;
+        left: 0;
+        width: 24.7396vw;
+        height: 42.0573vw;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 480px){
+    /* 프로필 배경 */
+    #about {
+        height: 100vh; 
+        margin-bottom: 120px;
+        padding: 50px 2% 0 2%;
+    }
+
+    /* 프로필 텍스트 */
+ /* 프로필 배경 */
+ #about {
+    height: 100vh; 
+    padding-top: 10.4167vw;
+    margin-bottom: 25.0000vw;
 }
 
 /* 프로필 텍스트 */
 .about_textBox {
     width: 100%;
-    height: 420px;
-    margin: 0 auto 200px auto;
+    height: 83.3333vw;
+    margin: 0 0 41.6667vw 0;
     position: relative;
 }
 .about_textBox p {
-    margin-bottom: 46px;
-    font-size: 24px;
+    margin-bottom: 9.5833vw;
+    font-size: 3.3333vw;
 }
 .about_textBox p .bold {
-    font-size: 50px;
-    margin-bottom: 10px;
+    font-size: 6.2500vw;
     position: absolute;
-    left: 0;
+    top: 60%;
+    opacity: 1;
 }
 .about_textBox p .bold-1 {
-    top: 28px;
-    /* top: 10%; */
+    left: 5.5%
 }
 .about_textBox p .bold-2 {
-    top: 119px;
-    /* top: 25%; */
+    left: 65.5%;
 }
 .about_textBox p .bold span {
-    min-width: 19px;
-    transform: translateY(20px);
+    min-width: 0.0000vw;
+    transform: translateY(0.0000vw);
 }
 .about_textBox p .normal {
     position: absolute;
-    left: 0;
-    top: 173px;
+    left: 50%;
+    top: 36.0417vw;
     /* top: 35%; */
 }
 .about_textBox p .normal span {
     display: inline-block;
-    min-width: 4px;
-    opacity: 0;
+    min-width: 0.8333vw;
+    opacity: 1;
 }
 .about_textBox p .aText03 {
-    transform: translateY(35px);
+    transform: translate(-50%, 20.8333vw);
 }
 .about_textBox p .aText04 {
-    transform: translateY(75px);
+    transform: translate(-50%, 26.0417vw);
 }
 .about_textBox p .aText05 {
-    transform: translateY(115px);
+    width: 60%;
+    transform: translate(-47%, 31.2500vw);
 }
 .about_textBox p .aText06 {
-    transform: translateY(155px);
+    transform: translate(-50%, 36.4583vw);
 }
 .about_textBox p .aText07 {
-    transform: translateY(195px);
+    transform: translate(-50%, 41.6667vw);
 }
 
 
 /* 프로필 사진 */
 .about_textBox figure {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
+    left: 26vw;
+    top: 0;
+    opacity: 1;
 }
 .about_textBox figure img {
-    width: 280px;
-    height: 280px;
+    width: 41.6667vw;
+    height: 41.6667vw;
 }
 
 .profile_picture {
@@ -310,16 +416,16 @@
     height: 100%;
 }
 .profile_picture .cards {
-    width: 260px;
-    height: 413px;
+    width: 33.3333vw;
+    height: 60.4167vw;
 }
 .profile_picture .card {
     position: absolute;
-    top: 0;
+    top: -29.1667vw;
     left: 0;
-    width: 260px;
-    height: 413px;
-    border-radius: 25px;
+    width: 33.3333vw;
+    height: 60.4167vw;
+    border-radius: 20px;
 }
 }
  
