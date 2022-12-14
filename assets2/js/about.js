@@ -257,7 +257,7 @@ function aboutFadeIn2(){
     const t2 = gsap.timeline({
         scrollTrigger: {
             trigger: ".about_textBox",
-            markers: true,  
+            // markers: true,  
             start: "75% 60%",
             end: "+=50%",
             pin: true,
@@ -417,7 +417,7 @@ function aboutFadeIn3(){
     const t2 = gsap.timeline({
         scrollTrigger: {
             trigger: ".about_textBox",
-            markers: true,  
+            // markers: true,  
             start: "75% 60%",
             end: "+=50%",
             pin: true,

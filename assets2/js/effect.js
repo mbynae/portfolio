@@ -136,7 +136,7 @@ function slider(){
             scrub: 2,
             start: "top 0",
             end: "+=8000vw",
-            markers: true
+            // markers: true
         }
     })
 }

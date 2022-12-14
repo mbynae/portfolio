@@ -33,6 +33,11 @@ projectTitle();
 // 프로젝트 컨텐츠 효과
 function projectCont(){
 
+    const media1024 = matchMedia("(min-width: 769) and (max-width: 1024)");
+    const media768 = matchMedia("(min-width: 481) and (max-width: 768)");
+    const media480 = matchMedia("(max-width: 480)");
+
+
     // 스티키 효과
     const prSticky1 = gsap.timeline({
         scrollTrigger: {
@@ -118,6 +123,17 @@ function projectCont(){
 
 
     // 등장 효과
+    // const asd =
+    //     if(media1024){
+    //         "60%"
+    //     } else if(media768){
+    //         "40%"
+    //     } else if(media480){
+    //         "20%"
+    //     } else {"80%"}
+    
+
+
     gsap.timeline({
         scrollTrigger: {
             trigger: ".project_table",
@@ -133,28 +149,29 @@ function projectCont(){
     gsap.timeline({
         scrollTrigger: {
             trigger: ".project_table",
-            // markers: true,
-            start: `${document.querySelector(".project_textBox").offsetHeight}, 80%`,
-            end: "top, 80%"
+            markers: true,
+            start: `${document.querySelector(".project_textBox").offsetHeight}, ${mediafade1024}`,
+            end: `top, ${mediafade1024}`
         }
     })
     .to(".prCB1", {scaleX: 1, duration: 0.3}, "table2")
-    .to(".button2", {y: `${document.querySelector(".project_textBox").offsetHeight * 0.9}px`, opacity: 1, duration: 1, ease: "power2.out"}, "table2")
+    .to(".button2", {y: `${document.querySelector(".project_textBox").offsetHeight-document.querySelector(".project_sideMenu button").offsetHeight}px`, opacity: 1, duration: 1, ease: "power2.out"}, "table2")
     .to(".leftpd2", {y: `-${document.querySelector(".project_textBox").offsetHeight}`, opacity: 1, delay: 0.2, duration: 1, ease: "power2.out"}, "table2")
     .to(".rightpd2", {y: `-${document.querySelector(".project_textBox").offsetHeight}`, opacity: 1, delay: 0.4, duration: 1, ease: "power2.out"}, "table2")
     .to(".leftpd2", {borderTop: 0 , delay: 0.5,ease: "none"}, "table2")
     .to(".rightpd2", {borderTop: 0, delay: 0.5, ease: "none"}, "table2");
+    
 
     gsap.timeline({
         scrollTrigger: {
             trigger: ".project_table",
             // markers: true,
-            start: `${document.querySelector(".project_textBox").offsetHeight*2}, 80%`,
-            end: "top, 80%"
+            start: `${document.querySelector(".project_textBox").offsetHeight*2}, ${mediafade1024}`,
+            end: `top, ${mediafade1024}`
         }
     })
     .to(".prCB2", {scaleX: 1, duration: 0.3}, "table3")
-    .to(".button3", {y: `${document.querySelector(".project_textBox").offsetHeight * 1.8}px`, opacity: 1, duration: 1, ease: "power2.out"}, "table3")
+    .to(".button3", {y: `${(document.querySelector(".project_textBox").offsetHeight-document.querySelector(".project_sideMenu button").offsetHeight)*2}px`, opacity: 1, duration: 1, ease: "power2.out"}, "table3")
     .to(".leftpd3", {y: `-${document.querySelector(".project_textBox").offsetHeight}`, opacity: 1, delay: 0.2, duration: 1, ease: "power2.out"}, "table3")
     .to(".rightpd3", {y: `-${document.querySelector(".project_textBox").offsetHeight}`, opacity: 1, delay: 0.4, duration: 1, ease: "power2.out"}, "table3")
     .to(".ltb3", {borderTop: 0 , delay: 0.5,ease: "none"}, "table3")
@@ -164,12 +181,12 @@ function projectCont(){
         scrollTrigger: {
             trigger: ".project_table",
             // markers: true,
-            start: `${document.querySelector(".project_textBox").offsetHeight*3}, 80%`,
-            end: "top, 80%"
+            start: `${document.querySelector(".project_textBox").offsetHeight*3}, ${mediafade1024}`,
+            end: `top, ${mediafade1024}`
         }
     })
     .to(".prCB3", {scaleX: 1, duration: 0.3}, "table4")
-    .to(".button4", {y: `${document.querySelector(".project_textBox").offsetHeight * 2.7}px`, opacity: 1, duration: 1, ease: "power2.out"}, "table4")
+    .to(".button4", {y: `${(document.querySelector(".project_textBox").offsetHeight-document.querySelector(".project_sideMenu button").offsetHeight)*3}px`, opacity: 1, duration: 1, ease: "power2.out"}, "table4")
     .to(".leftpd4", {y: `-${document.querySelector(".project_textBox").offsetHeight * 2}`, opacity: 1, delay: -0.2, duration: 1.5, ease: "power2.out"}, "table4")
     .to(".rightpd4", {y: `-${document.querySelector(".project_textBox").offsetHeight * 2}`, opacity: 1, delay: 0.2, duration: 1.5, ease: "power2.out"}, "table4")
     .to(".ltb4", {borderTop: 0 , delay: 0.8,ease: "none"}, "table4")
@@ -179,12 +196,12 @@ function projectCont(){
         scrollTrigger: {
             trigger: ".project_table",
             // markers: true,
-            start: `${document.querySelector(".project_textBox").offsetHeight*4}, 80%`,
-            end: "top, 80%"
+            start: `${document.querySelector(".project_textBox").offsetHeight*4}, ${mediafade1024}`,
+            end: `top, ${mediafade1024}`
         }
     })
     .to(".prCB4", {scaleX: 1, duration: 0.3}, "table5")
-    .to(".button5", {y: `${document.querySelector(".project_textBox").offsetHeight * 3.6}px`, opacity: 1, duration: 1, ease: "power2.out"}, "table5")
+    .to(".button5", {y: `${(document.querySelector(".project_textBox").offsetHeight-document.querySelector(".project_sideMenu button").offsetHeight)*4}px`, opacity: 1, duration: 1, ease: "power2.out"}, "table5")
     .to(".leftpd5", {y: `-${document.querySelector(".project_textBox").offsetHeight * 4}`, opacity: 1, delay: -0.3, duration: 1.5, ease: "power2.out"}, "table5")
     .to(".rightpd5", {y: `-${document.querySelector(".project_textBox").offsetHeight * 4}`, opacity: 1, delay: 0.2, duration: 1.5, ease: "power2.out"}, "table5")
     .to(".ltb5", {borderTop: 0 , delay: 0.8,ease: "none"}, "table5")
@@ -198,9 +215,7 @@ document.querySelectorAll(".button").forEach((e, i)=>{
     if(i == 0){
         document.querySelector(`.button${i+1}`).style.transform = `translateY(200%)`;
     } else {
-        document.querySelector(`.button${i+1}`).style.transform = `translateY(${document.querySelector(".project_textBox").offsetHeight * i + 500}px)`;
+        document.querySelector(`.button${i+1}`).style.transform = `translateY(${document.querySelector(".project_textBox").offsetHeight * i}px)`;
     }
     document.querySelectorAll(".prContBorder")[i].style.transform = `translateY(${document.querySelector(".project_textBox").offsetHeight * (i+1)}px) scaleX(0)`;
 })
-// document.querySelector(`.prContBorder`).style.transform = `translateY(${document.querySelector(".project_textBox").offsetHeight}px)`;
-
