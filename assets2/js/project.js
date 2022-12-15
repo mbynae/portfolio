@@ -209,7 +209,35 @@ function projectCont(){
     .to(".ltb5", {borderTop: 0 , delay: 0.8,ease: "none"}, "table5")
     .to(".rtb5", {borderTop: 0, delay: 1, ease: "none"}, "table5");
 }
-projectCont();
+
+function projectContMini(){
+    const prBox = document.querySelectorAll(".project_contentsInner");
+    const prText = document.querySelectorAll(".project_contentsInner .project_textBox");
+    const prImg = document.querySelectorAll(".project_contentsInner .project_imgBox");
+    
+    prBox.forEach((e, i) => {
+        if(prImg[i].classList.contains("rightpd")){
+            e.prepend(prImg[i]);
+        } 
+
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: e,
+                // markers: true,
+                start: "top, 60%",
+                end: "top, 60%"
+            }
+        })
+        .to(prImg[i], {y: 0, opacity: 1, duration: 0.8, ease: "power3.out"}, "up")
+        .to(prText[i], {y: 0, opacity: 1, duration: 0.8, ease: "power3.out", delay: 0.3}, "up")
+    })
+}
+
+if(window.matchMedia("(min-width: 481px)").matches){
+    projectCont();
+} else {
+    projectContMini();
+}
 
 
 // 버튼 및 사이드 테두리 위치 조정
