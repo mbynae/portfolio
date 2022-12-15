@@ -123,6 +123,7 @@ function projectCont(){
 
 
     // 등장 효과
+    const mediafade1024 = media1024 ? "60%" : "80%";
     // const asd =
     //     if(media1024){
     //         "60%"
