@@ -87,7 +87,7 @@
     /* border-right: 1px solid rgba(21, 21, 21, 0.35); */
 }
 .project_sideMenu button {
-    width: 365px;
+    width: 19.0104vw;
     height: 85px;
     font-size: 30px;
     color: #fff;
@@ -208,7 +208,7 @@
     }
 
     .project_sideMenu button {
-        width: 220px;
+        width: 21.4844vw;
         height: 60px;
         font-size: 25px;
         color: #fff;
