@@ -1,125 +1,77 @@
 //이펙트 효과 진입
 function effectStart(){
-    window.addEventListener("scroll", ()=>{
-        if(window.scrollY < document.querySelector(".prevEffect").offsetTop - document.querySelector(".prevEffect").offsetHeight){
-            header.style.color = "#000"; 
-            document.documentElement.style.setProperty("--border-right-transform", "scaleX(0)")
-        }
-    });
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.to(".prevEffect", {
-        // onComplete: middleEffect,
-        // onComplete: horizontal,
+    gsap.timeline({
         scrollTrigger: {
             trigger: ".prevEffect",
-            start: "top 50%",
-            end: "top 50%",
-            pin: true,
-            pinSpacing: true,
-            // end: () => `+=${document.querySelector(".prevEffect").offsetHeight - 500}`,   //요소 높이값만큼 end를 처리함 가로모드 할때 필요
-            // markers: {
-            //     startColor: "blue",
-            //     endColor: "purple",
-            //     fontSize: "30px"
-            // },
-            toggleActions: "restart none restart none"
-        },
-    });
+            start: "-10%, 70%",
+            end: "-10%, 70%",
+            markers: true
+        }
+    })
+    .to(".prevEffect span", {
+        yPercent: 0,
+        opacity: 1,
+        duration: 0.7,
+        ease:Back.easeOut.config(2.5),
+        stagger: 0.05,
+    })
+    .to(".prevEffect span", {rotate: 0, stagger: 0.05, duration: 0.3, delay: -0.3})
 
-    console.log(document.querySelector(".prevEffect").offsetTop - document.querySelector(".prevEffect").offsetHeight)
+    if(window.matchMedia("(min-width: 481px) and (max-width: 1024px)").matches){
+        document.querySelector(".prevEffect").innerText = "";
+    }
 }
+effectStart();
 
-
-function middleEffect(){
-    const tl = gsap.timeline()
-    tl.to(".middleBox", {
-        top: 0,
-        duration: 1.2,
-        ease: Power3.easeOut,
-    })
-    .to(".middleBox2", {
-        top: 0,
-        duration: 1.4,
-        delay: -1,
-        ease: Power3.easeOut
-    })
-    .to("#effect", {
-        display: 'block'
-    })
-    .to(".middleBox", {
-        display: 'none'
-    })
-    .to(".middleBox2", {
-        display: 'none'
-    })
-}
 
 //이펙트 효과 타이틀
 function horizontal(){
-    if(window.scrollY >= document.querySelector(".prevEffect").offsetTop - document.querySelector(".prevEffect").offsetHeight){
-        const el = gsap.timeline()
-        header.style.color = "#fff";
-        el.set(".effect_title h2",{
-            y: 50,
-            opacity: 0,
-        })
-        .set(".effect_title .emphasis", {
-            y: 50,
-            opacity: 0,
-        })
-        .set(".effect_titleLine", {
-            y: 50,
-            opacity: 0,
-        })
-        .to(".effect_title h2",{
-            y: 0,
-            opacity: 1,
-            delay: -0.5,
-        })
-        .to(".effect_title .emphasis", {
-            y: 0,
-            opacity: 1,
-            delay: -0.4,
-        })
-        .to(".effect_titleLine", {
-            y: 0,
-            opacity: 1,
-            delay: -0.3,
-            onStart: borderLine, effectReset,
-            // onComplete: slider
-        })
-    }
+    const el = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#effect",
+            // markers: true,
+            start: "top, center",
+            end: "top, center" 
+        }
+    })
+    header.style.color = "#fff";
+    gsap.set(".effect_title h2",{
+        y: 50,
+        opacity: 0,
+    })
+    gsap.set(".effect_title .emphasis", {
+        y: 50,
+        opacity: 0,
+    })
+    gsap.set(".effect_titleLine", {
+        y: 50,
+        opacity: 0,
+    })
+    el.to(".effect_title h2",{
+        y: 0,
+        ease: "power2.out",
+        opacity: 1,
+    })
+    .to(".effect_title .emphasis", {
+        y: 0,
+        ease: "power2.out",
+        opacity: 1,
+        delay: -0.3
+    })
+    .to(".effect_titleLine", {
+        y: 0,
+        ease: "power2.out",
+        opacity: 1,
+        delay: -0.3,
+        onStart: borderLine
+    })
 }
+horizontal();
 
 //이펙트 타이틀 테두리
 function borderLine(){
     document.documentElement.style.setProperty("--border-right-transform", "scaleX(1)")
 }
-
-//이펙트 효과 아웃
-function effectReset(){
-    window.addEventListener("scroll", ()=>{
-    //     alert("실행")
-        if(window.scrollY < document.querySelector(".prevEffect").offsetTop - document.querySelector(".prevEffect").offsetHeight){
-            gsap.timeline();
-            gsap.to(".middleBox", {
-                // display: "block",
-                top: '100vh',
-                delay: -2,
-                ease: Power3.easeOut,
-            })
-            .to(".middleBox", {
-                // position: "fixed",
-                top: '100vh',
-                delay: -2,
-                ease: Power3.easeOut,
-            })
-        } 
-    })
-}
-
 
 //가로모드
 function slider(){

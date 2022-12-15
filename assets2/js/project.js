@@ -151,7 +151,7 @@ function projectCont(){
     gsap.timeline({
         scrollTrigger: {
             trigger: ".project_table",
-            markers: true,
+            // markers: true,
             start: `${document.querySelector(".project_textBox").offsetHeight}, ${mediafade}`,
             end: `top, ${mediafade}`
         }

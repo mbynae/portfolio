@@ -4,6 +4,12 @@
     font-size: 100px;
     text-align: center;
     line-height: 50vh;
+    /* background-color: #666; */
+}
+.prevEffect span {
+    display: inline-block;
+    transform: translateY(-50%) rotate(45deg);
+    opacity: 0;
 }
 
 #effect {
@@ -14,10 +20,9 @@
     width: 100%;
     height: 100vh;
 
-
 }
 .effect_inner {
-    width: 800%;
+    width: 808%;
     display: flex;
     flex-wrap: nowrap;
     background-color: #000;

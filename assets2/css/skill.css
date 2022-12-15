@@ -130,6 +130,12 @@
 .skill_iconBox .icon:nth-child(8) figure::before {content: '30%';}
 .skill_iconBox .icon:nth-child(9) figure::before {content: '15%';}
 
+@media (max-width: 1400px){
+    .skill_textBox {
+        margin-left: 1.4286vw;
+    }
+}
+
 @media (max-width: 1024px){
     .skill_textBox h3 {
         font-size: 3.5156vw;
