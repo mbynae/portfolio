@@ -33,8 +33,9 @@ projectTitle();
 // 프로젝트 컨텐츠 효과
 function projectCont(){
 
-    const media1024 = matchMedia("(min-width: 769) and (max-width: 1024)");
-    // const media768 = matchMedia("(min-width: 481) and (max-width: 768)");
+    // 미디어 쿼리
+    const media1024 = window.matchMedia("(min-width: 769px) and (max-width: 1024px)");
+    const media768 = window.matchMedia("(min-width: 481px) and (max-width: 768px)");
     // const media480 = matchMedia("(max-width: 480)");
 
 
@@ -123,19 +124,17 @@ function projectCont(){
 
 
     // 등장 효과
-    const mediafade1024 = media1024 ? "60%" : "80%";
-    console.log(mediafade1024);
-    
-    // const asd =
-    //     if(media1024){
-    //         "60%"
-    //     } else if(media768){
-    //         "40%"
-    //     } else if(media480){
-    //         "20%"
-    //     } else {"80%"}
-    
 
+        //미디어 쿼리 변수 조절
+        let mediafade;
+        if(media1024.matches){
+            mediafade = "60%";
+        } else if(media768.matches){
+            mediafade = "60%";
+        } else {
+            mediafade = "80%";
+        }
+    
 
     gsap.timeline({
         scrollTrigger: {
@@ -153,8 +152,8 @@ function projectCont(){
         scrollTrigger: {
             trigger: ".project_table",
             markers: true,
-            start: `${document.querySelector(".project_textBox").offsetHeight}, ${mediafade1024}`,
-            end: `top, ${mediafade1024}`
+            start: `${document.querySelector(".project_textBox").offsetHeight}, ${mediafade}`,
+            end: `top, ${mediafade}`
         }
     })
     .to(".prCB1", {scaleX: 1, duration: 0.3}, "table2")
@@ -169,8 +168,8 @@ function projectCont(){
         scrollTrigger: {
             trigger: ".project_table",
             // markers: true,
-            start: `${document.querySelector(".project_textBox").offsetHeight*2}, ${mediafade1024}`,
-            end: `top, ${mediafade1024}`
+            start: `${document.querySelector(".project_textBox").offsetHeight*2}, ${mediafade}`,
+            end: `top, ${mediafade}`
         }
     })
     .to(".prCB2", {scaleX: 1, duration: 0.3}, "table3")
@@ -184,8 +183,8 @@ function projectCont(){
         scrollTrigger: {
             trigger: ".project_table",
             // markers: true,
-            start: `${document.querySelector(".project_textBox").offsetHeight*3}, ${mediafade1024}`,
-            end: `top, ${mediafade1024}`
+            start: `${document.querySelector(".project_textBox").offsetHeight*3}, ${mediafade}`,
+            end: `top, ${mediafade}`
         }
     })
     .to(".prCB3", {scaleX: 1, duration: 0.3}, "table4")
@@ -199,8 +198,8 @@ function projectCont(){
         scrollTrigger: {
             trigger: ".project_table",
             // markers: true,
-            start: `${document.querySelector(".project_textBox").offsetHeight*4}, ${mediafade1024}`,
-            end: `top, ${mediafade1024}`
+            start: `${document.querySelector(".project_textBox").offsetHeight*4}, ${mediafade}`,
+            end: `top, ${mediafade}`
         }
     })
     .to(".prCB4", {scaleX: 1, duration: 0.3}, "table5")
