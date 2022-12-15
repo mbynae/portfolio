@@ -105,6 +105,11 @@
 
 
 @media (max-width: 1024px){
+    .summary_inner {
+        width: 96%;
+        padding: 7.8125vw 2% 0 2%;
+    }
+
     .summary_inner h3 {
         font-size: 4.8828vw;
         max-width: 146.4844vw;
