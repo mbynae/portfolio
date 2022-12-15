@@ -34,8 +34,8 @@ projectTitle();
 function projectCont(){
 
     const media1024 = matchMedia("(min-width: 769) and (max-width: 1024)");
-    const media768 = matchMedia("(min-width: 481) and (max-width: 768)");
-    const media480 = matchMedia("(max-width: 480)");
+    // const media768 = matchMedia("(min-width: 481) and (max-width: 768)");
+    // const media480 = matchMedia("(max-width: 480)");
 
 
     // 스티키 효과
@@ -124,6 +124,8 @@ function projectCont(){
 
     // 등장 효과
     const mediafade1024 = media1024 ? "60%" : "80%";
+    console.log(mediafade1024);
+    
     // const asd =
     //     if(media1024){
     //         "60%"
