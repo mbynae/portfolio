@@ -48,3 +48,7 @@ body::-webkit-scrollbar-track {
     body {
     }
 } */
+
+.hide {
+    display: none !important;
+}

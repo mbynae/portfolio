@@ -40,7 +40,7 @@ function titleText(){
 }
 titleText();
 
-function romoveFixed(){
-    document.querySelector("#title").style.position = "static";
-    document.querySelector("body").style.overflow = "overlay";
-}
+// function romoveFixed(){
+//     document.querySelector("#title").style.position = "static";
+//     document.querySelector("body").style.overflow = "overlay";
+// }

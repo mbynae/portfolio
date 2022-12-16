@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #loading {
+            font-family: 'GmarketSans';
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            background-color: #000;
+            color: #fff;
+        }
+        /* .block_box {
+            width: 100%;
+            height: 43%;
+            display: flex;
+            justify-content: center;
+            align-items:flex-end;
+            background-color: #000;
+            z-index: 1;
+        } */
+        .loading_text {
+            font-size: 100px;
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        .loading_text span {
+            display: inline-block;
+        }
+        .loadingM {
+            width: 100%;
+            height: 100vh;
+            background-color: #14CF93;
+            position: fixed;
+            top: 100vh;
+            left: 0;
+            z-index: 1;
+        }
+        .loadingE {
+            width: 100%;
+            height: 100vh;
+            background-color: #FCFAF8;
+            position: fixed;
+            top: 100vh;
+            left: 0;
+            z-index: 2;
+        }
+        .hide {
+            display: none !important;
+        }
+    </style>
+
+    <link rel="stylesheet" href="assets2/css/style.css">
+
+</head>
+<body>
+    <div id="loading">
+        <div class="block_box"></div>
+        <div class="loading_text">LOADING</div>
+        <div class="loadingM"></div>
+        <div class="loadingE"></div>
+    </div>
+    <div class="wrap">
+        <header id="header">
+            <nav>
+                <ul>
+                    <li><a href="#title" onclick="lenis.scrollTo('#title', {offset:0, duration:5})">HOME</a></li>
+                    <li><a href="#project" onclick="lenis.scrollTo('#project', {offset:0, duration:5})">PROJECT</a></li>
+                    <li><a href="#effect" onclick="lenis.scrollTo('#effect', {offset:0, duration:5})">SCRIPT</a></li>
+                    <li><a href="#contact" onclick="lenis.scrollTo('#contact', {offset:0, duration:5})">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section id="title">
+            <canvas id="canvas"></canvas>
+            <div class="title_inner">
+                <div class="textBox">
+                    <div class="tText01 tText">Creative</div>
+                    <div class="tText02 ppEiko tText">frontend</div>
+                    <div class="tText03 tText">Developer</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+
+
+
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        var cw = canvas.width = window.innerWidth,
+            cx = cw / 2;
+        var ch = canvas.height = window.innerHeight,
+            cy = ch / 2;
+
+        ctx.fillStyle = "#14CF93";
+        var circlesRy = [];
+        var circlesNum = 15;
+        var requestId = null;
+
+        function Circle() {
+            this.r = randomIntFromInterval(25, 170);
+            this.x = randomIntFromInterval(this.r, cw - this.r);
+            this.y = randomIntFromInterval(this.r, ch - this.r);
+
+            this.vx = randomIntFromInterval(25, 100) / 100;
+            this.vy = randomIntFromInterval(25, 100) / 100;
+
+            this.update = function () {
+                this.edges();
+                this.x += this.vx;
+                this.y += this.vy;
+            }
+
+            this.edges = function () {
+                if (this.x < this.r || this.x > cw - this.r) {
+                    this.vx *= -1;
+                }
+                if (this.y < this.r || this.y > ch - this.r) {
+                    this.vy *= -1;
+                }
+            }
+
+            this.draw = function () {
+                ctx.strokeStyle = "#ccc";
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
+                ctx.stroke();
+            }
+        }
+
+        for (var i = 0; i < circlesNum; i++) {
+            var circle = new Circle();
+            circlesRy.push(circle);
+        }
+
+        function Draw() {
+            requestId = window.requestAnimationFrame(Draw);
+            ctx.clearRect(0, 0, cw, ch);
+            for (var i = 0; i < circlesRy.length; i++) {
+                var c = circlesRy[i];
+                c.update();
+                c.draw();
+            }
+            for (var i = 0; i < circlesRy.length; i++) {
+                var c = circlesRy[i];
+                for (var j = i + 1; j < circlesRy.length; j++) {
+                    var c1 = circlesRy[j];
+                    var d = dist(c, c1);
+                    if ((d < c.r + c1.r) && (d > Math.abs(c.r - c1.r))) {
+                        getIntersection(c, c1, d);
+                    }
+                }
+            }
+        }
+
+        function Init() {
+            circlesRy.length = 0;
+            for (var i = 0; i < circlesNum; i++) {
+                var circle = new Circle();
+                circlesRy.push(circle);
+            }
+
+            if (requestId) {
+                window.cancelAnimationFrame(requestId);
+                requestId = null;
+            }
+
+            cw = canvas.width = window.innerWidth,
+                cx = cw / 2;
+            ch = canvas.height = window.innerHeight,
+                cy = ch / 2;
+
+            Draw();
+        };
+
+        setTimeout(function () {
+            Init();
+
+            addEventListener('resize', Init, false);
+        }, 15);
+
+        function getIntersection(p1, p2, d) {
+
+            var p3 = {}; // middle point
+            var p4 = {}; // intersection 1
+            var p5 = {}; // intersection 2
+
+            var a = (Math.pow(p1.r, 2) - Math.pow(p2.r, 2) + Math.pow(d, 2)) / (2 * d)
+            var h = Math.sqrt(Math.pow(p1.r, 2) - Math.pow(a, 2));
+
+            p3.x = p1.x + a * (p2.x - p1.x) / d;
+            p3.y = p1.y + a * (p2.y - p1.y) / d;
+
+            p4.x = p3.x + h * (p2.y - p1.y) / d;
+            p4.y = p3.y - h * (p2.x - p1.x) / d;
+
+            p5.x = p3.x - h * (p2.y - p1.y) / d;
+            p5.y = p3.y + h * (p2.x - p1.x) / d;
+
+            markPoint(p4);
+            markPoint(p5);
+
+        }
+
+        function dist(p1, p2) {
+            var dx = p2.x - p1.x;
+            var dy = p2.y - p1.y;
+            return Math.sqrt(dx * dx + dy * dy);
+        }
+
+        function randomIntFromInterval(mn, mx) {
+            return ~~(Math.random() * (mx - mn + 1) + mn)
+        }
+
+        function markPoint(p) {
+            ctx.fillStyle = "#14CF93";
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, 2, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+    </script>
+
+    <script src="assets2/js/title.js"></script>
+
+    <script>
+        document.onreadystatechange = function() {
+            if(document.readyState === "loading" || document.readyState === "interactive"){
+                document.querySelector(".wrap").classList.add("hide");
+                console.log("loading");
+            
+            } else if(document.readyState === "complete"){
+                console.log("complete");
+                complete();
+            }
+        } 
+        
+        function complete(){
+            const LText = document.querySelector(".loading_text");
+            LText.innerHTML = `<span class='lSplit'>${LText.innerText.split("").join('</span><span class=lSplit}>')}</span>`;
+            
+            const asd = gsap.timeline();
+            asd.to(".loading_text span", {y: -120, opacity: 0, ease: "power2.out", duration: 0.5,stagger: 0.03}, "box")
+            .to(".loadingM", {top: 0, duration: 0.8, delay: -0.1, ease: Circ.easeOut})
+            .to(".loadingE", {top: 0, duration: 0.8, delay: -0.6, ease: Circ.easeOut})
+            .to(".wrap", {onUpdate: contentsOn})
+        }
+
+    
+        
+        function contentsOn(){
+            document.querySelector(".wrap").classList.remove("hide");
+            document.querySelector("#loading").classList.add("hide");
+        }
+
+
+    </script>
+
+
+</body>
+</html>
