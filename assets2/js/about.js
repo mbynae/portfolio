@@ -521,21 +521,22 @@ function sampleAb4(){
 }
 
 
-
-
-let responseAb = gsap.matchMedia();
-responseAb.add("(min-width: 1025px)", ()=>{
-    aboutFadeIn1();
-    sampleAb1();
-});
-responseAb.add("(min-width: 769px) and (max-width: 1024px)", ()=>{
-    aboutFadeIn2();
-    sampleAb2();
-});
-responseAb.add("(min-width: 481px) and (max-width: 768px)", ()=>{
-    aboutFadeIn3();
-    sampleAb3();
-});
-responseAb.add("(max-width: 480px)", ()=>{
-    sampleAb4();
-});
+// 어바웃미 함수 실행
+function aboutRun(){
+    let responseAb = gsap.matchMedia();
+    responseAb.add("(min-width: 1025px)", ()=>{
+        aboutFadeIn1();
+        sampleAb1();
+    });
+    responseAb.add("(min-width: 769px) and (max-width: 1024px)", ()=>{
+        aboutFadeIn2();
+        sampleAb2();
+    });
+    responseAb.add("(min-width: 481px) and (max-width: 768px)", ()=>{
+        aboutFadeIn3();
+        sampleAb3();
+    });
+    responseAb.add("(max-width: 480px)", ()=>{
+        sampleAb4();
+    });    
+}

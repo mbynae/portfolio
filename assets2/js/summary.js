@@ -1,4 +1,4 @@
-function summaryActive(){
+function summaryRun(){
     const sTl = gsap.timeline({
         scrollTrigger: {
             trigger: "#summary",
@@ -31,6 +31,6 @@ function summaryActive(){
         })
     })
 }
-summaryActive();
+summaryRun();
 
 

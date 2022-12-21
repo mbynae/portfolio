@@ -7,34 +7,65 @@
     <title>Document</title>
 
     <style>
-        #loading {
+        /* 로딩중
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100);
+        body {
+            overflow: hidden;
+        }
+
+        .loading-page {  
+            font-family: 'Roboto';
+            background: #0d0d0d;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: -1;
+        }
+        .loading-page .counter {
+            text-align: center;
+        }
+        .loading-page .counter p {
+            font-size: 40px;
+            font-weight: 100;
+            color: #14CF93;
+            margin-bottom: 10px;
+        }
+        .loading-page .counter h1 {
+            color: white;
+            font-size: 60px;
+            margin-top: -10px;
+        }
+        .loading-page .counter .loading_bar {
+            background: #14CF93;
+            margin: 0;
+            border: none;
+            height: 1px;
+        }
+        .loading-page .counter {
+            position: relative;
+            width: 200px;
+        }
+        .loading-page .counter h1.abs {
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .loading-page .counter .color {
+            width: 0px;
+            overflow: hidden;
+            color: #f60d54;
+        }
+
+        /* 컨텐츠 온 */
+        /* #pageOn {
             font-family: 'GmarketSans';
             width: 100%;
             height: 100vh;
             position: fixed;
             background-color: #000;
             color: #fff;
-        }
-        /* .block_box {
-            width: 100%;
-            height: 43%;
-            display: flex;
-            justify-content: center;
-            align-items:flex-end;
-            background-color: #000;
-            z-index: 1;
-        } */
-        .loading_text {
-            font-size: 100px;
-            text-align: center;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            z-index: -1;
-        }
-        .loading_text span {
-            display: inline-block;
         }
         .loadingM {
             width: 100%;
@@ -56,19 +87,26 @@
         }
         .hide {
             display: none !important;
-        }
+        }  */
     </style>
 
     <link rel="stylesheet" href="assets2/css/style.css">
 
 </head>
 <body>
-    <div id="loading">
-        <div class="block_box"></div>
-        <div class="loading_text">LOADING</div>
+    <div class="loading-page">
+        <div class="counter">
+            <p>Loading</p>
+            <h1>0%</h1>
+            <div class="loading_bar"></div>
+        </div>
+    </div>
+
+    <div id="pageOn">
         <div class="loadingM"></div>
         <div class="loadingE"></div>
     </div>
+
     <div class="wrap">
         <header id="header">
             <nav>
@@ -97,7 +135,7 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
 
 
     <script>
@@ -242,34 +280,53 @@
         document.onreadystatechange = function() {
             if(document.readyState === "loading" || document.readyState === "interactive"){
                 document.querySelector(".wrap").classList.add("hide");
+                loading();
                 console.log("loading");
             
             } else if(document.readyState === "complete"){
                 console.log("complete");
-                setTimeout(complete, 1000);
-                
+                const timer = setInterval(()=>{
+                    if(document.querySelector(".loading-page .counter h1").innerText == "100%"){
+                        clearInterval(timer);
+                        setTimeout(complete, 800);
+                    }
+                }, 100)
             }
         } 
         
+        function loading(){
+            $(document).ready(function() {
+                var counter = 0;
+                var c = 0;
+                var i = setInterval(function(){
+                    $(".loading-page .counter h1").html(c + "%");
+                    $(".loading-page .counter .loading_bar").css("width", c + "%");
+                    counter++;
+                    c++;
+                    
+                    if(counter == 101) {
+                        clearInterval(i);
+                    }
+                }, 20);
+            });
+        }
+
         function complete(){
-            const LText = document.querySelector(".loading_text");
-            LText.innerHTML = `<span class='lSplit'>${LText.innerText.split("").join('</span><span class=lSplit}>')}</span>`;
-            
-            const asd = gsap.timeline();
-            asd.to(".loading_text span", {y: -120, opacity: 0, ease: "power2.out", duration: 0.5,stagger: 0.03}, "box")
-            .to(".loadingM", {top: 0, duration: 0.8, delay: -0.1, ease: Circ.easeOut})
-            .to(".loadingE", {top: 0, duration: 0.8, delay: -0.6, ease: Circ.easeOut})
-            .to(".wrap", {onUpdate: contentsOn})
+            const Tl = gsap.timeline();
+            Tl.to(".loadingM", {top: 0, duration: 0.8, delay: 0, ease: Circ.easeOut})
+            .to(".loadingE", {top: 0, duration: 0.8, delay: -0.6, ease: Circ.easeOut, onComplete: contentsOn})
         }
 
-    
-        
         function contentsOn(){
+            document.querySelector(".loading-page").classList.add("hide");
+            document.querySelector("#pageOn").classList.add("hide");
             document.querySelector(".wrap").classList.remove("hide");
-            document.querySelector("#loading").classList.add("hide");
+            init();
         }
-
-
+        
+        function init(){
+            titleText();
+        }
     </script>
 
 

@@ -1,4 +1,5 @@
-function mySkillEffect(){
+//마이스킬 함수 시작
+function mySkillRun(){
     const skillText = document.querySelectorAll(".skillText");
 
     skillText.forEach((e, i) => {
@@ -36,4 +37,3 @@ function mySkillEffect(){
         })
     }
 }
-mySkillEffect();

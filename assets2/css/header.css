@@ -15,11 +15,14 @@
     align-items: center;
     justify-content:space-evenly;
 }
-#header nav ul li{
+#header nav ul li {
     font-size: 14px;
     font-weight: 500;
     text-decoration: underline;
     text-underline-position: under;
     cursor: pointer;
-    color: #383838
+
+}
+#header nav ul li a {
+    color: #000;
 }

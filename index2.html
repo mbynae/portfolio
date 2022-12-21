@@ -14,38 +14,32 @@
 
     <link rel="stylesheet" href="assets2/css/style.css">
     <style>
-        #loading {
-            width: 100%;
-            height: 100vh;
-            position: fixed;
-            background-color: #151515;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        #loading span {
-            font-size: 100px;
-        }
+
     </style>
 </head>
 <body>
-
-    <!-- <div id="loading">
-        <div>
-            <span>로딩중입니다.</span>
+    <div class="loading-page">
+        <div class="counter">
+            <p>Loading</p>
+            <h1>0%</h1>
+            <div class="loading_bar"></div>
         </div>
-        <div></div>
-    </div> -->
+    </div>
+
+    <div id="pageOn">
+        <div class="loadingM"></div>
+        <div class="loadingE"></div>
+    </div>
+
     <div class="wrap">
         <!-- header -->
         <header id="header">
             <nav>
                 <ul>
-                    <li><a href="#title" onclick="lenis.scrollTo('#title', {offset:0, duration:5})">HOME</a></li>
-                    <li><a href="#project" onclick="lenis.scrollTo('#project', {offset:0, duration:5})">PROJECT</a></li>
-                    <li><a href="#effect" onclick="lenis.scrollTo('#effect', {offset:0, duration:5})">SCRIPT</a></li>
-                    <li><a href="#contact" onclick="lenis.scrollTo('#contact', {offset:0, duration:5})">CONTACT</a></li>
+                    <li><a href="#title" onclick="lenis.scrollTo('#title', {offset:0, duration:6})">HOME</a></li>
+                    <li><a href="#project" onclick="lenis.scrollTo('#project', {offset:0, duration:6})">PROJECT</a></li>
+                    <li><a href="#effect" onclick="lenis.scrollTo('#effect', {offset:0, duration:6})">SCRIPT</a></li>
+                    <li><a href="#contact" onclick="lenis.scrollTo('#contact', {offset:0, duration:6})">CONTACT</a></li>
                 </ul>
             </nav>
         </header>
@@ -1024,7 +1018,7 @@
             </div>
             <div class="contact_img">
                 <button class="contact_btn">
-                    <a href="#title" onclick="lenis.scrollTo('#title', {offset:0, duration:5})">
+                    <a href="#title" onclick="lenis.scrollTo('#title', {offset:0, duration:6})">
                         <div class="inner">
                             <span class="text">Click the button to go to the top</span>
                             <span class="arrow"></span>
@@ -1043,25 +1037,25 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
 
     <script>
         gsap.registerPlugin(ScrollTrigger);
         
         // lenis 효과
-            const lenis = new Lenis({
-                duration: 1.8,
-            })
-
-            //get scroll value
-            lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
-            })
-
-            function raf(time) {
-                lenis.raf(time)
-                requestAnimationFrame(raf)
-            }
-            requestAnimationFrame(raf);
-        
+        const lenis = new Lenis({
+            duration: 1.8,
+        })
+    
+        //get scroll value
+        lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
+        })
+    
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+        requestAnimationFrame(raf);
     </script>
 
     <script>
@@ -1207,7 +1201,7 @@
     <script src="assets2/js/skill.js"></script>
     <script src="assets2/js/about.js"></script>
     <script src="assets2/js/title.js"></script>
-    <!-- <script src="assets2/js/loading.js"></script> -->
+    <script src="assets2/js/loading.js"></script>
 
     
 </body>
