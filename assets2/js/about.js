@@ -179,7 +179,7 @@ function aboutFadeIn2(){
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: ".about_textBox",
-            // markers: true,  
+            markers: true,  
             start: "top 60%",
             end: "top 60%",
         }
@@ -273,8 +273,6 @@ function aboutFadeIn2(){
     .to(".abSplit4", {x: "-50vw"}, "abText1")
     .to(".abSplit5", {x: "100vw"}, "abText1")
     .to(nonempasis, {x: "-70vw"}, "abText1")
-
-    
 }
 function sampleAb2(){
     gsap.to(".cards", {
@@ -479,6 +477,8 @@ function sampleAb3(){
 }
 
 function sampleAb4(){
+
+    // gsap.to(".normalType", {opacity:1});
     gsap.to(".cards", {
         scale: 1.1,
         filter : 'grayscale(0)',
