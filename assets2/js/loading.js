@@ -32,7 +32,7 @@ function loading(){
             if(counter == 101) {
                 clearInterval(i);
             }
-        }, 20);
+        }, 0);
     });
 }
 

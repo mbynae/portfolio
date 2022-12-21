@@ -65,8 +65,15 @@ function titleRun(){
 
         ctx.fillStyle = "#14CF93";
         var circlesRy = [];
-        var circlesNum = 15;
+        var circlesNum = 0;
         var requestId = null;
+        if(window.matchMedia("(min-width: 481px) and (max-width: 768px)").matches){
+            circlesNum = 10;
+        } else if(window.matchMedia("(max-width: 480px)").matches){
+            circlesNum = 5;
+        } else {
+            circlesNum = 15;
+        }
 
         function Circle() {
             this.r = randomIntFromInterval(25, 170);
