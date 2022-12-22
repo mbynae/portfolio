@@ -83,13 +83,16 @@
     right: 0;
     bottom: 0;
     opacity: 0;
+    width: 17.1875vw;
+    height: 17.1875vw;
+
     z-index: -1;
 }
 .about_textBox figure img {
     display: inline-block;
-    width: 17.1875vw;
-    height: 17.1875vw;
+    width: 100%;
     border-radius: 50%;
+
 }
 
 .profile_picture {
