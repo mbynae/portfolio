@@ -16,6 +16,7 @@
     z-index: 1;
     margin: 0 auto 10.4167vw auto;
     position: relative;
+    background-color: #666;
 }
 .about_textBox p {
     margin-bottom: 2.3958vw;
@@ -85,7 +86,6 @@
     opacity: 0;
     width: 17.1875vw;
     height: 17.1875vw;
-
     z-index: -1;
 }
 .about_textBox figure img {
@@ -155,7 +155,6 @@
         width: 90%;
         height: 42.9688vw;
         margin: 0 auto 19.5313vw auto;
-        position: relative;
     }
     .about_textBox p {
         margin-bottom: 4.4922vw;
@@ -164,31 +163,23 @@
     .about_textBox p .bold {
         font-size: 5.8594vw;
         margin-bottom: 0.9766vw;
-        position: absolute;
-        left: 0;
     }
     .about_textBox p .bold-1 {
         top: 2.7344vw;
-        /* top: 10%; */
     }
     .about_textBox p .bold-2 {
         top: 9.668vw;
-        /* top: 25%; */
     }
     .about_textBox p .bold span {
         min-width: 1.8555vw;
         transform: translateY(1.9531vw);
     }
     .about_textBox p .normal {
-        position: absolute;
         left: 0;
         top: 16.8945vw;
-        /* top: 35%; */
     }
     .about_textBox p .normal span {
-        display: inline-block;
         min-width: 0.3906vw;
-        opacity: 0;
     }
     .about_textBox p .aText03 {
         transform: translateY(0.0000vw);
@@ -209,14 +200,14 @@
 
     /* 프로필 사진 */
     .about_textBox figure {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        opacity: 0;
+        right: 0px;
+        bottom: 0px;
+        width: 42vh;
+        height: 42vh;
     }
     .about_textBox figure img {
-        width: 30.2734vw;
-        height: 30.2734vw;
+        width: 100%;
+        height: 100%;
     }
 
     .profile_picture {
