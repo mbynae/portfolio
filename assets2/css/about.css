@@ -16,7 +16,7 @@
     z-index: 1;
     margin: 0 auto 10.4167vw auto;
     position: relative;
-    background-color: #666;
+    /* background-color: #666; */
 }
 .about_textBox p {
     margin-bottom: 2.3958vw;
