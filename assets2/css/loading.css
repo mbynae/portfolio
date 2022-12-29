@@ -51,7 +51,6 @@
         }
 
         .word {
-            bottom: 0;
             color: #fff;
             font-size: 4em;
             height: 2.5em;
@@ -59,7 +58,10 @@
             line-height: 2.5em;
             margin: auto;
             text-shadow: 0 0 10px #000, 0 0 5px #000;
-            top: 0
+            position: relative;
+          }
+          .word::before {
+
           }
           
           .word span {
@@ -69,18 +71,17 @@
           }
           
           .word .done {
-            color: #14CF93;
+            /* color: #14CF93; */
+            color: #fff;
             transform: translateX(0) scale(1);
           }
           
-          .overlay {
-            background-image: linear-gradient(transparent 0%, rgba(10, 16, 10, 0.5) 50%);
-            background-size: 1000px 2px;
-            bottom: 0;
-            content: '';
-            left: 0;
+          .word_block {
+            background-color: #0d0d0d;
+            width: 100%;
+            height: 47%;
             position: absolute;
-            right: 0;
+            left: 0;
             top: 0;
           }
 
@@ -101,7 +102,7 @@
             position: fixed;
             top: 100vh;
             left: 0;
-            z-index: 1;
+            z-index: 2;
         }
         .loadingE {
             width: 100%;
@@ -110,7 +111,7 @@
             position: fixed;
             top: 100vh;
             left: 0;
-            z-index: 2;
+            z-index: 3;
         }
         .hide {
             display: none !important;

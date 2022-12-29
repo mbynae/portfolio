@@ -13,7 +13,7 @@ document.onreadystatechange = function() {
         const timer = setInterval(()=>{
             clearInterval(timer);
             setTimeout(complete, 800);
-        }, 1000)
+        }, 1100)
     }
 } 
 
@@ -84,7 +84,7 @@ function loading(){
             });
         } else if(document.readyState === "complete"){
             setTimeout(()=>{
-                gsap.to(".word", {y: -70, opacity: 0, ease: "power3.out"} )
+                gsap.to(".word span", {y: -130, ease: "power3.out", duration: 0, stagger: 0.03})
             }, 300)
         } else {
             setTimeout( function() {
