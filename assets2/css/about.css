@@ -87,6 +87,7 @@
     width: 17.1875vw;
     height: 17.1875vw;
     z-index: -1;
+    /* background-color: red; */
 }
 .about_textBox figure img {
     display: inline-block;
@@ -202,8 +203,10 @@
     .about_textBox figure {
         right: 0px;
         bottom: 0px;
-        width: 42vh;
-        height: 42vh;
+        width: 32.2266vw;
+        height: 32.2266vw;
+        /* width: 330px;
+        height: 330px; */
     }
     .about_textBox figure img {
         width: 100%;
@@ -239,7 +242,6 @@
     /* 프로필 텍스트 */
     .about_textBox {
         width: 100%;
-        height: 54.6875vw;
         margin: 0 auto 26.0417vw auto;
         position: relative;
         /* background-color: #666; */
@@ -298,10 +300,8 @@
     .about_textBox figure {
         position: absolute;
         right: 0;
-        bottom: 5.2083vw;
+        bottom: -6.5104vw;
         opacity: 0;
-    }
-    .about_textBox figure img {
         width: 36.4583vw;
         height: 36.4583vw;
     }
@@ -358,10 +358,10 @@
     opacity: 1;
 }
 .about_textBox p .bold-1 {
-    left: 5.5%
+    left: 7%
 }
 .about_textBox p .bold-2 {
-    left: 65.5%;
+    left: 67%;
 }
 .about_textBox p .bold span {
     min-width: 0.0000vw;
@@ -401,11 +401,10 @@
 /* 프로필 사진 */
 .about_textBox figure {
     position: absolute;
-    left: 26vw;
-    top: 0;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
     opacity: 1;
-}
-.about_textBox figure img {
     width: 41.6667vw;
     height: 41.6667vw;
 }
