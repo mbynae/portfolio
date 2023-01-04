@@ -19,9 +19,9 @@ function effectRun(){
         })
         .to(".prevEffect span", {rotate: 0, stagger: 0.05, duration: 0.3, delay: -0.3})
 
-        if(window.matchMedia("(min-width: 481px) and (max-width: 1024px)").matches){
-            document.querySelector(".prevEffect").innerText = "";
-        }
+        // if(window.matchMedia("(min-width: 481px) and (max-width: 1024px)").matches){
+        //     document.querySelector(".prevEffect").innerText = "";
+        // }
     }
     effectStart();
 
