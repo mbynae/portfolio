@@ -13,13 +13,8 @@
 }
 
 #effect {
-    /* position: fixed;
-    left: 0;
-    top: 100vh; */
-    /* display: none; */
     width: 100%;
     height: 100vh;
-
 }
 .effect_inner {
     width: 808%;
@@ -32,7 +27,7 @@
 }
 .effect_title {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     position: relative;
 }
 .paddingBox {
@@ -43,9 +38,8 @@
     font-size: 200px;
     color: #fff;
     position: absolute;
-    left: 27%;
-    top: 32%;
-    transform: translate(-50%, -50%);
+    left: 2.5%;
+    top: 20%;
 }
 .effect_title .emphasis {
     display: inline-block;
@@ -53,9 +47,8 @@
     font-weight: 100;
     color: #14CF93;
     position: absolute;
-    left: 51%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    left: 29.5%;
+    top: 32%;
 }
 .effect_titleLine {
     display: block;
@@ -104,18 +97,15 @@
 
 .effectCont {
     width: 100vw;
-    height: 100%;
     margin-top: 85px;
 }
 
 .effectCont_inner {
-    width: 100vw;
-    height: 100%;
     color: #fff;
 }
 .effectName_box {
     padding-bottom: 30px;
-    border-bottom: 1px solid #454545
+    border-bottom: 1px solid #454545;
 }
 .effectName {
     margin-left: 30px;
@@ -137,7 +127,6 @@
 
 .effectMain_box {
     width: 100%;
-    /* height: 100%; */
     display: flex;
     flex-wrap: wrap;
     border-left: 1px solid #454545;
@@ -155,7 +144,7 @@
     padding: 30px;
 }
 .effectMain_inner img {
-    width: 640px;
+    width: 41.71%;
     height: 325px;
     margin-right: 20px;
 }
@@ -182,6 +171,7 @@
 .effectSource {
     width: 20%;
     height: 385px;
+    
 }
 .effectSource_inner {
     padding: 30px;
@@ -192,6 +182,7 @@
     text-decoration: underline;
     text-underline-position: under;
     margin-bottom: 14px;
+    word-break: keep-all;
 }
 .effectSource_inner .source {}
 .effectSource_inner .source li {}
@@ -213,6 +204,20 @@
 }
 
 
+@media (max-width: 1500px){
+    .effectMain_inner img {
+        width: 50%;
+    }
+    .effectMain_inner .effectText_box h3 {
+        font-size: 36px;
+    }
+    .effectMain_inner .effectText_box p {
+        font-size: 18px;
+    }
+    .effectSource_inner .source li a {
+        font-size: 16px;
+    }
+}
 @media (max-width: 1024px){
     .effect_title h2 {
         font-size: 160px;
@@ -239,15 +244,13 @@
 
     .effectMain {
         width:79.9%;
-        height: 385px;
     }
     .effectMain_inner img {
-        width: 500px;
-        height: 325px;
+        width: 65%;
         margin-right: 20px;
     }
     .effectMain_inner .effectText_box {
-        width: 50%;
+        width: 35%;
     }
     .effectMain_inner .effectText_box h3 {
         font-size: 26px;
@@ -264,7 +267,6 @@
     
     .effectSource {
         width: 20%;
-        height: 385px;
     }
     .effectSource_inner h4 {
         font-size: 18px;
