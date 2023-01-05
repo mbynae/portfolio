@@ -2,8 +2,11 @@
     width: 100%;
     height: 50vh;
     font-size: 100px;
-    text-align: center;
-    line-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    /* line-height: 50vh; */
     /* background-color: #666; */
 }
 .prevEffect span {
@@ -15,40 +18,37 @@
 #effect {
     width: 100%;
     height: 100vh;
+    background-color: #000;
 }
 .effect_inner {
     width: 808%;
+    height: 100%;
     display: flex;
     flex-wrap: nowrap;
-    background-color: #000;
     overscroll-behavior: none;
     overflow-x: hidden;
-    /* overflow-y: hidden; */
+
 }
 .effect_title {
     width: 100%;
-    /* height: 100vh; */
-    position: relative;
-}
-.paddingBox {
-    padding: 0 50px;
-    /* background-color: #fff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .effect_title h2 {
-    font-size: 200px;
+    font-size: 10vw;
     color: #fff;
-    position: absolute;
-    left: 2.5%;
-    top: 20%;
+    line-height: 0.3;
+    margin-top: 12vh;
+    margin-right: 30vw;
 }
 .effect_title .emphasis {
     display: inline-block;
-    font-size: 260px;
+    font-size: 12vw;
     font-weight: 100;
     color: #14CF93;
-    position: absolute;
-    left: 29.5%;
-    top: 32%;
+    margin-left: 28vw;
+    margin-bottom: 8vh;
 }
 .effect_titleLine {
     display: block;
@@ -56,16 +56,12 @@
     font-weight: 300;
     font-size: 40px;
     color: #fff;
-    float:right;
-    /* text-align: right; */
-    padding-left: 30%;
-    /* width: 30%; */
+    text-align: right;
     position: relative;
-    margin-top: 700px;
 }
 .effect_titleLine::before {
     content: '';
-    width: 100%;
+    width: 50%;
     border: 1px solid #fff;
     position: absolute;
     right: 0;
@@ -89,7 +85,6 @@
 
 .effectContBox {
     width: 700%;
-    height: 100%;
     border-left: 1px solid #454545;
     display: flex;
     flex-wrap: nowrap;
@@ -97,36 +92,40 @@
 
 .effectCont {
     width: 100vw;
-    margin-top: 85px;
 }
 
 .effectCont_inner {
     color: #fff;
+    height: 100vh;
 }
 .effectName_box {
-    padding-bottom: 30px;
+    height: 16%;
     border-bottom: 1px solid #454545;
+    position: relative;
 }
 .effectName {
-    margin-left: 30px;
+    position: absolute;
+    left: 1.2vw;
+    bottom: 1.2vw;
     text-align: center;
-    line-height: 80px;
-    width: 360px;
-    height: 80px;
+    line-height: 5.5vh;
+    height: 5vh;
+    width: 14vw;
     background-color: #fff;
     border-radius: 60px;
-    font-size: 30px;
+    font-size: 1.2vw;
     color: #000;
 }
 .effectName img {
     display: inline-block;
     vertical-align: middle;
-    width: 40px;
-    height: 40px;
+    width: 1.5vw;
+    height: 1.5vw;
 }
 
 .effectMain_box {
     width: 100%;
+    height: 84%;
     display: flex;
     flex-wrap: wrap;
     border-left: 1px solid #454545;
@@ -137,16 +136,17 @@
 
 .effectMain {
     width:79.9%;
-    height: 385px;
 }
 .effectMain_inner {
     display: flex;
-    padding: 30px;
+    padding: 1.2vw;
 }
 .effectMain_inner img {
-    width: 41.71%;
-    height: 325px;
-    margin-right: 20px;
+    width: 50%;
+    /* width: 100%; */
+    /* height: 325px; */
+    /* height: 100%; */
+    margin-right: 1.2vw;
 }
 .effectMain_inner .effectText_box {
     width: 50%;
@@ -170,7 +170,7 @@
 
 .effectSource {
     width: 20%;
-    height: 385px;
+    /* height: 385px; */
     
 }
 .effectSource_inner {
@@ -204,7 +204,7 @@
 }
 
 
-@media (max-width: 1500px){
+/* @media (max-width: 1500px){
     .effectMain_inner img {
         width: 50%;
     }
@@ -217,8 +217,8 @@
     .effectSource_inner .source li a {
         font-size: 16px;
     }
-}
-@media (max-width: 1024px){
+} */
+/* @media (max-width: 1024px){
     .effect_title h2 {
         font-size: 160px;
         left: 40%;
@@ -291,5 +291,5 @@
         top: 51%;
         transform: translate(-50%, -50%);
     }
-}
+} */
 
