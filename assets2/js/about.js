@@ -459,7 +459,7 @@ function sampleAb3() {
       end: "70% center",
       scrub: true,
       // markers: true,
-      // pin: true
+      pin: true,
     },
   });
 

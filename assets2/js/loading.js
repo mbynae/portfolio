@@ -142,12 +142,12 @@ function contentsOn() {
 
 // 시작 함수
 function init() {
-  titleRun();
-  aboutRun();
-  mySkillRun();
-  projectRun();
-  effectRun();
-  summaryRun();
-  contactBtn();
+    titleRun();
+    aboutRun();
+    mySkillRun();
+    projectRun();
+    effectRun();
+    summaryRun();
+    contactBtn();
 }
 // init();
