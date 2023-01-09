@@ -4,6 +4,7 @@ html {
     --about-border: 0;
     --pr-border: 0;
     --pr-border2: 0;
+    overflow-x: hidden;
 }
 
 
